@@ -1,7 +1,7 @@
 # Term Project Repo 
 ### classifiedz.github.io   
-Term project repo for SOEN341, a classified site software.  
-___  
+### Term project repo for SOEN341, a classified site software.  
+  
 [Liyuan Zhang](https://github.com/Swallow666)  
 Alexander Jarowyj  
 [Rami Yahia](https://github.com/rami186)  
