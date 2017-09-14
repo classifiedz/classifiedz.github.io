@@ -10,6 +10,6 @@ Alexander Jarowyj
 [Laurie Yung](https://github.com/laurie-y)  
 [Neqqash	Hussin](https://github.com/neqqash)  
 ---  
-**Slack**     classifiedz.slack.com  
-**Website**   classifiedz.xyz  
-**Github**    @classifiedz  
+**Slack**     [classifiedz.slack.com](https://classifiedz.slack.com/)    
+**Website**   [classifiedz.xyz](http://www.classfiedz.xyz)  
+**Github**    [@classifiedz](https://github.com/classfiedz)  
