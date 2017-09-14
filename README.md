@@ -11,5 +11,5 @@ Alexander Jarowyj
 [Neqqash	Hussin](https://github.com/neqqash)  
 ---  
 **Slack**     [classifiedz.slack.com](https://classifiedz.slack.com/)    
-**Website**   [classifiedz.xyz](http://www.classfiedz.xyz)  
+**Website**   [classifiedz.xyz](http://www.classifiedz.xyz)  
 **Github**    [@classifiedz](https://github.com/classfiedz)  
