@@ -1,129 +1,92 @@
+<!doctype html>
+<html>
 <head>
-	<!-- === Meta Data === -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="">
-	<meta name="keywords" content="">
-	<meta name="author" content="">
-	<title>Classfiedz</title>
-	<!-- === Dependencies === -->
-	<!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <!-- Font Awesome-->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-	<!-- Custom CSS -->
-    <link href="css/stylesheet.css" rel="stylesheet"></style>
+<title>Classifiedz - buy and sell freely</title>
+<style type="text/css">
+	body{
+		background-image:url(bluebar.jpg);
+		background-repeat:no-repeat;
+		background-size:100% 100px;
+	}
+	a:link{
+		color:white;
+		text-decoration:none;
+	}
+	a:visited{color:white;}
+	a:hover{
+		color:white;
+		text-decoration:underline;
+		font-weight:bold;
+	}
+	a:active{background-color:orange;}
+	#title{
+		font-size:30px;
+		font-family:Verdana;
+		position:absolute;
+		top:30px;
+		left:40px;
+	}
+	#help{font-family:arial;
+		position:absolute;
+		top:10px;
+		right:100px;}
+	#fr{font-family:arial;
+		position:absolute;
+		top:10px;
+		right:60px;}
+	#rs{font-family:arial;
+		position:absolute;
+		top:50px;
+		right:58px;
+		color:purple;}
+	#ad{position:absolute;
+		top:10px;
+		right:250px;}
+	#searchbar{
+		position:absolute;
+		top:50px;
+		left:320px;
+	}
+	#exampleimg{
+		position:absolute;
+		top:150px;
+		left:320px;
+	}
+</style>
 </head>
 <body>
-	<!-- NAVBAR -->
-	<nav class="navbar navbar-toggleable-md navbar-inverse bg-primary">
-		<!-- Navbar Collapsible Button -->
-		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<!-- Navbar Content -->
-		<a class="navbar-brand" href="#"><i class="fa fa-search">&nbsp;</i>Classifiedz</a>
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<!-- Navbar Items -->
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active">
-					<a class="nav-link" href="#">Home</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Link</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link disabled" href="#">FR</a>
-				</li>
-			</ul>
-			<!-- Navbar Search Field -->
-			<form class="form-inline my-2 my-lg-0">
-				<input class="form-control mr-sm-2" type="text" placeholder="Search...">
-				<button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
-			</form>
-		</div>
-	</nav>
-	<!-- NAV END -->
-
-	<!-- PAGE CONTENT -->
-	<div class="container-fluid py-3">
-		<div class="row-fluid">
-			<!-- CARD GROUP  -->
-			<div class="card-columns">
-				<!-- Card 1 -->
-				<div class="card my-4">
-					<div class="card-header text-center text-primary">
-					    <span class="card-title h4">AD #1</span>
-				  	</div>
-					<img class="card-img-top img-fluid pt-3" src="https://myconcordiaadventure.files.wordpress.com/2016/09/concordia_logo.jpg" alt="Card image cap">
-					<div class="card-block">
-						<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-					</div>
-					<div class="card-footer">
-						<small class="text-muted">Last updated 3 mins ago</small>
-					</div>
-				</div>
-				<!-- Clearfix = Helps with document flow -->
-				<div class="clearfix"></div>
-				<!-- Card 2 -->
-				<div class="card my-4">
-					<div class="card-header text-center text-primary">
-						<span class="card-title h4">AD #2</span>
-					</div>
-					<img class="card-img-top img-fluid pt-3" src="https://myconcordiaadventure.files.wordpress.com/2016/09/concordia_logo.jpg" alt="Card image cap">
-					<div class="card-block">
-						<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-					</div>
-					<div class="card-footer">
-					<small class="text-muted">Last updated 3 mins ago</small>
-					</div>
-				</div>
-				<!-- Clearfix = Helps with document flow -->
-				<div class="clearfix"></div>
-				<!-- Card 3 -->
-				<div class="card my-4">
-					<div class="card-header text-center text-primary">
-					    <span class="card-title h4">AD #1</span>
-				  	</div>
-					<img class="card-img-top img-fluid pt-3" src="https://myconcordiaadventure.files.wordpress.com/2016/09/concordia_logo.jpg" alt="Card image cap">
-					<div class="card-block">
-						<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-					</div>
-					<div class="card-footer">
-						<small class="text-muted">Last updated 3 mins ago</small>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- PAGE CONTENT END -->
-
-	<!-- FOOTER -->
-	<footer class="py-5 bg-inverse text-muted">
-		<div class="container">
-			<div class="row">
-				<ul class="list-inline m-1">
-					<li class="list-inline-item">Authors: </li>
-					<li class="list-inline-item"><a href="#"  class="text-muted">Going Toget</a></li>
-					<li class="list-inline-item"><a href="#"  class="text-muted">Tothis Itsjust</a></li>
-					<li class="list-inline-item"><a href="#"  class="text-muted">Super Late,</a></li>
-					<li class="list-inline-item"><a href="#"  class="text-muted">Andi Cant Sleep</a></li>
-				</ul>
-			</div>
-			<div class="row">
-				<p class="m-1">&copy; Classifiedz 2017</p>
-			</div>
-		</div>
-	</footer>
-	<!-- FOOTER END-->
-
-	<!-- === Dependencies === -->
-	<!-- Custom JS -->
-    <script src="js/script.js"></script>
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/tether/tether.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<div id="title"><a href="index.html">ClassifiedZ</a></div>
+<div id="help"><a href="help.html">Help</a></div>
+<div id="fr"><a href="frindex.html">FR</a></div>
+<div id="rs"><a href="register.html">Register</a>or<a href="signin.html">Sign In</a></div>
+<div id="ad"><a href="adv.html"><img src="ad.png" height="80px"/></a></div>
+<form>
+	<div id="searchbar">
+	<select name="types">
+		<option value="all">all ads</option>
+		<option value="bas">buy and sells</option>
+		<option value="s">services</option>
+		<option value="v">vehicles</option>
+		<option value="p">pets</option>
+		<option value="vr">vacation rentals</option>
+		<option value="j">jobs</option>
+	</select>
+	<select name="location">
+		<option value="Alberta">Alberta</option>
+		<option value="British Columbia">British Columbia</option>
+		<option value="Manitoba">Manitoba</option>
+		<option value="New Brunswick">New Brunswick</option>
+		<option value="Newfoundland">Newfoundland</option>
+		<option value="Nova Scotia">Nova Scotia</option>
+		<option value="Ontario">Ontario</option>
+		<option value="Prince Edward Island">Prince Edward Island</option>
+		<option value="Quebec">Quebec</option>
+		<option value="Saskaychewan">Saskaychewan</option>
+		<option value="Territories">Territories</option>
+	</select>
+	<input type="text" name="anything"/>
+	<input type="submit" value="search"/></div>
+</form>
+<div id="exampleimg"><img src="mac.jpg"/></div>
 </body>
+</html>
