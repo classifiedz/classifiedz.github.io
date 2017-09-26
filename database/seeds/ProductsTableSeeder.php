@@ -18,6 +18,7 @@ class ProductsTableSeeder extends Seeder
         for ($i = 0; $i < 50; $i++) {
             Product::create([
             	'user_id' => $faker->numberBetween(1,25),
+                'category_id' => $faker->numberBetween(1,13),
                 'title' => $faker->sentence,
                 'description' => $faker->paragraph,
                 'price' => $faker->randomFloat($nbMaxDecimals = 2, $min = 0, $max = 10000),
