@@ -17,11 +17,12 @@ class CreateProductsTable extends Migration
             $table->increments('id');
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->string('title');
-            $table->text('description');
-            $table->decimal('price', 10, 2);
+            $table->string('title', 200);
+            $table->text('description')->nullable();
+            $table->decimal('price', 10, 2)->default(0);
             $table->integer('category_id')->unsigned();
-            $table->foreign('category_id')->references('id')->on('product_categories')->onDelete('cascade');    
+            $table->foreign('category_id')->references('id')->on('product_categories')->onDelete('cascade');
+            $table->enum('status', ['ACTIVE', 'PURCHASED', 'INACTIVE', 'REMOVED'])->default('ACTIVE');
             $table->timestamps(); //created+at and updated+at
         });
     }
