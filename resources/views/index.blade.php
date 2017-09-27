@@ -12,13 +12,13 @@
     <!-- === Dependencies === -->
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="../../public/css/bootstrap/bootstrap.min.css" rel="stylesheet">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <!-- Font Awesome-->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../../public/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <!-- Custom CSS -->
-    <link href="css/stylesheet.css" rel="stylesheet">
+    <link href="../../public/css/stylesheet.css" rel="stylesheet">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 </head>
@@ -139,11 +139,11 @@
 
                 <!-- === Dependencies === -->
                 <!-- Custom JS -->
-                <script src="js/script.js"></script>
+                <script src="../../public/js/script.js"></script>
                 <!-- Bootstrap core JavaScript -->
-                <script src="js/jquery/jquery.min.js"></script>
-                <script src="js/tether/tether.min.js"></script>
-                <script src="js/bootstrap/bootstrap.min.js"></script>
+                <script src="../../public/js/jquery/jquery.min.js"></script>
+                <script src="../../public/js/tether/tether.min.js"></script>
+                <script src="../../public/js/bootstrap/bootstrap.min.js"></script>
 
         <!-- <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
