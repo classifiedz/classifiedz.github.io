@@ -107,9 +107,20 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">My Cart</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Sign in</a>
-                    </ul>
+                    @if (Route::has('login'))
+                            @auth
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ url('/home') }}">Home</a>
+                                </li>
+                            @else
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('login') }}">Login</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}">Register</a>
+                                </li>
+                            @endauth
+                    @endif
                     <!-- Navbar Search Field -->
                     <form class="form-inline my-2 my-lg-0">
                         <input class="form-control mr-sm-2" type="text" placeholder="Search for anything...">
