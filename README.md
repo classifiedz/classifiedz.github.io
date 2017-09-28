@@ -1,7 +1,10 @@
 # Term Project Repo 
 ### classifiedz.github.io   
 ### Term project repo for SOEN341, a classified site software.  
-  
+- index and other html files are located in `resources/views/`  
+- css, js and other files are located in `public/`
+
+### Authors:    
 [Liyuan Zhang](https://github.com/Swallow666)  
 [Rami Yahia](https://github.com/rami186)  
 [Kevin	Camellini](https://github.com/kcamcam)  
