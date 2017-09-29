@@ -34,9 +34,6 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Navbar Items -->
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="/">Home</a>
-                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Browse</a>
                     <div class="dropdown-menu">
@@ -46,20 +43,17 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Your Store</a>
+                    <a class="nav-link" href="{{ route('login') }}">Your Store</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('login') }}">Sell your stuff</a>
                 </li>
             </ul>
             <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">My Cart</a>
-                </li>
 
                 @guest
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('login') }}">Login</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('register') }}">Register</a>
                 </li>
                 @else
                 <li class="nav-item dropdown">
