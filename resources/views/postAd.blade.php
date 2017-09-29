@@ -49,6 +49,12 @@
             <label class="px-4"><input type="radio" name="contact" value="email"> Email</label>
           </div>
         </div>
+      </br></br>
+      <div class="checkbox">
+        <label><input type="checkbox" name="agree"> <small>I have read and agree to the <a href="#">Terms and Conditions</a></small></label>
+      </div>
+        <button type="submit" class="btn btn-success"> Post Ad</button>
+        <button type="button" class="btn btn-danger">Cancel</button>
       </form>
     </div>
   </div>
