@@ -80,6 +80,9 @@
                                 <button type="submit" class="btn btn-primary">
                                     Register
                                 </button>
+                                <br /><br />Already have an account?
+                                <a class="btn btn-link" href="{{ route('login') }}">
+                                    Sign in here
                             </div>
                         </div>
                     </form>
