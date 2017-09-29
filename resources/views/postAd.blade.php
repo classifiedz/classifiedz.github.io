@@ -27,6 +27,11 @@
           <label for="comment">Description:</label>
           <textarea class="form-control" rows="5" id="description" placeholder="Describe what you're selling... "></textarea>
         </div>
+        <div class="form-group">
+        <label for="image">Upload an image of your product:</label>
+        </br>
+        <button type="button" class="btn btn-primary">Upload</button>
+        </div>
       </form>
     </div>
   </div>
