@@ -23,6 +23,10 @@
           <label for="item">Item you're selling:</label>
           <input type="text" class="form-control" id="item" placeholder="Product..." name="item">
         </div>
+        <div class="form-group">
+          <label for="comment">Description:</label>
+          <textarea class="form-control" rows="5" id="description" placeholder="Describe what you're selling... "></textarea>
+        </div>
       </form>
     </div>
   </div>
