@@ -9,7 +9,7 @@
       <form action="{{ route('register') }}">
         <div class="form-group">
           <label for="sel1">What category does your product fall under:</label>
-          <select class="form-control" id="sel1">
+          <select class="form-control" id="category">
             <option>---</option>
             <option>Vehicles</option>
             <option>Pets</option>
@@ -19,8 +19,11 @@
             <option>Entertainment</option>
           </select>
         </div>
+        <div class="form-group">
+          <label for="item">Item you're selling:</label>
+          <input type="text" class="form-control" id="item" placeholder="Product..." name="item">
+        </div>
       </form>
-
     </div>
   </div>
 </div>
