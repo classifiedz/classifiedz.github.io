@@ -42,3 +42,11 @@ This step is only necessary to verifiy **laravel** and **composer** are installe
 `http://localhost:8080/laravel` will display the default laravel page  
 You can now git *pull/push/commit* in terminal or through the desktop app like you normally would  
 > *SIDE NOTE*: our REAL not LOCAL server is located at `http://104.131.9.198/`
+
+### Update : Fix to page not loading
+Once the repository is cloned/re-cloned dont forget to run in the directory of the repo, 
+`curl -s http://getcomposer.org/installer | php`  
+`php composer.phar install`  
+`sudo chmod -R 777 storage`  
+
+
