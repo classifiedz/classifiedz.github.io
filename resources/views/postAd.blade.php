@@ -28,6 +28,11 @@
           <textarea class="form-control" rows="5" id="description" placeholder="Describe what you're selling... "></textarea>
         </div>
         <div class="form-group">
+          <label for="price">How much are you selling this item for?</label>
+          <input type="text" class="form-control" id="price" name="price">
+        </div>
+        <div cl
+        <div class="form-group">
           <label for="image">Upload an image of your product:</label>
           </br>
           <button type="button" class="btn btn-primary">Upload</button>
