@@ -16,7 +16,18 @@ html, body {
 .full-height {
 	height: 100vh;
 }
-
+.footer {
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height:100px;
+}
+.container {
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height:100px;
+}
 .flex-center {
 	align-items: center;
 	display: flex;
