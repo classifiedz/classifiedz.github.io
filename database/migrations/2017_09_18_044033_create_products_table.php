@@ -23,6 +23,7 @@ class CreateProductsTable extends Migration
             $table->integer('category_id')->unsigned();
             $table->foreign('category_id')->references('id')->on('product_categories')->onDelete('cascade');
             $table->enum('status', ['ACTIVE', 'PURCHASED', 'INACTIVE', 'REMOVED'])->default('ACTIVE');
+            $table->string('image')->default('/img/default.png')->nullable();
             $table->timestamps(); //created+at and updated+at
         });
     }
