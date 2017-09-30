@@ -43,17 +43,17 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}">Your Store</a>
+                    <a class="nav-link" href="{{ route('login') }}"><i class="fa fa-user"></i> Your Store</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}">Post an Ad</a>
+                    <a class="nav-link" href="{{ route('login') }}"><i class="fa fa-pencil-square-o"></i> Post an Ad</a>
                 </li>
             </ul>
             <ul class="navbar-nav">
 
                 @guest
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}">Login</a>
+                    <a class="nav-link" href="{{ route('login') }}"> <i class="fa fa-sign-in"></i>Login</a>
                 </li>
                 @else
                 <li class="nav-item dropdown">
