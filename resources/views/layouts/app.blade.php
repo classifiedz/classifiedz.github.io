@@ -46,7 +46,7 @@
                     <a class="nav-link" href="{{ route('login') }}">Your Store</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}">Sell your stuff</a>
+                    <a class="nav-link" href="{{ route('login') }}">Post an Ad</a>
                 </li>
             </ul>
             <ul class="navbar-nav">
@@ -57,7 +57,7 @@
                 </li>
                 @else
                 <li class="nav-item dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                         {{ Auth::user()->name }} <span class="caret"></span>
                     </a>
 
