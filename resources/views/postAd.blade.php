@@ -31,7 +31,6 @@
           <label for="price">How much are you selling this item for?</label>
           <input type="text" class="form-control" id="price" name="price">
         </div>
-        <div cl
         <div class="form-group">
           <label for="image">Upload an image of your product:</label>
           </br>
