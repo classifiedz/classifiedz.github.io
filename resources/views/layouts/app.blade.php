@@ -7,7 +7,7 @@
     <meta name="description" content="classified webpage">
     <meta name="keywords" content="frontpage">
     <meta name="author" content="">
-    <title>ClassifiedZ - @yield('title')</title>
+    <title>ClassifiedZ @yield('title')</title>
 
     <!-- === Dependencies === -->
 
@@ -84,9 +84,11 @@
         </div>
     </nav>
     <!-- NAV END -->
+	<div class="container-fluid content">
 
-    @yield('content')
+		@yield('content')
 
+	</div>
     <!-- FOOTER -->
     <footer class="py-5 bg-inverse text-muted">
         <div class="container">
