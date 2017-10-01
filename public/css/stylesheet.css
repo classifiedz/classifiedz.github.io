@@ -2,8 +2,14 @@ html, body{
   width: 100%;
   height: 100%;
   font-family: 'Raleway', sans-serif;
+  margin:0;
+  padding: 0;
 }
+header{background-color: #ffe4c4;}
+main{background-color: #bdb76b;}
+footer{background-color: #ffc0cb;}
 /* Sticks the Footer to the bottom of the page */
 .content{
 	min-height: 82%;
 }
+.fixed-bottom {position: fixed;bottom: 0;width:100%;}
