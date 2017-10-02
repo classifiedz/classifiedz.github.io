@@ -24,10 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        //THIS IS HOW TO GET DATA FROM DATABASE AND PASS IT TO THE VIEW, Make sure that db is set up locally for this to work
         $products = Product::all();
         return view('index', ['products' => $products]);
-
-        /*return view('index');*/
     }
 }

@@ -4,8 +4,6 @@
 
 @section('content')
 
-<img src="{{ asset('storage/0JiOFtOIhtPyxv7KXgqBNtCQKjjE3PbwVgGGNZn5.jpeg') }}">
-
 <!-- PAGE CONTENT -->
 <div class="container-fluid py-3">
     <div class="row-fluid">
@@ -63,8 +61,8 @@
 
 <div>
     <!-- This is how to display data has been passed to the view (in App\Http\Controller\HomeController.php), look at /app/Product.php to look at data that's in product. Remove {{-- --}} to test and remove comment -->
-    @foreach ($products as $product)
+    {{-- @foreach ($products as $product)
     <p>Product {{ $product->id }} - {{ $product->category->name }} - {{ $product->image}}</p>
-    @endforeach
+    @endforeach --}}
 </div>
 @endsection
