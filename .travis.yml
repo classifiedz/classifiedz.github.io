@@ -12,7 +12,7 @@ services:
   
 before_script:
   - mysql -u root -e 'CREATE DATABASE classifiedz;'
-  - mysql -u root -e "GRANT ALL ON classifiedz.* TO 'root'@'localhost';"
+  #- mysql -u root -e "GRANT ALL ON classifiedz.* TO 'root'@'localhost';"
   - composer install --dev --prefer-source --no-interaction
   - php artisan key:generate
   - php artisan migrate --seed
