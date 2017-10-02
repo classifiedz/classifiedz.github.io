@@ -1,8 +1,6 @@
 language: php
 
 php:
-  # - '5.6'
-  #- '7.0'
    - '7.1'
 
 sudo: true
@@ -12,11 +10,6 @@ services:
   
 before_script:
   - mysql -u root -e 'CREATE DATABASE classifiedz;'
-  - mysql -u root -e "GRANT ALL ON classifiedz.* TO 'root'@'localhost';"
   - composer install --dev --prefer-source --no-interaction
   - php artisan key:generate
   - php artisan migrate --seed
-
-script:
-  - vendor/bin/phpmd app text codesize design naming unusedcode
-  - vendor/bin/phpunit --testdox --coverage-text tests
