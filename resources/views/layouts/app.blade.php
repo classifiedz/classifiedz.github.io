@@ -53,7 +53,7 @@
 
                 @guest
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}"> <i class="fa fa-sign-in"></i>Login</a>
+                    <a class="nav-link" href="{{ route('login') }}"> <i class="fa fa-sign-in"></i> Login</a>
                 </li>
                 @else
                 <li class="nav-item dropdown">

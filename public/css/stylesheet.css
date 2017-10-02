@@ -13,6 +13,10 @@ footer{background-color: #ffc0cb;}
 	min-height: 82%;
 }
 
+/* Fixes card columns clearing eachother, not sure if necessary */
+.card{
+	display: inline-block;
+}
 .fixed-bottom {position: fixed;bottom: 0;width:100%;}
 
 a:hover{
