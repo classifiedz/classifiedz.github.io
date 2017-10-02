@@ -71,6 +71,6 @@ class ProductController extends Controller
 
         $product = Product::create($product);
 
-        return redirect()->intended('/');
+        return redirect('/')->with('alert_msg', "<strong>Great!</strong> You've posted a new ad!");
     }
 }

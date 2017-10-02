@@ -6,6 +6,15 @@
 
 <!-- PAGE CONTENT -->
 <div class="container-fluid py-3">
+    @if(session('alert_msg'))
+    <div class="alert alert-info alert-dismissible fade show" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      {!! session('alert_msg') !!}
+    </div>
+    @endif
+
     <div class="row-fluid">
         <!-- CARD GROUP  -->
         <div class="card-columns">
