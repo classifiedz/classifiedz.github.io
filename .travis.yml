@@ -11,7 +11,7 @@ services:
   - mysql
   
 before_install:
-  - "mysql -e 'create database classifiedz;'"
+  - "mysql -e 'create database classifiedz';"
   - "cp ./.travis.database.yml ./config/database.yml"
   
 before_script:
