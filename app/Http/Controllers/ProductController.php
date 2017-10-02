@@ -2,8 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\StoreProduct;
 use App\Product;
+use App\ProductCategory;
+
 
 class ProductController extends Controller
 {
@@ -36,5 +41,33 @@ class ProductController extends Controller
         $product->delete();
 
         return response()->json(null, 204);
+    }
+
+    // Create Ad
+    public function showForm() {
+        $categories = ProductCategory::all();
+
+        return view('postAd', [
+            'categories' => $categories,
+        ]);
+    }
+
+    public function storeAd(StoreProduct $request) {
+        $id = Auth::id();
+        $path = Storage::putFile('images-ad', $request->file('image'));
+        Storage::setVisibility($path, 'public');
+
+        $product = [
+            'user_id' => $id,
+            'title' => $request->title,
+            'description' => $request->description,
+            'price' => $request->price,
+            'category_id' => $request->category_id,
+            'image' => $path
+        ];
+
+        $product = Product::create($product);
+
+        return redirect()->intended('/');
     }
 }

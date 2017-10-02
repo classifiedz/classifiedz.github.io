@@ -46,7 +46,7 @@
                     <a class="nav-link" href="{{ route('login') }}">Your Store</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}">Post an Ad</a>
+                    <a class="nav-link" href="{{ route('postAdForm') }}">Post an Ad</a>
                 </li>
             </ul>
             <ul class="navbar-nav">

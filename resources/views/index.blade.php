@@ -3,6 +3,9 @@
 @section('title', 'Home')
 
 @section('content')
+
+<img src="{{ asset('storage/image-ad/pYI06j15kqxxjw8tOxY71RBhJqMPWcGZhy1azJX8.jpeg') }}">
+
 <!-- PAGE CONTENT -->
 <div class="container-fluid py-3">
     <div class="row-fluid">

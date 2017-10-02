@@ -23,14 +23,15 @@ class StoreProduct extends FormRequest
      */
     public function rules()
     {
-        $statuses = array('ACTIVE', 'PURCHASED', 'INACTIVE', 'REMOVED');
+        /*$statuses = array('ACTIVE', 'PURCHASED', 'INACTIVE', 'REMOVED');
+        'status' => 'required|in:' . implode(',', $statuses),*/
 
         return [
             'title' => 'required|string|max:200',
             'description' => 'nullable|string',
             'price' => 'required|numeric',
             'category_id' => 'required|numeric|exists:product_categories,id',
-            'status' => 'required|in:' . implode(',', $statuses),
+            'image' => 'required|image',
         ];
     }
 }
