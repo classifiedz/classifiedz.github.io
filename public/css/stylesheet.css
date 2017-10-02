@@ -12,4 +12,9 @@ footer{background-color: #ffc0cb;}
 .content{
 	min-height: 82%;
 }
+
 .fixed-bottom {position: fixed;bottom: 0;width:100%;}
+
+a:hover{
+   color:yellow !important;
+}
