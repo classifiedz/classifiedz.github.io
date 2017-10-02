@@ -10,11 +10,10 @@ sudo: true
 services:
   - mysql
   
-before_install:
-  - "mysql -e 'create database classifiedz';"
-  - "cp ./.travis.database.yml ./config/database.yml"
-  
 before_script:
+  - mysql -u root -e 'CREATE DATABASE classifiedz;'
+  - mysql -u root -e "CREATE USER 'root'@'localhost';"
+  - mysql -u root -e "GRANT ALL ON classifiedz.* TO 'root'@'localhost';"
   - composer install --dev --prefer-source --no-interaction
   - php artisan key:generate
   - php artisan migrate --seed
@@ -22,13 +21,3 @@ before_script:
 script:
   - vendor/bin/phpmd app text codesize design naming unusedcode
   - vendor/bin/phpunit --testdox --coverage-text tests
-
-after_failure:
-  - "mysql -e 'show databases;'"
-  
-notifications:
-  email:
-    recipients:
-      - kevincamellini@gmail.com
-    on_success: always
-    on_failure: always
