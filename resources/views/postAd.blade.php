@@ -53,9 +53,7 @@
           @endif
         </div>
         <div class="form-group{{ $errors->has('image') ? ' has-error' : '' }}">
-          <label for="image">
-            Upload an image of your product:
-          </label>
+          <label for="image">Upload an image of your product:</label>
           </br>
           <input id="image" name="image" type="file">
 

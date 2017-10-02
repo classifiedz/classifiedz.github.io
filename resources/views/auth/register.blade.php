@@ -2,10 +2,10 @@
 
 @section('content')
 <div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+    <div class="row-fluid">
+        <div class="col-md-8 col-md-offset-2 py-5">
             <div class="panel panel-default">
-                <div class="panel-heading">Register</div>
+                <div class="panel-heading h1">Register</div>
 
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="{{ route('register') }}">
@@ -83,6 +83,7 @@
                                 <br /><br />Already have an account?
                                 <a class="btn btn-link" href="{{ route('login') }}">
                                     Sign in here
+								</a>
                             </div>
                         </div>
                     </form>

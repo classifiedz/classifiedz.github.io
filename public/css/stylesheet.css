@@ -3,55 +3,10 @@ html, body{
   height: 100%;
   font-family: 'Raleway', sans-serif;
 }
-/*
-html, body {
-	background-color: #fff;
-	color: #636b6f;
-	font-family: 'Raleway', sans-serif;
-	font-weight: 100;
-	height: 100vh;
-	margin: 0;
+/* Sticks the Footer to the bottom of the page */
+.content{
+	min-height: 82%;
 }
-
-.full-height {
-	height: 100vh;
+a:hover{
+   color:yellow !important;
 }
-
-.flex-center {
-	align-items: center;
-	display: flex;
-	justify-content: center;
-}
-
-.position-ref {
-	position: relative;
-}
-
-.top-right {
-	position: absolute;
-	right: 10px;
-	top: 18px;
-}
-
-.content {
-	text-align: center;
-}
-
-.title {
-	font-size: 84px;
-}
-
-.links > a {
-	color: #636b6f;
-	padding: 0 25px;
-	font-size: 12px;
-	font-weight: 600;
-	letter-spacing: .1rem;
-	text-decoration: none;
-	text-transform: uppercase;
-}
-
-.m-b-md {
-	margin-bottom: 30px;
-}
-*/

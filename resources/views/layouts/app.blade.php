@@ -7,7 +7,7 @@
     <meta name="description" content="classified webpage">
     <meta name="keywords" content="frontpage">
     <meta name="author" content="">
-    <title>ClassifiedZ - @yield('title')</title>
+    <title>ClassifiedZ @yield('title')</title>
 
     <!-- === Dependencies === -->
 
@@ -43,17 +43,17 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}">Your Store</a>
+                    <a class="nav-link" href="{{ route('login') }}"><i class="fa fa-user"></i> Your Store</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('postAdForm') }}">Post an Ad</a>
+                    <a class="nav-link" href="{{ route('postAdForm') }}"><i class="fa fa-pencil-square-o"></i>Post an Ad</a>
                 </li>
             </ul>
             <ul class="navbar-nav">
 
                 @guest
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}">Login</a>
+                    <a class="nav-link" href="{{ route('login') }}"> <i class="fa fa-sign-in"></i>Login</a>
                 </li>
                 @else
                 <li class="nav-item dropdown">
@@ -84,9 +84,11 @@
         </div>
     </nav>
     <!-- NAV END -->
+	<div class="container-fluid content">
 
-    @yield('content')
+		@yield('content')
 
+	</div>
     <!-- FOOTER -->
     <footer class="py-5 bg-inverse text-muted">
         <div class="container">
