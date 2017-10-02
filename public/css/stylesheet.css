@@ -7,7 +7,12 @@ html, body{
 .content{
 	min-height: 82%;
 }
+
 /* Fixes card columns clearing eachother, not sure if necessary */
 .card{
 	display: inline-block;
+}
+
+a:hover{
+   color:yellow !important;
 }
