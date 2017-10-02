@@ -4,7 +4,7 @@
 
 @section('content')
 
-<img src="{{ asset('storage/pYI06j15kqxxjw8tOxY71RBhJqMPWcGZhy1azJX8.jpeg') }}">
+<img src="{{ asset('storage/0JiOFtOIhtPyxv7KXgqBNtCQKjjE3PbwVgGGNZn5.jpeg') }}">
 
 <!-- PAGE CONTENT -->
 <div class="container-fluid py-3">

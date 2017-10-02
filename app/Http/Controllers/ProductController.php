@@ -54,8 +54,11 @@ class ProductController extends Controller
 
     public function storeAd(StoreProduct $request) {
         $id = Auth::id();
-        $path = Storage::putFile('images-ad', $request->file('image'));
+        $path = Storage::putFile('public', $request->file('image'));
         Storage::setVisibility($path, 'public');
+
+        $imagePath = explode('/',$path);
+        $path =  "storage/".$imagePath[1];
 
         $product = [
             'user_id' => $id,
