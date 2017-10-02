@@ -5,8 +5,11 @@ php:
   #- '7.0'
    - '7.1'
 
-sudo: false
+sudo: true
 
+services:
+  - mysql
+  
 before_install:
   - "mysql -e 'create database classifiedz;'"
   - "cp ./.travis.database.yml ./config/database.yml"
