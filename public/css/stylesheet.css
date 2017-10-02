@@ -7,3 +7,6 @@ html, body{
 .content{
 	min-height: 82%;
 }
+a:hover{
+   color:yellow !important;
+}
