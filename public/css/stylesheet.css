@@ -7,7 +7,7 @@ html, body{
 }
 header{background-color: #ffe4c4;}
 main{background-color: #bdb76b;}
-footer{background-color: #ffc0cb;}
+footer{}
 /* Sticks the Footer to the bottom of the page */
 .content{
 	min-height: 82%;
