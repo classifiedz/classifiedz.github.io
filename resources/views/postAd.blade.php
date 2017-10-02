@@ -63,7 +63,7 @@
         </span>
         @endif
       </div>
-      <div class="form-group">
+      <!-- <div class="form-group">
         <label for="contact">How would you prefer to be contacted?</label>
         <div class="radio">
           <label class="px-4"><input type="radio" name="contact" value="call"> Call</label>
@@ -74,7 +74,7 @@
         <div class="radio">
           <label class="px-4"><input type="radio" name="contact" value="email"> Email</label>
         </div>
-      </div>
+      </div> -->
     </br></br>
     <div class="checkbox">
       <label><input type="checkbox" name="agree"> <small>I have read and agree to the <a href="#">Terms and Conditions</a></small></label>
