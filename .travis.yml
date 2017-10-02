@@ -1,6 +1,25 @@
 language: php
+
 php:
-  - '5.6'
-  - '7.1'
-  - hhvm # on Trusty only
-  - nightly
+  # - '5.6'
+  - '7.0'
+  # - '7.1'
+
+sudo: false
+
+before_script:
+  - cp .env.ci .env
+  - composer install --dev --prefer-source --no-interaction
+  - php artisan key:generate
+  - php artisan migrate --seed
+
+script:
+  - vendor/bin/phpmd app text codesize design naming unusedcode
+  - vendor/bin/phpunit --testdox --coverage-text tests
+
+notifications:
+  email:
+    recipients:
+      - kevincamellini@gmail.com
+    on_success: always
+    on_failure: always
