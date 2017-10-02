@@ -6,57 +6,84 @@
   <div class="row-fluid">
     <div class="container col-sm-8">
       <h2>Post an Ad</h2>
-      <form action="{{ route('postAd') }}">
-        <div class="form-group">
-          <label for="sel1">What category does your product fall under:</label>
-          <select class="form-control" id="category">
-            <option>---</option>
-            <option>Vehicles</option>
-            <option>Pets</option>
-            <option>Fashion</option>
-            <option>Home Appliances</option>
-            <option>Electronics</option>
-            <option>Entertainment</option>
+      <form method="POST"  enctype="multipart/form-data" action="{{ route('storeAd') }}">
+        {{ csrf_field() }}
+
+        <div class="form-group{{ $errors->has('category_id') ? ' has-error' : '' }}">
+          <label for="category_id">What category does your product fall under:</label>
+          <select class="form-control" id="category_id" name="category_id">
+            @foreach ($categories as $category)
+            <option value="{{$category->id}}"> {{ $category->name }}</option>
+            @endforeach
           </select>
+
+          @if ($errors->has('category_id'))
+          <span class="help-block">
+            <strong>{{ $errors->first('category_id') }}</strong>
+          </span>
+          @endif
         </div>
-        <div class="form-group">
-          <label for="item">Item you're selling:</label>
-          <input type="text" class="form-control" id="item" placeholder="Product..." name="item">
+        <div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">
+          <label for="title">Item you're selling:</label>
+          <input type="text" class="form-control" id="title" placeholder="Product..." name="title">
+          @if ($errors->has('title'))
+          <span class="help-block">
+            <strong>{{ $errors->first('title') }}</strong>
+          </span>
+          @endif
         </div>
-        <div class="form-group">
-          <label for="comment">Description:</label>
-          <textarea class="form-control" rows="5" id="description" placeholder="Describe what you're selling... "></textarea>
+        <div class="form-group{{ $errors->has('description') ? ' has-error' : '' }}">
+          <label for="description">Description:</label>
+          <textarea class="form-control" rows="5" name="description" id="description" placeholder="Describe what you're selling... "></textarea>
+          
+          @if ($errors->has('description'))
+          <span class="help-block">
+            <strong>{{ $errors->first('description') }}</strong>
+          </span>
+          @endif
         </div>
-        <div class="form-group">
+        <div class="form-group{{ $errors->has('price') ? ' has-error' : '' }}">
           <label for="price">How much are you selling this item for?</label>
           <input type="text" class="form-control" id="price" name="price">
+
+          @if ($errors->has('price'))
+          <span class="help-block">
+            <strong>{{ $errors->first('price') }}</strong>
+          </span>
+          @endif
         </div>
-        <div class="form-group">
+        <div class="form-group{{ $errors->has('image') ? ' has-error' : '' }}">
           <label for="image">Upload an image of your product:</label>
           </br>
-          <button type="button" class="btn btn-primary">Upload</button>
-        </div>
-        <div class="form-group">
-          <label for="contact">How would you prefer to be contacted?</label>
-          <div class="radio">
-            <label class="px-4"><input type="radio" name="contact" value="call"> Call</label>
-          </div>
-          <div class="radio">
-            <label class="px-4"><input type="radio" name="contact" value="text"> Text</label>
-          </div>
-          <div class="radio">
-            <label class="px-4"><input type="radio" name="contact" value="email"> Email</label>
-          </div>
-        </div>
-      </br></br>
-      <div class="checkbox">
-        <label><input type="checkbox" name="agree"> <small>I have read and agree to the <a href="#">Terms and Conditions</a></small></label>
+          <input id="image" name="image" type="file">
+
+        @if ($errors->has('image'))
+        <span class="help-block">
+          <strong>{{ $errors->first('image') }}</strong>
+        </span>
+        @endif
       </div>
-        <button type="submit" class="btn btn-success"> Post Ad</button>
-        <button type="button" class="btn btn-danger">Cancel</button>
-      </form>
+      <div class="form-group">
+        <label for="contact">How would you prefer to be contacted?</label>
+        <div class="radio">
+          <label class="px-4"><input type="radio" name="contact" value="call"> Call</label>
+        </div>
+        <div class="radio">
+          <label class="px-4"><input type="radio" name="contact" value="text"> Text</label>
+        </div>
+        <div class="radio">
+          <label class="px-4"><input type="radio" name="contact" value="email"> Email</label>
+        </div>
+      </div>
+    </br></br>
+    <div class="checkbox">
+      <label><input type="checkbox" name="agree"> <small>I have read and agree to the <a href="#">Terms and Conditions</a></small></label>
     </div>
-  </div>
+    <button type="submit" class="btn btn-success"> Post Ad</button>
+    <button type="button" class="btn btn-danger">Cancel</button>
+  </form>
+</div>
+</div>
 </div>
 
 @endsection
