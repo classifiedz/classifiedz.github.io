@@ -19,6 +19,14 @@ footer{background-color: #ffc0cb;}
 }
 .fixed-bottom {position: fixed;bottom: 0;width:100%;}
 
-a:hover{
-   color:yellow !important;
+.nav-link:hover{
+   color:#f9f94a !important;
 }
+
+.navbar-brand{
+	color: #d0f2f1;
+	font-weight:bold;
+	font-size: 1.4em;
+}
+
+

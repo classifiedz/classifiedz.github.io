@@ -85,9 +85,7 @@
     </nav>
     <!-- NAV END -->
 	<div class="container-fluid content">
-
 		@yield('content')
-
 	</div>
     <!-- FOOTER -->
     <footer class="py-5 bg-inverse text-muted">
