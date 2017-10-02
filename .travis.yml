@@ -8,6 +8,8 @@ php:
 sudo: false
 
 before_script:
+  - "mysql -e 'create database classifiedz;'"
+  - "cp ./.travis.database.yml ./config/database.yml"
   - composer install --dev --prefer-source --no-interaction
   - php artisan key:generate
   - php artisan migrate --seed
@@ -16,6 +18,9 @@ script:
   - vendor/bin/phpmd app text codesize design naming unusedcode
   - vendor/bin/phpunit --testdox --coverage-text tests
 
+after_failure:
+  - "mysql -e 'show databases;'"
+  
 notifications:
   email:
     recipients:
