@@ -20,7 +20,7 @@
 		<div class="card-columns">
             @foreach ($products as $product)
             <!-- Card -->
-            <div class="card">
+            <div class="card mb-3">
                 <img class="card-img-top img-fluid" width="100%" src="{{ asset($product->image) }}" alt="Card Image">
                 <div class="card-block">
                     <span class="card-title h4">{{ $product->title }}</span>
