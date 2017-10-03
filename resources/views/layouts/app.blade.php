@@ -37,9 +37,11 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Browse</a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Category 1</a>
-                        <a class="dropdown-item" href="#">Category 2</a>
-                        <a class="dropdown-item" href="#">Category 3</a>
+                        <a class="dropdown-item" href="#">Clothing</a>
+                        <a class="dropdown-item" href="#">Electronics</a>
+                        <a class="dropdown-item" href="#">Home</a>
+                        <a class="dropdown-item" href="#">Vehicles</a>
+                        <a class="dropdown-item" href="#">Others(General)</a>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -85,7 +87,9 @@
     </nav>
     <!-- NAV END -->
 	<div class="container-fluid content">
+
 		@yield('content')
+
 	</div>
     <!-- FOOTER -->
     <footer class="py-5 bg-inverse text-muted">
