@@ -20,14 +20,15 @@
 		<div class="card-columns">
             @foreach ($products as $product)
             <!-- Card -->
-            <div class="card">
+            <div class="card mb-3">
                 <img class="card-img-top img-fluid" width="100%" src="{{ asset($product->image) }}" alt="Card Image">
-                <div class="card-block">
-                    <span class="card-title h4">{{ $product->title }}</span>
-                    <p class="card-text"> $ {{ $product->price }}</p>
-                    <p class="card-text">{{ $product->description }}</p>
-                    <footer>
-                        <small class="text-muted">Posted: {{ date('jS \of F Y', strtotime($product->created_at)) }}</small>
+                <div class="card-block p-3">
+                    <span class="card-title h4 text-justify">{{ $product->title }}</span>
+                    <!-- <p class="card-text text-justify"> $ {{ $product->price }}</p> -->
+                    <p class="card-text mb-1">{{ $product->description }}</p>
+                    <footer class="text-right">
+						<small class="text-muted">Posted: {{ date('F jS, Y', strtotime($product->created_at)) }}</small><br/>
+						<span class="badge badge-success">$ {{ $product->price }}</span>
                     </footer>
                 </div>
             </div>
