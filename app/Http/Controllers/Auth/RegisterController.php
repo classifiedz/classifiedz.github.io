@@ -50,6 +50,7 @@ class RegisterController extends Controller
         $messages = [
             'password.regex' => 'Password must contain atleast one uppercase and lowercase letter, a number and a special character',
         ];
+        
 
         return Validator::make($data, [
             'name' => 'required|string|max:255',
