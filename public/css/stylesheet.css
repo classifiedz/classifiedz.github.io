@@ -32,3 +32,8 @@ main{
 	font-weight:bold;
 	font-size: 1.4em;
 }
+
+/* Prompt for Password Validation */
+.help-block{
+  color: red !important;
+}
