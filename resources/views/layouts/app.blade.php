@@ -38,10 +38,45 @@
                     <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Browse</a>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="#">Clothing</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Bags</a>
+                                <a class="dropdown-item" href="#">Jewellery</a>
+                                <a class="dropdown-item" href="#">Outfits and Outwears</a>
+                                <a class="dropdown-item" href="#">Shoes</a>
+                                <a class="dropdown-item" href="#">Accessories and Others</a>
+                            </div>
                         <a class="dropdown-item" href="#">Electronics</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Accessories</a>
+                                <a class="dropdown-item" href="#">Computers</a>
+                                <a class="dropdown-item" href="#">Consoles and Video Games</a>
+                                <a class="dropdown-item" href="#">Phones, Tablets and Smart Watches</a>
+                                <a class="dropdown-item" href="#">TVs and Media</a>
+                                <a class="dropdown-item" href="#">Others</a>
+                        </div>
                         <a class="dropdown-item" href="#">Home</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Home Appliances</a>
+                                <a class="dropdown-item" href="#">Indoor</a>
+                                <a class="dropdown-item" href="#">Outdoor</a>
+                                <a class="dropdown-item" href="#">Renovation Materials</a>
+                                <a class="dropdown-item" href="#">Others</a>
+                        </div>
                         <a class="dropdown-item" href="#">Vehicles</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Motorized</a>
+                                <a class="dropdown-item" href="#">Unmotorized</a>
+                                <a class="dropdown-item" href="#">Vehicle Parts</a>
+                                <a class="dropdown-item" href="#">Others</a>
+                            </div>
                         <a class="dropdown-item" href="#">Others(General)</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Jobs</a>
+                                <a class="dropdown-item" href="#">Community</a>
+                                <a class="dropdown-item" href="#">Real Estates</a>
+                                <a class="dropdown-item" href="#">Services</a>
+                                <a class="dropdown-item" href="#">Others</a>
+                            </div>
                     </div>
                 </li>
                 <li class="nav-item">
