@@ -62,3 +62,8 @@ main{
         column-count: 5;
     }
 }
+
+/* Prompt for Password Validation */
+.help-block{
+  color: red !important;
+}
