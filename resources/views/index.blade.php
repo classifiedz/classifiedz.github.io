@@ -3,58 +3,85 @@
 @section('title', 'Home')
 
 @section('content')
-<!-- PAGE CONTENT -->
+<!-- PAGE CONTENT CONTAINER -->
 <div class="container-fluid py-3">
-    <div class="row-fluid">
-        <!-- CARD GROUP  -->
-        <div class="card-columns">
-            <!-- Card 1 -->
-            <div class="card my-4">
-                <div class="card-header text-center text-primary">
-                    <span class="card-title h4">NEW iPhone X</span>
-                </div>
-                <div class="text-center"><a href="#"><img class="card-img-top img-fluid pt-3" src="{{ asset('img/iphonex.jpg') }}" alt="Card image cap"><a></div>
-                    <div class="card-block">
-                        <p class="card-text"> $1200.00CAD <small>+Shipping</small></p>
-                        <p class="card-text">New, untouched iPhone X still in box!</br></br></br></p>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Last updated 3 mins ago</small>
-                    </div>
-                </div>
-                <!-- Clearfix = Helps with document flow -->
-                <div class="clearfix"></div>
-                <!-- Card 2 -->
-                <div class="card my-4">
-                    <div class="card-header text-center text-primary">
-                        <span class="card-title h4">Cactus Candles</span>
-                    </div>
-                    <div class="text-center"><a href="#"><img class="card-img-top img-fluid pt-3" src="{{ asset('img/cactus-candle.jpg') }}" alt="Card image cap"></a></div>
-                    <div class="card-block">
-                        <p class="card-text"> $45.50CAD <small>+FREE Shipping</small></p>
-                        <p class="card-text">100% handmade cactus candles! No harsh chemicals used! Comes in a set of three as shown in the picture, each lasting up to 8 hours!</p>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Last updated 20 mins ago</small>
-                    </div>
-                </div>
-                <!-- Clearfix = Helps with document flow -->
-                <div class="clearfix"></div>
-                <!-- Card 3 -->
-                <div class="card my-4">
-                    <div class="card-header text-center text-primary">
-                        <span class="card-title h4">Contigo Thermos</span>
-                    </div>
-                    <div class="text-center"><a href="#"><img class="card-img-top img-fluid pt-3" src="{{ asset('img/contigo.jpg') }}" alt="Card image cap"></a></div>
-                    <div class="card-block">
-                        <p class="card-text"> $14.39CAD <small>+Shipping</small></p>
-                        <p class="card-text">Great Contigo thermos that's never been used. Keeps liquids hot for hours and doesn't leak! </br></br></p>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Last updated 3 mins ago</small>
-                    </div>
+    @if(session('alert_msg'))
+    <div class="alert alert-info alert-dismissible fade show" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      {!! session('alert_msg') !!}
+    </div>
+    @endif
+
+	<!-- Row Fluid -->
+	<div class="row-fluid">
+		<!-- CARD COLUMNNS -->
+		<div class="card-columns">
+            @foreach ($products as $product)
+            <!-- Card -->
+            <div class="card mb-3">
+                <img class="card-img-top img-fluid" width="100%" src="{{ asset($product->image) }}" alt="Card Image">
+                <div class="card-block p-3">
+                    <span class="card-title h4 text-justify">{{ $product->title }}</span>
+                    <!-- <p class="card-text text-justify"> $ {{ $product->price }}</p> -->
+                    <p class="card-text mb-1">{{ $product->description }}</p>
+                    <footer class="text-right">
+						<small class="text-muted">Posted: {{ date('F jS, Y', strtotime($product->created_at)) }}</small><br/>
+						<span class="badge badge-success">$ {{ $product->price }}</span>
+                    </footer>
                 </div>
             </div>
-        </div>
-    </div>
+            @endforeach
+			<!-- End Card -->
+		</div>
+		<!-- END CARD COLUMNNS -->
+	</div>
+	<!-- End Row -->
+
+	<!-- Row Fluid -->
+	<div class="row-fluid">
+		<!-- PAGINATION -->
+		<nav aria-label="Page navigation">
+			<ul class="pagination justify-content-center">
+				<!-- Previous -->
+				<li class="page-item disabled">
+					<a class="page-link" href="#">
+						<span>&lsaquo;</span>
+					</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="#">1</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="#">2</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="#">3</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="#">4</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="#">5</a>
+				</li>
+				<!-- Next -->
+				<li class="page-item">
+					<a class="page-link" href="#">&rsaquo;</a>
+				</li>
+				<!-- Next -->
+			</ul>
+		</nav>
+		<!-- END PAGINATION -->
+	</div>
+	<!-- End Row -->
+</div>
+<!-- End Container -->
+
+<div>
+    <!-- This is how to display data has been passed to the view (in App\Http\Controller\HomeController.php), look at /app/Product.php to look at data that's in product. Remove {{-- --}} to test and remove comment -->
+    {{-- @foreach ($products as $product)
+    <p>Product {{ $product->id }} - {{ $product->category->name }} - {{ $product->image}}</p>
+    @endforeach --}}
+</div>
 @endsection

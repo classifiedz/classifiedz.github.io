@@ -1,0 +1,15 @@
+language: php
+
+php:
+   - '7.1'
+
+sudo: true
+
+services:
+  - mysql
+  
+before_script:
+  - mysql -u root -e 'CREATE DATABASE classifiedz;'
+  - composer install --dev --prefer-source --no-interaction
+  - php artisan key:generate
+  - php artisan migrate --seed

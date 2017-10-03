@@ -2,56 +2,68 @@ html, body{
   width: 100%;
   height: 100%;
   font-family: 'Raleway', sans-serif;
+  margin:0;
+  padding: 0;
+  background-color: rgb(250,250,250);
 }
-/*
-html, body {
-	background-color: #fff;
-	color: #636b6f;
-	font-family: 'Raleway', sans-serif;
-	font-weight: 100;
-	height: 100vh;
-	margin: 0;
+header{
+	background-color: #ffe4c4;
 }
-
-.full-height {
-	height: 100vh;
+main{
+	background-color: #bdb76b;
 }
-
-.flex-center {
-	align-items: center;
-	display: flex;
-	justify-content: center;
+/* Sticks the Footer to the bottom of the page */
+.content{
+	min-height: 82%;
 }
 
-.position-ref {
-	position: relative;
+/* Nav Hover Color */
+.nav-link:hover{
+   color:#5DB856 !important;
 }
 
-.top-right {
-	position: absolute;
-	right: 10px;
-	top: 18px;
+/* Nav Logo CSS */
+.navbar-brand{
+	color: #d0f2f1;
+	font-weight:bold;
+	font-size: 1.4em;
 }
 
-.content {
-	text-align: center;
+/* Card Column on Homepage CSS */
+/* Small Screens */
+@media (min-width: 34em) {
+    .card-columns {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+}
+/* Medium Screens*/
+@media (min-width: 48em) {
+    .card-columns {
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3;
+    }
+}
+/* Large Screens */
+@media (min-width: 62em) {
+    .card-columns {
+        -webkit-column-count: 4;
+        -moz-column-count: 4;
+        column-count: 4;
+    }
+}
+/* X-Large Screens*/
+@media (min-width: 75em) {
+    .card-columns {
+        -webkit-column-count: 5;
+        -moz-column-count: 5;
+        column-count: 5;
+    }
 }
 
-.title {
-	font-size: 84px;
+/* Prompt for Password Validation */
+.help-block{
+  color: red !important;
 }
-
-.links > a {
-	color: #636b6f;
-	padding: 0 25px;
-	font-size: 12px;
-	font-weight: 600;
-	letter-spacing: .1rem;
-	text-decoration: none;
-	text-transform: uppercase;
-}
-
-.m-b-md {
-	margin-bottom: 30px;
-}
-*/

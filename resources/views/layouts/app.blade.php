@@ -7,7 +7,7 @@
     <meta name="description" content="classified webpage">
     <meta name="keywords" content="frontpage">
     <meta name="author" content="">
-    <title>ClassifiedZ - @yield('title')</title>
+    <title>ClassifiedZ @yield('title')</title>
 
     <!-- === Dependencies === -->
 
@@ -43,21 +43,21 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}">Your Store</a>
+                    <a class="nav-link" href="{{ route('login') }}"><i class="fa fa-user"></i> Your Store</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}">Sell your stuff</a>
+                    <a class="nav-link" href="{{ route('postAdForm') }}"><i class="fa fa-pencil-square-o"></i> Post an Ad</a>
                 </li>
             </ul>
             <ul class="navbar-nav">
 
                 @guest
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}">Login</a>
+                    <a class="nav-link" href="{{ route('login') }}"> <i class="fa fa-sign-in"></i> Login</a>
                 </li>
                 @else
                 <li class="nav-item dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                         {{ Auth::user()->name }} <span class="caret"></span>
                     </a>
 
@@ -84,11 +84,11 @@
         </div>
     </nav>
     <!-- NAV END -->
-
-    @yield('content')
-
+	<div class="container-fluid content">
+		@yield('content')
+	</div>
     <!-- FOOTER -->
-    <footer class="py-5 bg-inverse text-muted">
+    <footer class="p-5 bg-inverse text-muted">
         <div class="container">
             <div class="row">
                 <ul class="list-inline m-1">
