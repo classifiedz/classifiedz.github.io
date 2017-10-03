@@ -13,7 +13,7 @@
       {!! session('alert_msg') !!}
     </div>
     @endif
-    
+
 	<!-- Row Fluid -->
 	<div class="row-fluid">
 		<!-- Card Columns -->
@@ -32,8 +32,46 @@
                 </div>
             </div>
             @endforeach
+			<!-- End Card -->
 		</div>
 		<!-- End Card Columnds -->
+	</div>
+	<!-- End Row -->
+
+	<!-- Row Fluid -->
+	<div class="row-fluid">
+		<!-- Pagination -->
+		<nav aria-label="Page navigation">
+			<ul class="pagination justify-content-center">
+				<!-- Previous -->
+				<li class="page-item disabled">
+					<a class="page-link" href="#">
+						<span>&lsaquo;</span>
+					</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="#">1</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="#">2</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="#">3</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="#">4</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="#">5</a>
+				</li>
+				<!-- Next -->
+				<li class="page-item">
+					<a class="page-link" href="#">&rsaquo;</a>
+				</li>
+				<!-- Next -->
+			</ul>
+		</nav>
+		<!-- End Pagination -->
 	</div>
 	<!-- End Row -->
 </div>

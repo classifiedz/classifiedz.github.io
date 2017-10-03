@@ -88,7 +88,7 @@
 		@yield('content')
 	</div>
     <!-- FOOTER -->
-    <footer class="py-5 bg-inverse text-muted">
+    <footer class="p-5 bg-inverse text-muted">
         <div class="container">
             <div class="row">
                 <ul class="list-inline m-1">
