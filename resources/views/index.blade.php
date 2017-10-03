@@ -12,6 +12,7 @@
             <div class="card my-4">
                 <div class="card-header text-center text-primary">
                     <span class="card-title h4">NEW iPhone X</span>
+                    
                 </div>
                 <div class="text-center"><a href="#"><img class="card-img-top img-fluid pt-3" src="{{ asset('img/iphonex.jpg') }}" alt="Card image cap"><a></div>
                     <div class="card-block">

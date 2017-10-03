@@ -93,7 +93,7 @@
             <div class="row">
                 <ul class="list-inline m-1">
                     <li class="list-inline-item">&copy; ClassifiedZ 2017</li>
-                    <li class="list-inline-item"><a href="#"  class="text-muted">Privacy Notice</a></li>
+                    <li class="list-inline-item"><a href="privacy.blade.php"  class="text-muted">Privacy Notice</a></li>
                     <li class="list-inline-item"><a href="#"  class="text-muted">Posting Policy</a></li>
                     <li class="list-inline-item"><a href="#"  class="text-muted">Sales and Refunds</a></li>
                     <li class="list-inline-item"><a href="#"  class="text-muted">Terms of Use</a></li>
