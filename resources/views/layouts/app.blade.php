@@ -46,7 +46,7 @@
                     <a class="nav-link" href="{{ route('login') }}"><i class="fa fa-user"></i> Your Store</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('postAdForm') }}"><i class="fa fa-pencil-square-o"></i>Post an Ad</a>
+                    <a class="nav-link" href="{{ route('postAdForm') }}"><i class="fa fa-pencil-square-o"></i> Post an Ad</a>
                 </li>
             </ul>
             <ul class="navbar-nav">
@@ -88,7 +88,7 @@
 		@yield('content')
 	</div>
     <!-- FOOTER -->
-    <footer class="py-5 bg-inverse text-muted">
+    <footer class="p-5 bg-inverse text-muted">
         <div class="container">
             <div class="row">
                 <ul class="list-inline m-1">

@@ -13,27 +13,65 @@
       {!! session('alert_msg') !!}
     </div>
     @endif
-    
+
 	<!-- Row Fluid -->
 	<div class="row-fluid">
-		<!-- Card Columns -->
+		<!-- CARD COLUMNNS -->
 		<div class="card-columns">
             @foreach ($products as $product)
             <!-- Card -->
             <div class="card">
-                <img class="card-img-top img-fluid" width="100%" src="{{ asset($product->image) }}" alt="Card image cap">
+                <img class="card-img-top img-fluid" width="100%" src="{{ asset($product->image) }}" alt="Card Image">
                 <div class="card-block">
                     <span class="card-title h4">{{ $product->title }}</span>
-                    <p class="card-text"> ${{ $product->price }}CAD <small>+FREE Shipping</small></p>
+                    <p class="card-text"> $ {{ $product->price }}</p>
                     <p class="card-text">{{ $product->description }}</p>
                     <footer>
-                        <small class="text-muted">Posted on {{ date('jS \of F Y', strtotime($product->created_at)) }}</small>
+                        <small class="text-muted">Posted: {{ date('jS \of F Y', strtotime($product->created_at)) }}</small>
                     </footer>
                 </div>
             </div>
             @endforeach
+			<!-- End Card -->
 		</div>
-		<!-- End Card Columnds -->
+		<!-- END CARD COLUMNNS -->
+	</div>
+	<!-- End Row -->
+
+	<!-- Row Fluid -->
+	<div class="row-fluid">
+		<!-- PAGINATION -->
+		<nav aria-label="Page navigation">
+			<ul class="pagination justify-content-center">
+				<!-- Previous -->
+				<li class="page-item disabled">
+					<a class="page-link" href="#">
+						<span>&lsaquo;</span>
+					</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="#">1</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="#">2</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="#">3</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="#">4</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="#">5</a>
+				</li>
+				<!-- Next -->
+				<li class="page-item">
+					<a class="page-link" href="#">&rsaquo;</a>
+				</li>
+				<!-- Next -->
+			</ul>
+		</nav>
+		<!-- END PAGINATION -->
 	</div>
 	<!-- End Row -->
 </div>

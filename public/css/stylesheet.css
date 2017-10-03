@@ -5,9 +5,12 @@ html, body{
   margin:0;
   padding: 0;
 }
-header{background-color: #ffe4c4;}
-main{background-color: #bdb76b;}
-footer{}
+header{
+	background-color: #ffe4c4;
+}
+main{
+	background-color: #bdb76b;
+}
 /* Sticks the Footer to the bottom of the page */
 .content{
 	min-height: 82%;
@@ -17,20 +20,20 @@ footer{}
 .card{
 	display: inline-block;
 }
-.fixed-bottom {position: fixed;bottom: 0;width:100%;}
 
+/* Nav Hover Color */
 .nav-link:hover{
-   color:#f9f94a !important;
+   color:#5DB856 !important;
 }
 
+/* Nav Logo CSS */
 .navbar-brand{
 	color: #d0f2f1;
 	font-weight:bold;
 	font-size: 1.4em;
 }
 
+/* Prompt for Password Validation */
 .help-block{
   color: red !important;
 }
-
-
