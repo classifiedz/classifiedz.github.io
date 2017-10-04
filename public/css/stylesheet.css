@@ -1,32 +1,35 @@
-html, body{
-  width: 100%;
-  height: 100%;
-  font-family: 'Raleway', sans-serif;
-  margin:0;
-  padding: 0;
-  background-color: rgb(250,250,250);
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(250, 250, 250);
 }
-header{
-	background-color: #ffe4c4;
+
+header {
+    background-color: #ffe4c4;
 }
-main{
-	background-color: #bdb76b;
+
+main {
+    background-color: #bdb76b;
 }
+
 /* Sticks the Footer to the bottom of the page */
-.content{
-	min-height: 82%;
+.content {
+    min-height: 82%;
 }
 
 /* Nav Hover Color */
-.nav-link:hover{
-   color:#5DB856 !important;
+.nav-link:hover {
+    color: #5DB856 !important;
 }
 
 /* Nav Logo CSS */
-.navbar-brand{
-	color: #d0f2f1;
-	font-weight:bold;
-	font-size: 1.4em;
+.navbar-brand {
+    color: #d0f2f1;
+    font-weight: bold;
+    font-size: 1.4em;
 }
 
 /* Card Column on Homepage CSS */
@@ -38,6 +41,7 @@ main{
         column-count: 2;
     }
 }
+
 /* Medium Screens*/
 @media (min-width: 48em) {
     .card-columns {
@@ -46,6 +50,7 @@ main{
         column-count: 3;
     }
 }
+
 /* Large Screens */
 @media (min-width: 62em) {
     .card-columns {
@@ -54,6 +59,7 @@ main{
         column-count: 4;
     }
 }
+
 /* X-Large Screens*/
 @media (min-width: 75em) {
     .card-columns {
@@ -64,6 +70,59 @@ main{
 }
 
 /* Prompt for Password Validation */
-.help-block{
-  color: red !important;
+.help-block {
+    color: red !important;
+}
+
+.navbar-header {
+    color: #d0f2f1;
+    font-weight: bold;
+    font-size: 1.4em;
+}
+/* --------------------------- Drop Down Menu and Sub Menu Fixes --------------------------- */
+
+/* Aligns Main Menu under button */
+.dropdownfix{
+  left: auto !important;
+}
+.dropdown-submenu {
+    position: relative;
+}
+.dropdown-submenu > .dropdown-menu {
+    top: 0;
+    left: 100.125%;
+    margin-top: -6px;
+    margin-left: 0px;
+    -webkit-border-radius: 0 6px 6px 6px;
+    -moz-border-radius: 0 6px 6px;
+    border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover > .dropdown-menu {
+    display: block;
+}
+.dropdown-submenu > a:after {
+    display: block;
+    content: " ";
+    float: right;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-left-color: #ccc;
+    margin-top: 5px;
+    margin-right: -10px;
+}
+.dropdown-submenu:hover > a:after {
+    border-left-color: #fff;
+}
+.dropdown-submenu.pull-left {
+    float: none;
+}
+.dropdown-submenu.pull-left > .dropdown-menu {
+    left: -100%;
+    margin-left: 10px;
+    -webkit-border-radius: 6px 0 6px 6px;
+    -moz-border-radius: 6px 0 6px 6px;
+    border-radius: 6px 0 6px 6px;
 }
