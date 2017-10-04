@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2 py-5">
             <div class="panel panel-default">
-                <div class="panel-heading h1">Reset Password</div>
+                <div class="panel-heading h1"style= "width:100px; height:50px; position:relative; left:1.1%; font-size:40px">Reset Password</div>
 
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="{{ route('password.request') }}">
