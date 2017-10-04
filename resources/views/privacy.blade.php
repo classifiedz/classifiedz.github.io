@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-
+<div class="container">
 <h1 class="display-1">Privacy</h1>
 
 <p class="h2">1. General</p>
@@ -16,5 +16,5 @@
  
 Information we collect automatically: When you visit our Website, use our Services and or reply to ads or other content, we automatically collect the information sent to us by your computer, mobile device or other equipment that provides access. This information includes, but is not limited to: 
  </p>
- 
+</div> 
 @endsection

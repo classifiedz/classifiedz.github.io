@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-
+<div class="container">
 <h1 class="display-1">Terms of Service</h1>
 
 <p class="h2">1. General</p>
@@ -13,5 +13,5 @@ Classifiedz is provided to you by SOEN 341 students, 1455 boulevard de Maisonneu
 In order to access and use some or a portion of the Services, you may be required to register with us and set up an account with your email address and a password (your “Account”). The email address you provide will be your email address, and you are solely responsible for maintaining the confidentiality of your password. You are solely responsible for all activities that occur under your Account. Therefore, you should protect your password and make your password difficult for others to guess.
 
 You may connect to the Services with a third-party service and you give us permission to access, store, and use your information from that service as permitted by that service and as may be described in our Privacy Policy. If you believe your Account may have been compromised or misused, contact us immediately.</p>
- 
+</div>
 @endsection
