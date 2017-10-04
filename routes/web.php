@@ -18,4 +18,9 @@ Route::post('/postAd', ['as' => 'storeAd', 'uses' => 'ProductController@storeAd'
 
 Route::get('/categories/{category}', 'ProductCategoryController@show');
 
+Route::get('/privacy', 'PageController@privacyPage');
+Route::get('/postingpolicy', 'PageController@postingpolicyPage');
+Route::get('/refund', 'PageController@refundPage');
+Route::get('/terms', 'PageController@termsPage');
+
 Auth::routes();

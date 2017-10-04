@@ -35,6 +35,7 @@
             @endforeach
 			<!-- End Card -->
 		</div>
+		
 		<!-- END CARD COLUMNNS -->
 	</div>
 	<!-- End Row -->
