@@ -45,7 +45,7 @@ class ProductController extends Controller
 
     // Create Ad
     public function showForm() {
-        $categories = ProductCategory::all();
+        $categories = ProductCategory::where('parent_category_id', null)->get();
 
         return view('postAd', [
             'categories' => $categories,

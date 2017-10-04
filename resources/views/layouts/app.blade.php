@@ -7,7 +7,7 @@
     <meta name="description" content="classified webpage">
     <meta name="keywords" content="frontpage">
     <meta name="author" content="">
-    <title>ClassifiedZ @yield('title')</title>
+    <title>ClassifiedZ | @yield('title')</title>
 
     <!-- === Dependencies === -->
 
@@ -16,7 +16,7 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <!-- Font Awesome-->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="{{ asset('font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
     <!-- Custom CSS -->
     <link href="{{ asset('css/stylesheet.css') }}" rel="stylesheet">
     <!-- Fonts -->
