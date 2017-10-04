@@ -5,9 +5,9 @@
 - css, js and other files are located in `public/`
 
 ### To run project locally:
-`composer install`
-`php artisan migrate:refresh --seed`
-`php artisan serve`
+- `composer install`
+- `php artisan migrate:refresh --seed`
+- `php artisan serve`
 
 ### Authors:    
 [Liyuan Zhang](https://github.com/Swallow666)  
