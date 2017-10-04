@@ -5,7 +5,7 @@
     <div class="row-fluid">
         <div class="col-md-8 col-md-offset-2 py-5">
             <div class="panel panel-default">
-                <div class="panel-heading h1" style= "width:100px; height:50px; position:relative; left:1.1%; font-size:40px">Register</div>
+                <div class="panel-heading h1">Register</div>
 
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="{{ route('register') }}">
