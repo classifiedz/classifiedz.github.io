@@ -24,7 +24,7 @@ class ProductCategoriesTier2TableSeeder extends Seeder
         $electronics = 6;
         $home = 5;
         $vehicles = 4;
-        $others = 0;
+        $others = 3;
 
         $listOfId = array($clothing_id, $electronics_id, $home_id, $vehicles_id, $others_id);
         $itemsOfEachCategory = array($clothing, $electronics, $home, $vehicles, $others);
@@ -36,7 +36,7 @@ class ProductCategoriesTier2TableSeeder extends Seeder
             }
         }
 
-        $names = array('Bags', 'Jewellery', 'Outfits & Outerwear', 'Shoes', 'Accessories & Others', 'Accessories', 'Computers', 'Consoles & Video Games', 'Phones, Tablets & Smart Watches', 'TVs & Media', 'Others', 'Home Appliances', 'Indoor', 'Outdoor', 'Renovation Materials', 'Others', 'Motorized', 'Unmotorized', 'Vehicle Parts', 'Others');
+        $names = array('Bags', 'Jewellery', 'Outfits & Outerwear', 'Shoes', 'Accessories & Others', 'Accessories', 'Computers', 'Consoles & Video Games', 'Phones, Tablets & Smart Watches', 'TVs & Media', 'Others', 'Home Appliances', 'Indoor', 'Outdoor', 'Renovation Materials', 'Others', 'Motorized', 'Unmotorized', 'Vehicle Parts', 'Others', 'Community', 'Real Estates', 'Job & Services');
 
         $size = count($names);
 
