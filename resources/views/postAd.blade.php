@@ -14,6 +14,12 @@
           <select class="form-control" id="category_id" name="category_id">
             @foreach ($categories as $category)
             <option value="{{$category->id}}"> {{ $category->name }}</option>
+              @foreach ($category->children as $categoryTier2)
+              <option value="{{$categoryTier2->id}}">&emsp;{{ $categoryTier2->name }}</option>
+                @foreach ($categoryTier2->children as $categoryTier3)
+                <option value="{{$categoryTier3->id}}">&emsp;&emsp;{{ $categoryTier3->name }}</option>
+                @endforeach
+              @endforeach
             @endforeach
           </select>
 
