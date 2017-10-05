@@ -14,7 +14,8 @@ class ProductCategoriesTableSeeder extends Seeder
     {
     	$faker = \Faker\Factory::create();
 
-        $names = array('Electronics', 'Home Appliances, Furniture & Décor', 'Tools, Patio & Garden', 'Health, Beauty, & Fragrances', 'Clothing, Shoes & Jewelry', 'Toys & Video Games', 'Sports & Outdoors', 'Baby & Children', 'Cars, Vehicles & Parts', 'Movies, Books & Music', 'Free Stuff','Services', 'Others');
+        /*$names = array('Electronics', 'Home Appliances, Furniture & Décor', 'Tools, Patio & Garden', 'Health, Beauty, & Fragrances', 'Clothing, Shoes & Jewelry', 'Toys & Video Games', 'Sports & Outdoors', 'Baby & Children', 'Cars, Vehicles & Parts', 'Movies, Books & Music', 'Free Stuff','Services', 'Others');*/
+        $names = ['Clothing', 'Electronics', 'Home', 'Vehicles', 'Others'];
 
         $size = count($names);
 

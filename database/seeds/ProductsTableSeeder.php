@@ -22,7 +22,7 @@ class ProductsTableSeeder extends Seeder
 
             Product::create([
             	'user_id' => $faker->numberBetween(1,25),
-                'category_id' => $faker->numberBetween(1,13),
+                'category_id' => $faker->numberBetween(1,124),
                 'title' => $faker->sentence,
                 'description' => $faker->paragraph,
                 'price' => $faker->randomFloat($nbMaxDecimals = 2, $min = 0, $max = 10000),
