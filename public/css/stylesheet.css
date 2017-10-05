@@ -69,6 +69,15 @@ main {
     }
 }
 
+/* Card Shadow Effect and Hover  */
+.card{
+	box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.16), 0 1px 7px 0 rgba(0, 0, 0, 0.12);
+	transition: all 0.4s cubic-bezier(.25,.8,.25,1);
+}
+.card:hover {
+  	box-shadow: 0 4px 6px rgba(0,0,0,0.25), 0 4px 9px rgba(0,0,0,0.22);
+}
+
 /* Prompt for Password Validation */
 .help-block {
     color: red !important;
@@ -123,13 +132,12 @@ main {
     -moz-border-radius: 6px 0 6px 6px;
     border-radius: 0.85rem;
 }
-
 /*login & register page font size*/
 .panel-heading h1{
-  width:100px; 
-  height:50px; 
-  position:relative; 
-  left:1.1%; 
+  width:100px;
+  height:50px;
+  position:relative;
+  left:1.1%;
   font-size:40px
 }
 
