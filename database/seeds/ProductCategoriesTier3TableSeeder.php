@@ -34,9 +34,12 @@ $faker = \Faker\Factory::create();
 		$unmotorized_id = 23;
 		$vehicle_parts_id = 24;
 		$vehicle_others_id = 25;
+        $community_id = 26;
+        $real_estates_id = 27;
+        $jobs_id = 28;
 
-        $listOfId = array($bags_id, $jewellery_id, $outfit_id, $shoes_id, $clothing_accesories_id, $electronics_accessories_id, $computers_id, $consoles_id, $phones_id, $tv_id, $electronics_others_id, $appliacnces_id, $indoor_id, $outdoor_id, $renovation_id, $home_others_id, $motorized_id, $unmotorized_id, $vehicle_parts_id, $vehicle_others_id);
-        $itemsOfEachCategory = array(9,6,4,4,0,8,3,4,4,5,0,9,7,11,8,0,8,3,6,0);
+        $listOfId = array($bags_id, $jewellery_id, $outfit_id, $shoes_id, $clothing_accesories_id, $electronics_accessories_id, $computers_id, $consoles_id, $phones_id, $tv_id, $electronics_others_id, $appliacnces_id, $indoor_id, $outdoor_id, $renovation_id, $home_others_id, $motorized_id, $unmotorized_id, $vehicle_parts_id, $vehicle_others_id, $community_id, $real_estates_id, $jobs_id);
+        $itemsOfEachCategory = array(9,6,4,4,0,8,3,4,4,5,0,9,7,11,8,0,8,3,6,0,6,3,0);
         
         $parent_category_id = array();
         for ($i=0; $i < count($listOfId) ; $i++) { 
@@ -45,7 +48,7 @@ $faker = \Faker\Factory::create();
             }
         }
 
-        $names = array('Athletic/Bowling/Doctor\'s/Duffel','Backpack/Saddle','Baguette/Satchel/Tote','Briefcase/Attache/Hobo/Messenger','Clutch/Minaudiere/Wrislet','Cosmetic Case','Envelope','Shoulder/Sling','Others','Bracelets/Rings','Brooches/Pins','Jewellery Sets','Necklaces','Watches','Others','Kids','Youth','Men','Women','Kids','Youth','Men','Women','Cameras/Camcorders Accessories','Cables/Connectors','Computers Accessories','External Storage','Phone/Tablets Accessories','Printer/Scanner/Fax','Speakers/Headsets/Microphones','Others','Desktops','Laptops','Notebooks','Playstation','Nintendo','Xbox','Others','Android','iOS','Windows','Others','Cameras/Camcorders','CDs/DVDs/Blu-ray','LCD/LED/OLED','Plasma','Others','Irons/Garment Steamers','Microwaves/Cookers','Mixers/Blenders/Juicers','Heaters/Humidifiers/Dehumidifiers','Ovens/Toasters','Refrigerators/Freezers','Washers/Dryers','Vacuum Cleaners','Others','Bath/Kitchen/Dining Wares','Bedding','Carpets/Rugs/Runners','Fireplace/Woods','Decors/Accents/Lighting/Fans','Storage/Shelves','Others','Patio/Garden Furniture','BBQ/Outdoor Cooking','Plants/Fertilizer/Soil','Hot Tubs/Pools','Decors/Lighting','Decks/Fences','Snowblowers','Lawnmowers/Leaf Blowers','Tools/Storage','Garage Doors/Openers','Others','Cabinets/Countertops','Doors/Trim/Windows','Electrical','Floors/Walls','Painting/Paint Supplies','Plumbing/Sinks/Showers/Toilets','Roofing','Others','ATVs/Snowmobiles','Boats/Watercrafts','Cars','Motocycles','RV','Trucks','Vans','Others','Bicylces','Boards','Others','Auto Body Parts','Engines & Parts/Drivetrain/Transmission','Interiors','Tires/Rims','Vehicle Accessories','Others');
+        $names = array('Athletic/Bowling/Doctor\'s/Duffel','Backpack/Saddle','Baguette/Satchel/Tote','Briefcase/Attache/Hobo/Messenger','Clutch/Minaudiere/Wrislet','Cosmetic Case','Envelope','Shoulder/Sling','Others','Bracelets/Rings','Brooches/Pins','Jewellery Sets','Necklaces','Watches','Others','Kids','Youth','Men','Women','Kids','Youth','Men','Women','Cameras/Camcorders Accessories','Cables/Connectors','Computers Accessories','External Storage','Phone/Tablets Accessories','Printer/Scanner/Fax','Speakers/Headsets/Microphones','Others','Desktops','Laptops','Notebooks','Playstation','Nintendo','Xbox','Others','Android','iOS','Windows','Others','Cameras/Camcorders','CDs/DVDs/Blu-ray','LCD/LED/OLED','Plasma','Others','Irons/Garment Steamers','Microwaves/Cookers','Mixers/Blenders/Juicers','Heaters/Humidifiers/Dehumidifiers','Ovens/Toasters','Refrigerators/Freezers','Washers/Dryers','Vacuum Cleaners','Others','Bath/Kitchen/Dining Wares','Bedding','Carpets/Rugs/Runners','Fireplace/Woods','Decors/Accents/Lighting/Fans','Storage/Shelves','Others','Patio/Garden Furniture','BBQ/Outdoor Cooking','Plants/Fertilizer/Soil','Hot Tubs/Pools','Decors/Lighting','Decks/Fences','Snowblowers','Lawnmowers/Leaf Blowers','Tools/Storage','Garage Doors/Openers','Others','Cabinets/Countertops','Doors/Trim/Windows','Electrical','Floors/Walls','Painting/Paint Supplies','Plumbing/Sinks/Showers/Toilets','Roofing','Others','ATVs/Snowmobiles','Boats/Watercrafts','Cars','Motocycles','RV','Trucks','Vans','Others','Bicylces','Boards','Others','Auto Body Parts','Engines & Parts/Drivetrain/Transmission','Interiors','Tires/Rims','Vehicle Accessories','Others','Activities','Events','Friendship/Networking','Team','Volunteers','Others','For Rent','For Sale','Others');
 
         $size = count($names);
 

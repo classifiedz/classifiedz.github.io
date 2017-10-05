@@ -17,12 +17,12 @@ class ProductsTableSeeder extends Seeder
         $statuses = array('ACTIVE', 'PURCHASED', 'INACTIVE', 'REMOVED');
 
         // And now, let's create a few articles in our database:
-        for ($i = 0; $i < 50; $i++) {
+        for ($i = 0; $i < 250; $i++) {
             $randomNumber = $faker->numberBetween(0,3);
 
             Product::create([
             	'user_id' => $faker->numberBetween(1,25),
-                'category_id' => $faker->numberBetween(1,124),
+                'category_id' => $faker->numberBetween(1,136),
                 'title' => $faker->sentence,
                 'description' => $faker->paragraph,
                 'price' => $faker->randomFloat($nbMaxDecimals = 2, $min = 0, $max = 10000),
