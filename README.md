@@ -1,5 +1,6 @@
 # Term Project Repo ![Travis](https://travis-ci.org/classifiedz/classifiedz.github.io.svg?branch=master)
-### classifiedz.github.io   
+### [classifiedz.github.io](https://github.com/classifiedz/classifiedz.github.io)   
+### [classifiedz.xyz](http://classifiedz.xyz)   
 ### Term project repo for SOEN341, a classified site software.  
 - index and other html files are located in `resources/views/`  
 - css, js and other files are located in `public/`
