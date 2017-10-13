@@ -144,3 +144,7 @@ main {
 .category_breadcrumb{
   padding-bottom: 15px;
 }
+
+#sortByDropdown, .category_breadcrumb {
+    padding-top: 15px;
+}

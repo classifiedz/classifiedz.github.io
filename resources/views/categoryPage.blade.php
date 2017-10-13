@@ -3,10 +3,16 @@
 @section('title', $category->name)
 
 @section('content')
-<!-- PAGE CONTENT CONTAINER -->
-<div class="container-fluid py-3">
-	<!-- BREADCRUMB -->
-	<div class="category_breadcrumb">
+
+<div>
+	<br/>
+	<h2 class="text-center">Category: {{ $category->name }}</h3>
+	<h3 class="text-center">Items found: {{ count($products) }}</h2>
+</div>
+
+<div class="container clearfix">
+		<!-- BREADCRUMB -->
+	<div class="category_breadcrumb float-left">
 		@if (isset($category->parent))
 			@if ((isset($category->parent->parent)))
 				<a href='/categories/{{ $category->parent->parent->id }}'>
@@ -23,10 +29,23 @@
 	</div>
 	<!-- END BREADCRUMB -->
 
-    <br/>
-	<h3>Category: {{ $category->name }}</h3>
-	<h2>Items found: {{ count($products) }}</h2>
+	<div id="sortByDropdown" class="dropdown float-right">
+	  <a class="btn btn-secondary dropdown-toggle" href="https://example.com" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	    Sort by
+	  </a>
 
+	  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+	    <a class="dropdown-item sortBy" id="newestFirst">Newest</a>
+	    <a class="dropdown-item sortBy" id="oldestFirst">Oldest</a>
+	    <a class="dropdown-item sortBy" id="cheapestFirst">Price Low to High</a>
+	    <a class="dropdown-item sortBy" id="expensiveFirst">Price High to Low</a>
+	    <a class="dropdown-item sortBy" id="popularFirst">Most Viewed</a>
+	  </div>
+	</div>
+</div>
+
+<!-- PAGE CONTENT CONTAINER -->
+<div class="container-fluid py-3">
 	<!-- Row Fluid -->
 	<div class="row-fluid">
 		<!-- CARD COLUMNNS -->
