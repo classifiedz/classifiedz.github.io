@@ -25,7 +25,7 @@
 
     <br/>
 	<h3>Category: {{ $category->name }}</h3>
-	<h2>Items found: {{ count($category->products) }}</h2>
+	<h2>Items found: {{ count($products) }}</h2>
 
 	<!-- Row Fluid -->
 	<div class="row-fluid">
@@ -34,14 +34,14 @@
             @foreach ($products as $product)
             <!-- Card -->
             <div class="card mb-3">
-                <img class="card-img-top img-fluid" width="100%" src="{{ asset($product->image) }}" alt="Card Image">
+                <img class="card-img-top img-fluid" width="100%" src="{{ asset($product->image) }}" alt="Post Image">
                 <div class="card-block p-3">
                     <span class="card-title h4 text-justify">{{ $product->title }}</span>
-                    <!-- <p class="card-text text-justify"> $ {{ $product->price }}</p> -->
-                    <p class="card-text mb-1">{{ $product->description }}</p>
+                    <p class="card-text mb-2">{{ $product->description }}</p>
                     <footer class="text-right">
-						<small class="text-muted">Posted: {{ date('F jS, Y', strtotime($product->created_at)) }}</small><br/>
-						<span class="badge badge-success">$ {{ $product->price }}</span>
+						<small class="badge badge-pill badge-warning">{{ $product->category->name}}</small><br/>
+						<small class="badge badge-pill badge-info">{{ date('M-jS', strtotime($product->created_at)) }}</small>
+						<small class="badge badge-pill badge-success">$ {{ $product->price }}</small>
                     </footer>
                 </div>
             </div>
