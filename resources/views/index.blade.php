@@ -21,7 +21,7 @@
             @foreach ($products as $product)
             <!-- Card -->
             <div class="card mb-3">
-                <img class="card-img-top img-fluid" width="100%" src="{{ asset($product->image) }}" alt="Post Image">
+                <a href="/ads/{{ $product->id }}""><img class="card-img-top img-fluid" width="100%" src="{{ asset($product->image) }}" alt="Post Image"></a>
                 <div class="card-block p-3">
                     <span class="card-title h4 text-justify">{{ $product->title }}</span>
                     <p class="card-text mb-2">{{ $product->description }}</p>
