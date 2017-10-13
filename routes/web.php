@@ -12,6 +12,7 @@
 */
 
 Route::get('/', ['as' => 'index', 'uses' => 'HomeController@index']);
+Route::get('/ads/{product}', 'ProductController@showAd');
 
 Route::get('/postAd', ['as' => 'postAdForm', 'uses' => 'ProductController@showForm'])->middleware('auth');
 Route::post('/postAd', ['as' => 'storeAd', 'uses' => 'ProductController@storeAd']);
