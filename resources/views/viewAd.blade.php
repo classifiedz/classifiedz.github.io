@@ -6,6 +6,7 @@
     <div class="row">
         <div class=" col-sm-6">
             <img class="img-fluid" src="{{ asset($product->image) }}" alt="Post Image">
+            <small>This ad was posted on {{ date('M-jS', strtotime($product->created_at)) }} </small>
         </div>
         <div class=" col-sm-6">
             <h2>{{ $product->title }}</h2>
