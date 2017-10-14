@@ -9,6 +9,7 @@
     </div>
     <div class=" col-sm-6">
       <h2>{{ $product->title }}</h2>
+      <small>Sold by <a href="#">User</a></small>
     </div>
   </div>
 </div>
