@@ -42,7 +42,7 @@
                         @if (count($category->children) > 0)
                             <li class="dropdown-item dropdown-submenu">
                                 <a href="/categories/{{ $category->id }}">
-                                    {{ $category->name }} 
+                                    {{ $category->name }}
                                     <span class="caret"></span>
                                     <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>
                                 </a>
@@ -51,7 +51,7 @@
                                         @if (count($category2ndTier->children) > 0)
                                             <li class="dropdown-item dropdown-submenu">
                                                 <a href="/categories/{{ $category2ndTier->id }}">
-                                                    {{ $category2ndTier->name }} 
+                                                    {{ $category2ndTier->name }}
                                                     <span class="caret"></span>
                                                     <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>
                                                 </a>
@@ -74,7 +74,7 @@
                 </ul>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('login') }}"><i class="fa fa-user"></i> Your Store</a>
+                <a class="nav-link" href="/profile"><i class="fa fa-user"></i> Your Store</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('postAdForm') }}"><i class="fa fa-pencil-square-o"></i> Post an
@@ -89,12 +89,14 @@
             </li>
             @else
             <li class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
-                aria-expanded="false">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button">
                 {{ Auth::user()->name }} <span class="caret"></span>
             </a>
 
             <ul class="dropdown-menu" role="menu">
+                <li>
+                    <a href="/profile">Profile</a>
+                </li>
                 <li>
                     <a href="{{ route('logout') }}"
                     onclick="event.preventDefault();
@@ -103,10 +105,10 @@
                 </a>
 
                 <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                style="display: none;">
-                {{ csrf_field() }}
-            </form>
-        </li>
+	                style="display: none;">
+	                {{ csrf_field() }}
+                </form>
+                </li>
     </ul>
 </li>
 @endguest
@@ -122,7 +124,7 @@
 <div class="container-fluid content">
 
     @yield('content')
-    
+
 </div>
 <!-- FOOTER -->
 <footer class="p-5 bg-inverse text-muted">
