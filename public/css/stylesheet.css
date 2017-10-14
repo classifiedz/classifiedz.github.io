@@ -90,8 +90,8 @@ main {
     font-size: 1.4em;
 }
 /* --------------------------- Drop Down Menu and Sub Menu Fixes --------------------------- */
-
-/* Aligns Main Menu under button */
+/*
+Aligns Main Menu under button
 .dropdownfix{
     margin-top: 0px !important;
     left: auto !important;
@@ -131,7 +131,7 @@ main {
     -webkit-border-radius: 6px 0 6px 6px;
     -moz-border-radius: 6px 0 6px 6px;
     border-radius: 0.85rem;
-}
+}*/
 /*login & register page font size*/
 .panel-heading h1{
   width:100px;
@@ -139,10 +139,6 @@ main {
   position:relative;
   left:1.1%;
   font-size:40px
-}
-
-.category_breadcrumb{
-  padding-bottom: 15px;
 }
 
 

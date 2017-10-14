@@ -25,9 +25,9 @@
                 <div class="card-block p-3">
                     <a id="cardTitle" href="/ads/{{ $product->id }}"><span class="card-title h4 text-justify">{{ $product->title }}</span></a>
                     <p class="card-text mb-2">{{ $product->description }}</p>
-                    <footer class="text-right">
-						<small class="badge badge-pill badge-warning">{{ $product->category->name}}</small><br/>
-						<small class="badge badge-pill badge-info">{{ date('M-jS', strtotime($product->created_at)) }}</small>
+					<footer class="text-right">
+						<small class="text-muted">{{ date('M-jS', strtotime($product->created_at)) }}</small><br/>
+						<a href="/categories/{{$product->category->id}}"><small class="badge badge-pill badge-info">{{ $product->category->name}}</small></a>
 						<small class="badge badge-pill badge-success">$ {{ $product->price }}</small>
                     </footer>
                 </div>
