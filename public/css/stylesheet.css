@@ -144,3 +144,8 @@ main {
 .category_breadcrumb{
   padding-bottom: 15px;
 }
+
+/*ad links */
+#cardTitle:hover{
+  text-decoration: none;
+}
