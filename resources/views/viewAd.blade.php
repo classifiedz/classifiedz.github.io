@@ -11,7 +11,10 @@
       <h2>{{ $product->title }}</h2>
       <small>Sold by <a href="#">User</a></small>
     </br></br>
-      <h3>$ {{ $product->price}}</h4>
+      <h3>$ {{ $product->price}}</h3>
+    </br></br>
+      <h5>Description: </h5>
+      <p>{{ $product->description}}</p>
     </div>
   </div>
 </div>
