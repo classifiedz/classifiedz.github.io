@@ -2,9 +2,12 @@
 
 @section('content')
 
-<div class="container-fluid py-5">
-  <div class="row-fluid">
-    <div class="container col-sm-8">
+<div class="container py-5">
+  <div class="row">
+    <div class=" col-sm-6">
+      <img class="img-fluid" src="{{ asset($product->image) }}" alt="Post Image">
+    </div>
+    <div class=" col-sm-6">
       <h2>{{ $product->title }}</h2>
     </div>
   </div>
