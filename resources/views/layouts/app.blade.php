@@ -31,7 +31,7 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <!-- Navbar Content -->
-    <a class="navbar-brand navbar-header" href="/"><i class="fa fa-search">&nbsp;</i>ClassifiedZ</a>
+        <a class="navbar-brand" href="/" title="homepage" id="logo"><img src="/img/classifiedz.png" width="180" height="32"></a>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <!-- Navbar Items -->
         <ul class="navbar-nav mr-auto">
