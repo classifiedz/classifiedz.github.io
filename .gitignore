@@ -9,8 +9,5 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
-# .env
-public/css/stylesheet.css
-resources/views/layouts/app.blade.php
-resources/views/layouts/app.blade.php
+.env
 resources/views/layouts/trying

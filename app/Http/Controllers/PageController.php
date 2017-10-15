@@ -21,7 +21,7 @@ class PageController extends Controller
      * Show the application dashboard.
      *
      * @return \Illuminate\Http\Response
-     */
+	*/
     public function privacyPage()
     {
         return view('privacy');
@@ -38,6 +38,6 @@ class PageController extends Controller
     {
         return view('terms');
     }
-    
+
 
 }

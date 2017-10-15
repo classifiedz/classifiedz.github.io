@@ -36,45 +36,21 @@
         <!-- Navbar Items -->
         <ul class="navbar-nav mr-auto">
             <li class="nav-item dropdown">
-                <li class=" nav-link dropdown-toggle" href="#" data-toggle="dropdown"><i class="fa fa-globe"></i> Browse</li>
-                <ul class="dropdown-menu dropdownfix" role="menu" aria-labelledby="dLabel">
+                <a class=" nav-link dropdown-toggle" href="!#" data-toggle="dropdown"><i class="fa fa-globe"></i> Browse</a>
+				<div class="dropdown-menu bg-primary">
                     @foreach ($categories as $category)
                         @if (count($category->children) > 0)
-                            <li class="dropdown-item dropdown-submenu">
-                                <a href="/categories/{{ $category->id }}">
-                                    {{ $category->name }} 
-                                    <span class="caret"></span>
-                                    <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    @foreach ($category->children as $category2ndTier)
-                                        @if (count($category2ndTier->children) > 0)
-                                            <li class="dropdown-item dropdown-submenu">
-                                                <a href="/categories/{{ $category2ndTier->id }}">
-                                                    {{ $category2ndTier->name }} 
-                                                    <span class="caret"></span>
-                                                    <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>
-                                                </a>
-                                                <ul class="dropdown-menu">
-                                                    @foreach ($category2ndTier->children as $category3rdTier)
-                                                        <li><a class="dropdown-item" href="/categories/{{ $category3rdTier->id }}">{{ $category3rdTier->name }}</a></li>
-                                                    @endforeach
-                                                </ul>
-                                            </li>
-                                        @else
-                                            <li><a class="dropdown-item" href="/categories/{{ $category2ndTier->id }}">{{ $category2ndTier->name }}</a></li>
-                                        @endif
-                                    @endforeach
-                                </ul>
-                            </li>
+                            <a class="dropdown-item text-white bg-primary" href="/categories/{{ $category->id }}">
+                                {{ $category->name }}
+                            </a>
                         @else
-                            <li><a class="dropdown-item" href="/categories/{{ $category->id }}">{{ $category->name }}</a></li>
+							<a class="dropdown-item" href="/categories/{{ $category->id }}">{{ $category->name }}</a>
                         @endif
                     @endforeach
-                </ul>
+                </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('login') }}"><i class="fa fa-user"></i> Your Store</a>
+                <a class="nav-link" href="/profile"><i class="fa fa-user"></i> Your Store</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('postAdForm') }}"><i class="fa fa-pencil-square-o"></i> Post an
@@ -82,47 +58,43 @@
             </li>
         </ul>
         <ul class="navbar-nav">
-
             @guest
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('login') }}"> <i class="fa fa-sign-in"></i> Login</a>
             </li>
             @else
             <li class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
-                aria-expanded="false">
-                {{ Auth::user()->name }} <span class="caret"></span>
-            </a>
+                <a href="!#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                	{{ Auth::user()->name }} <span class="caret"></span>
+            	</a>
 
-            <ul class="dropdown-menu" role="menu">
-                <li>
-                    <a href="{{ route('logout') }}"
-                    onclick="event.preventDefault();
-                    document.getElementById('logout-form').submit();">
-                    Logout
-                </a>
-
-                <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                style="display: none;">
-                {{ csrf_field() }}
-            </form>
-        </li>
-    </ul>
-</li>
-@endguest
-<!-- Navbar Search Field -->
-<form class="form-inline my-2 my-lg-0">
-    <input class="form-control mr-sm-2" type="text" placeholder="Search for anything...">
-    <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
-</form>
-</ul>
-</div>
+	            <div class="dropdown-menu bg-primary">
+                    <a class="dropdown-item text-white bg-primary" href="/profile">Profile</a>
+                    <a class="dropdown-item text-white bg-primary" href="{{ route('logout') }}"
+	                    onclick="event.preventDefault();
+	                    document.getElementById('logout-form').submit();">
+	                    	Logout
+                	</a>
+	                <form id="logout-form" action="{{ route('logout') }}" method="POST"
+		                style="display: none;">
+		                {{ csrf_field() }}
+	                </form>
+				</div>
+			</li>
+		@endguest
+		<!-- Navbar Search Field -->
+		<form class="form-inline my-2 my-lg-0">
+		    <input class="form-control mr-sm-2" type="text" placeholder="Search for anything...">
+		    <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+		</form>
+		</ul>
+	</div>
 </nav>
 <!-- NAV END -->
 <div class="container-fluid content">
 
     @yield('content')
-    
+
 </div>
 <!-- FOOTER -->
 <footer class="p-5 bg-inverse text-muted">
