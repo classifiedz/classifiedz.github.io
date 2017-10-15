@@ -5,6 +5,7 @@ html, body {
     margin: 0;
     padding: 0;
     background-color: rgb(250, 250, 250);
+   
 }
 
 header {
@@ -139,6 +140,7 @@ Aligns Main Menu under button
   position:relative;
   left:1.1%;
   font-size:40px
+  margin-top:10;
 }
 
 /* profile page css*/
