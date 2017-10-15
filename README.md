@@ -3,6 +3,7 @@
 ### Website: [classifiedz.xyz](http://classifiedz.xyz)
 ### Slack : [classifiedz.slack.com](https://classifiedz.slack.com/)
 Repo for the term project for SOEN 341, a classifieds website.  
+
 ---  
 ## Important Notes on Laravel
 1. There is a lot of documenation on how to use [laravel here.](https://laravel.com/)  
@@ -50,8 +51,9 @@ _example:_
 	@endforeach
 	```  
 5. The type of database we are using is `MySQL`
-5.  Accessing data in the database is done through `{{ $tableName->row }}` or like the example above `{{ $user->id }}`
+6.  Accessing data in the database is done through `{{ $tableName->row }}` or like the example above `{{ $user->id }}`
 
+---  
 ## How to Run the Project Locally (OSX)  
 1. Make sure you have the latest version of Xcode and Git installed
 2. Download and install the latest version of XAMPP
@@ -69,6 +71,7 @@ _example:_
 	- `$ php artisan serve --host 192.168.64.2` This should be the sam IP you see in XAMPP
 5. In your browser go to `http://192.168.64.2:8000` :simple_smile::clap:
 
+---  
 ## How to Add New Rows to the database (OSX) 
 The following is an example adding a row called `city` to the `user` table in the `classifiedz` database.  
 
@@ -109,6 +112,7 @@ These instructions take into assumption that you have already created an HTML pa
 	- `href="/PageName"` not ~~`href="/PageName.blade.php"`~~
 	- note that we never used file extensions through this guide.
 7. You're now on track to becoming a ninja web dev :white_check_mark:  
+
 ---  
 ### Authors:  
 [Liyuan Zhang](https://github.com/Swallow666)  
