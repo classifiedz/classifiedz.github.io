@@ -27,6 +27,9 @@ class ProductCategoryController extends Controller
             $orderBy = 'desc';
             break;
             case 'popularFirst':
+            $sortBy_column = 'views';
+            $orderBy = 'desc';
+            break;
             case 'newestFirst':
             default:
             $sortBy_column = 'created_at';

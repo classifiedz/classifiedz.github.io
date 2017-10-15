@@ -28,6 +28,7 @@ class ProductsTableSeeder extends Seeder
                 'price' => $faker->randomFloat($nbMaxDecimals = 2, $min = 0, $max = 10000),
                 'status' => $statuses[$randomNumber],
                 'image' => $faker->imageUrl($width = 640, $height = 480),
+                'views' => $faker->numberBetween(0, 250),
             ]);
         }
     }

@@ -75,6 +75,10 @@ class ProductController extends Controller
     }
 
 		public function showAd(Product $product){
+            $views = $product->views;
+            $product->views = $views + 1;
+            $product->save();
+
 			return view('viewAd', ['product' => $product]);
 		}
 }
