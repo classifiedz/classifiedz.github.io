@@ -143,6 +143,12 @@ Aligns Main Menu under button
   margin-top:10;
 }
 
+
+/*ad links */
+#cardTitle:hover{
+  text-decoration: none;
+}
+
 /* profile page css*/
 
 .user-row {
