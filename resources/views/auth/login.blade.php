@@ -3,10 +3,11 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-6 col-lg-6 col-md-12 col-sm-12">
+        <div class="col-sm-5">
+            <div class ="form-box">
             <div class="panel panel-default">
                 <div class="panel-heading h1">Login</div>
-
+ 
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
@@ -67,9 +68,14 @@
                     </form>
                 </div>
             </div>
+            </div>
         </div>
+ <div class="col-sm-1 middle-border"></div>
+                        <div class="col-sm-1"></div>
 
-        <div class="col-6 col-lg-6 col-md-12 col-sm-12">
+
+        <div class="col-sm-5">
+            <div class ="form-box">
             <div class="panel panel-default">
                 <div class="panel-heading h1">Register</div>
 
@@ -155,6 +161,7 @@
                     </form>
                 </div>
             </div>
+        </div>
         </div>
     </div>
 </div>
