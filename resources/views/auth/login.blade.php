@@ -5,9 +5,14 @@
     <div class="row">
         <div class="col-sm-5">
             <div class ="form-box">
+                <div class="form-top">
+                    <div class="form-top-left">
             <div class="panel panel-default">
                 <div class="panel-heading h1">Login</div>
- 
+                    </div>
+                    
+                </div>
+                <div class="form-bottom">
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
@@ -55,7 +60,7 @@
                                 <button type="submit" class="btn btn-primary">
                                     Login
                                 </button>
-
+                </div>               
                                 <a class="btn btn-link" href="{{ route('password.request') }}">
                                     Forgot Your Password?
                                 </a>
