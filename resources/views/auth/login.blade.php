@@ -82,9 +82,14 @@
 
         <div class="col-sm-5">
             <div class ="form-box">
+                <div class="form-top">
+                    <div class="form-top-left">
             <div class="panel panel-default">
                 <div class="panel-heading h1">Register</div>
+                    </div>
 
+                </div>
+                <div class="form-bottom">
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="{{ route('register') }}">
                         {{ csrf_field() }}
@@ -157,6 +162,7 @@
                                 <button type="submit" class="btn btn-primary">
                                     Register
                                 </button>
+                </div>                
                                 <br /><br />Already have an account?
                                 <a class="btn btn-link" href="{{ route('login') }}">
                                     Sign in here
