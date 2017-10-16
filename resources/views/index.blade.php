@@ -4,22 +4,6 @@
 
 @section('content')
 <!-- PAGE CONTENT CONTAINER -->
-<div class="container clearfix">
-	<div id="sortByDropdown" class="dropdown float-right">
-	  <a class="btn btn-secondary dropdown-toggle" href="https://example.com" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	    Sort by
-	  </a>
-
-	  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-	    <a class="dropdown-item sortBy" id="newestFirst">Newest</a>
-	    <a class="dropdown-item sortBy" id="oldestFirst">Oldest</a>
-	    <a class="dropdown-item sortBy" id="cheapestFirst">Price Low to High</a>
-	    <a class="dropdown-item sortBy" id="expensiveFirst">Price High to Low</a>
-	    <a class="dropdown-item sortBy" id="popularFirst">Most Viewed</a>
-	  </div>
-	</div>
-</div>
-
 <div class="container-fluid py-3">
     @if(session('alert_msg'))
     <div class="alert alert-info alert-dismissible fade show" role="alert">
@@ -30,6 +14,21 @@
     </div>
     @endif
 
+	<div class="row-fluid clearfix pb-3">
+		<div class="dropdown float-right">
+			<a class="btn btn-secondary dropdown-toggle" href="#!" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				Sort by
+			</a>
+
+			<div class="dropdown-menu dropdown-menu-right">
+				<a class="dropdown-item sortBy" id="newestFirst">Newest</a>
+				<a class="dropdown-item sortBy" id="oldestFirst">Oldest</a>
+				<a class="dropdown-item sortBy" id="cheapestFirst">Price Low to High</a>
+				<a class="dropdown-item sortBy" id="expensiveFirst">Price High to Low</a>
+				<a class="dropdown-item sortBy" id="popularFirst">Most Viewed</a>
+			</div>
+		</div>
+	</div>
 	<!-- Row Fluid -->
 	<div class="row-fluid">
 		<!-- CARD COLUMNNS -->
@@ -101,3 +100,4 @@
     @endforeach --}}
 </div>
 @endsection
+<!-- End Page Cointainer -->

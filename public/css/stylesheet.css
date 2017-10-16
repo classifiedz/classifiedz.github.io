@@ -5,7 +5,7 @@ html, body {
     margin: 0;
     padding: 0;
     background-color: rgb(250, 250, 250);
-   
+
 }
 
 header {
@@ -159,15 +159,24 @@ Aligns Main Menu under button
     margin-bottom: 0;
 }
 
+/* Drop Down
 .dropdown-user {
     margin: 13px 0;
     padding: 5px;
     height: 100%;
 }
+
 .dropdown-user:hover {
     cursor: pointer;
 }
-
+#sortByDropdown, .category_breadcrumb {
+    padding-top: 15px;
+}
+/* End Dropdown*/
+.dropdown-item {
+    cursor: pointer;
+    cursor: hand;
+}
 .table-user-information > tbody > tr {
     border-top: 1px solid rgb(221, 221, 221);
 }
@@ -181,7 +190,3 @@ Aligns Main Menu under button
     border-top: 0;
 }
 /*profile page css end*/
-
-#sortByDropdown, .category_breadcrumb {
-    padding-top: 15px;
-}

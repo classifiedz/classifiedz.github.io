@@ -34,6 +34,7 @@
 <!-- Row -->
 <div class="row-fluid pt-2 pb-3">
 	@foreach ($category->children as $category2ndTier)
+		<!-- Button Group -->
 		<div class="btn-group p-1">
 			@if (count($category2ndTier->children) > 0)
 				<a role="button" class="btn btn-secondary" href="/categories/{{ $category2ndTier->id }}">{{ $category2ndTier->name }}</a>
@@ -47,19 +48,20 @@
 				<a class="btn btn-secondary" role="button" href="/categories/{{ $category2ndTier->id }}">{{ $category2ndTier->name }}</a>
 			@endif
 		</div>
+		<!-- End Button Group -->
 	@endforeach
-  <div id="sortByDropdown" class="dropdown float-right">
-    <a class="btn btn-secondary dropdown-toggle" href="https://example.com" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Sort by
-    </a>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-      <a class="dropdown-item sortBy" id="newestFirst">Newest</a>
-      <a class="dropdown-item sortBy" id="oldestFirst">Oldest</a>
-      <a class="dropdown-item sortBy" id="cheapestFirst">Price Low to High</a>
-      <a class="dropdown-item sortBy" id="expensiveFirst">Price High to Low</a>
-      <a class="dropdown-item sortBy" id="popularFirst">Most Viewed</a>
-    </div>
-  </div>
+  	<div id="sortByDropdown" class="dropdown float-right pr-2">
+	    <a role="button" class="btn btn-secondary dropdown-toggle" href="https://example.com" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	      Sort by
+	    </a>
+		<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+			<a class="dropdown-item sortBy" id="newestFirst">Newest</a>
+			<a class="dropdown-item sortBy" id="oldestFirst">Oldest</a>
+			<a class="dropdown-item sortBy" id="cheapestFirst">Price Low to High</a>
+			<a class="dropdown-item sortBy" id="expensiveFirst">Price High to Low</a>
+			<a class="dropdown-item sortBy" id="popularFirst">Most Viewed</a>
+		</div>
+  	</div>
 </div>
 <!-- End Row -->
 
@@ -67,22 +69,22 @@
 <div class="row-fluid">
 	<!-- CARD COLUMNNS -->
 	<div class="card-columns">
-        @foreach ($products as $product)
-        <!-- Card -->
-        <div class="card mb-3">
-            <img class="card-img-top img-fluid" width="100%" src="{{ asset($product->image) }}" alt="Post Image">
-            <div class="card-block p-3">
-                <span class="card-title h4 text-justify">{{ $product->title }}</span>
-                <p class="card-text mb-2">{{ $product->description }}</p>
+		@foreach ($products as $product)
+		<!-- Card -->
+		<div class="card mb-3">
+			<a href="/ads/{{ $product->id }}" ><img class="card-img-top img-fluid" width="100%" src="{{ asset($product->image) }}" alt="Post Image"></a>
+			<div class="card-block p-3">
+				<a id="cardTitle" href="/ads/{{ $product->id }}"><span class="card-title h4 text-justify">{{ $product->title }}</span></a>
+				<p class="card-text mb-2">{{ $product->description }}</p>
 				<footer class="text-right">
 					<small class="text-muted">{{ date('M-jS', strtotime($product->created_at)) }}</small><br/>
 					<a href="/categories/{{$product->category->id}}"><small class="badge badge-pill badge-info">{{ $product->category->name}}</small></a>
 					<small class="badge badge-pill badge-success">$ {{ $product->price }}</small>
 				</footer>
-            </div>
-        </div>
-        @endforeach
+			</div>
+		</div>
 		<!-- End Card -->
+		@endforeach
 	</div>
 	<!-- END CARD COLUMNNS -->
 </div>
@@ -131,3 +133,4 @@
     @endforeach --}}
 </div>
 @endsection
+<!-- End Page Container ->
