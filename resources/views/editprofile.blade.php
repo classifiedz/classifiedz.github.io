@@ -36,9 +36,7 @@
 			</li>
 			
 			<li class="list-inline-item p-1">
-				<a href="{{ route('logout') }}"
-				onclick="event.preventDefault();
-				document.getElementById('logout-form').submit();"
+				<a href="/profile"
 				class="btn btn-danger"  role="button">
 					Cancel
 				</a>
