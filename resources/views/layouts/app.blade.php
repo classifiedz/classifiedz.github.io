@@ -22,7 +22,7 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
     <!-- Favicon -->
-    <link rel="shortcut icon" href={{ asset('img/classi_fav.ico') }} />
+    <link rel="shortcut icon" href="{{ asset('img/favicon.png') }}" />
 
 </head>
 <body>
@@ -33,7 +33,7 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <!-- Navbar Content -->
-        <a class="navbar-brand" href="/" title="homepage" id="logo"><img src={{ asset('img/classifiedz.png') }} width="180" height="32"></a>
+    <a class="navbar-brand" href="/" title="homepage" id="logo"><img src="{{ asset('img/classifiedz.png') }}" width="180" height="32"></a>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <!-- Navbar Items -->
         <ul class="navbar-nav mr-auto">
