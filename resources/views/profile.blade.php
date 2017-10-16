@@ -36,7 +36,7 @@
 		</table>
 		<ul class="list-inline">
   			<li class="list-inline-item p-1">
-				<a href="#!" class="btn btn-success disabled"  role="button">Edit Profile</a>
+				<a href="privacy" class="btn btn-primary"  role="button">Edit Profile</a>
 			</li>
 			<li class="list-inline-item p-1">
 				<a href="#!" class="btn btn-info disabled"  role="button">Wish List</a>
