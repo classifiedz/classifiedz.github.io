@@ -140,9 +140,48 @@ Aligns Main Menu under button
   height:50px;
   position:relative;
   left:1.1%;
+
   font-size:40em;
 }
 
+.form-box {
+    margin-top: 70px;
+}
+
+.form-top {
+    overflow: hidden;
+    padding: 0 25px 15px 25px;
+    background: #fff;
+    -moz-border-radius: 4px 4px 0 0; -webkit-border-radius: 4px 4px 0 0; border-radius: 4px 4px 0 0;
+    text-align: left;
+}
+
+.form-top-left {
+    float: left;
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 8px;
+    padding-left: 15px;
+    background: #e6f2ff;
+}
+
+
+.form-top-right {
+    float: left;
+    width: 25%;
+    padding-top: 5px;
+    font-size: 66px;
+    color: #ddd;
+    line-height: 100px;
+    text-align: right;
+}
+
+.form-bottom {
+    padding: 25px 25px 30px 25px;
+    background: #e0ebeb;
+    -moz-border-radius: 0 0 4px 4px; -webkit-border-radius: 0 0 4px 4px; border-radius: 0 0 4px 4px;
+    text-align: left;
+}
 
 /*ad links */
 #cardTitle:hover{
