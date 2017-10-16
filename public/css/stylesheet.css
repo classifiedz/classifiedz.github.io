@@ -5,6 +5,7 @@ html, body {
     margin: 0;
     padding: 0;
     background-color: rgb(250, 250, 250);
+   
 }
 
 header {
@@ -90,8 +91,8 @@ main {
     font-size: 1.4em;
 }
 /* --------------------------- Drop Down Menu and Sub Menu Fixes --------------------------- */
-
-/* Aligns Main Menu under button */
+/*
+Aligns Main Menu under button
 .dropdownfix{
     margin-top: 0px !important;
     left: auto !important;
@@ -131,7 +132,7 @@ main {
     -webkit-border-radius: 6px 0 6px 6px;
     -moz-border-radius: 6px 0 6px 6px;
     border-radius: 0.85rem;
-}
+}*/
 /*login & register page font size*/
 .panel-heading h1{
   width:100px;
@@ -139,11 +140,47 @@ main {
   position:relative;
   left:1.1%;
   font-size:40px
+  margin-top:10;
 }
 
-.category_breadcrumb{
-  padding-bottom: 15px;
+
+/*ad links */
+#cardTitle:hover{
+  text-decoration: none;
 }
+
+/* profile page css*/
+
+.user-row {
+    margin-bottom: 14px;
+}
+
+.user-row:last-child {
+    margin-bottom: 0;
+}
+
+.dropdown-user {
+    margin: 13px 0;
+    padding: 5px;
+    height: 100%;
+}
+.dropdown-user:hover {
+    cursor: pointer;
+}
+
+.table-user-information > tbody > tr {
+    border-top: 1px solid rgb(221, 221, 221);
+}
+
+.table-user-information > tbody > tr:first-child {
+    border-top: 0;
+}
+
+
+.table-user-information > tbody > tr > td {
+    border-top: 0;
+}
+/*profile page css end*/
 
 #sortByDropdown, .category_breadcrumb {
     padding-top: 15px;

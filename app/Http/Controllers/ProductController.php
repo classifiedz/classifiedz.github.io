@@ -73,4 +73,8 @@ class ProductController extends Controller
 
         return redirect('/')->with('alert_msg', "<strong>Great!</strong> You've posted a new ad!");
     }
+
+		public function showAd(Product $product){
+			return view('viewAd', ['product' => $product]);
+		}
 }
