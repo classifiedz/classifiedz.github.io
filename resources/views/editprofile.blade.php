@@ -32,7 +32,7 @@
 		</table>
 		<ul class="list-inline" >
   			<li class="list-inline-item p-1">
-				<a href="privacy" class="btn btn-success"  role="button">Submit</a>
+				<button type="submit" class="btn btn-success">Submit</button>
 			</li>
 			
 			<li class="list-inline-item p-1">
