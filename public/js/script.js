@@ -16,7 +16,7 @@ $('.sortBy').on('click',function(){
 });
 
 console.log('STILL WORKING');
-=======
+
 /*profile page js test
 
 $(document).ready(function() {
