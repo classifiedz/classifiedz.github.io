@@ -28,9 +28,10 @@ main {
 
 /* Nav Logo CSS */
 .navbar-brand {
-    color: #d0f2f1;
-    font-weight: bold;
-    font-size: 1.4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 /* Card Column on Homepage CSS */
@@ -139,8 +140,7 @@ Aligns Main Menu under button
   height:50px;
   position:relative;
   left:1.1%;
-  font-size:40px
-  margin-top:10;
+  font-size:40em;
 }
 
 
