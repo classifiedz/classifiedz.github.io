@@ -15,4 +15,4 @@ before_script:
   - php artisan migrate --seed
 
 script:
-  - vendor/bin/phpunit
+  - vendor/bin/phpunit -- debug
