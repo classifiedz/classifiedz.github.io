@@ -50,11 +50,12 @@
 		</div>
 		<!-- End Button Group -->
 	@endforeach
-  	<div id="sortByDropdown" class="dropdown float-right pr-2">
-	    <a role="button" class="btn btn-secondary dropdown-toggle" href="https://example.com" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	      Sort by
-	    </a>
-		<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+  	<div class="dropdown float-right pr-2" id="sortByDropdown">
+		<a class="btn btn-secondary dropdown-toggle" href="#!" id="dropdownMenuLink" data-toggle="dropdown">
+			Sort by
+		</a>
+
+		<div class="dropdown-menu dropdown-menu-right">
 			<a class="dropdown-item sortBy" id="newestFirst">Newest</a>
 			<a class="dropdown-item sortBy" id="oldestFirst">Oldest</a>
 			<a class="dropdown-item sortBy" id="cheapestFirst">Price Low to High</a>
