@@ -19,7 +19,6 @@
             <a class="btn btn-secondary dropdown-toggle" href="#!" id="dropdownMenuLink" data-toggle="dropdown">
     			Sort by
     		</a>
-
     		<div class="dropdown-menu dropdown-menu-right">
     			<a class="dropdown-item sortBy" id="newestFirst">Newest</a>
     			<a class="dropdown-item sortBy" id="oldestFirst">Oldest</a>

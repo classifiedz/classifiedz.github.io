@@ -177,6 +177,7 @@ Aligns Main Menu under button
     cursor: pointer;
     cursor: hand;
 }
+/*
 .table-user-information > tbody > tr {
     border-top: 1px solid rgb(221, 221, 221);
 }
@@ -189,5 +190,5 @@ Aligns Main Menu under button
 .table-user-information > tbody > tr > td {
     border-top: 0;
 }
-
+*/
 /*profile page css end*/

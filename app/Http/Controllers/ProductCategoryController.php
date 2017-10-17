@@ -15,22 +15,27 @@ class ProductCategoryController extends Controller
 
         switch ($request->query('sortBy')) {
             case 'oldestFirst':
-            $sortBy_column = 'created_at';
-            $orderBy = 'asc';
+	            $sortBy_column = 'created_at';
+	            $orderBy = 'asc';
             break;
+
             case 'cheapestFirst':
-            $sortBy_column = 'price';
-            $orderBy = 'asc';
+	            $sortBy_column = 'price';
+	            $orderBy = 'asc';
             break;
+
             case 'expensiveFirst':
-            $sortBy_column = 'price';
-            $orderBy = 'desc';
+	            $sortBy_column = 'price';
+	            $orderBy = 'desc';
             break;
+
             case 'popularFirst':
+			
             case 'newestFirst':
+
             default:
-            $sortBy_column = 'created_at';
-            $orderBy = 'desc';
+	            $sortBy_column = 'created_at';
+	            $orderBy = 'desc';
             break;
         }
 
