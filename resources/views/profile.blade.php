@@ -39,7 +39,7 @@
 				<a href="/editprofile" class="btn btn-success"  role="button">Edit Profile</a>
 			</li>
 			<li class="list-inline-item p-1">
-				<a href="#!" class="btn btn-info disabled"  role="button">Wish List</a>
+				<a href="/wishlist" class="btn btn-info"  role="button">Wish List</a>
 			</li>
 			<li class="list-inline-item p-1">
 				<a href="{{ route('logout') }}"
