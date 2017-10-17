@@ -10,7 +10,7 @@
 				
 				<tr>
 					<td><span >Username</td>
-					<td>{{ Auth::user()->username }}</td>
+					<td><input class="form-control input-sm" type="text" placeholder={{ Auth::user()->username }}></td>
 				</tr>
 				<tr>
 					<td>City</span></td>
