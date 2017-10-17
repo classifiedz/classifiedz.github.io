@@ -13,30 +13,38 @@
 			<h3>{{ Auth::user()->name }}</h3>
 			<tbody>
 				<tr>
+					<td>Name</td>
+					<td>{{ Auth::user()->name }}</td>
+				</tr>
+				<tr>
 					<td>Username</td>
 					<td>{{ Auth::user()->username }}</td>
-				</tr>
-				<tr>
-					<td>Member Since</td>
-					<td>{{ date('F jS, Y', strtotime(Auth::user()->created_at)) }}</td>
-				</tr>
-				<tr>
-					<td>City</td>
-					<td>{{ Auth::user()->city }}</td>
 				</tr>
 				<tr>
 					<td>Email</td>
 					<td>{{ Auth::user()->email }}</td>
 				</tr>
 				<tr>
+					<td>City</td>
+					<td>{{ Auth::user()->city }}</td>
+				</tr>
+				<tr>
 				<td>Phone Number</td>
 					<td>{{ Auth::user()->phoneNumber }}</td>
+				</tr>
+				<tr>
+					<td>Member Since</td>
+					<td>{{ date('F jS, Y', strtotime(Auth::user()->created_at)) }}</td>
+				</tr>
+				<tr>
+					<td>Profile last modified</td>
+					<td>{{ date('F jS, Y', strtotime(Auth::user()->updated_at)) }}</td>
 				</tr>
 			</tbody>
 		</table>
 		<ul class="list-inline">
   			<li class="list-inline-item p-1">
-				<a href="/editprofile" class="btn btn-success"  role="button">Edit Profile</a>
+				<a href="/profile/edit" class="btn btn-success"  role="button">Edit Profile</a>
 			</li>
 			<li class="list-inline-item p-1">
 				<a href="/wishlist" class="btn btn-info"  role="button">Wish List</a>
