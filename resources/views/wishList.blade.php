@@ -11,40 +11,26 @@
 				<tr>
 					<td><b>Category</b></td>
 					<td><b>Details</b></td>
+					<td><b>Actions</b></td>
 				</tr>
-				<tr>
-					<td>Electronics</td>
-					<td>iPhoneX</td>
-				</tr>
-				<tr>
-					<td>Home</td>
-					<td>IKEA Daybed</td>
-				</tr>
-				<tr>
-				<td>Cloth</td>
-				<td>H&M gloves</td>
-				</tr>
-				
+				@foreach(Auth::user()->wishlist as $item)
+					<tr>
+						<td>{{ $item->product->category->name }}</td>
+						<td>{{ $item->product->title }}</td>
+						<td>
+							<span><a class="btn btn-secondary" href="/ads/{{ $item->product->id }}" role="button">See Ad</a></span>
+							<span>
+								<form  action="/wishlist/{{ $item->id }}" method="POST">
+					                {{ csrf_field() }}
+					                <input type="hidden" name="_method" value="DELETE">
+					                <button id="deleteWishlistBtn" type="submit" class="btn btn-danger">Delete</button>
+				                </form>
+			            	</span>
+						</td>
+					</tr>
+				@endforeach
 			</tbody>
 			<table class="table table-user-information">
-			<tbody>
-			<h3>Add New</h3>
-				<tr>
-					<td>
-					<div class="form-group">
-						<select class="form-control" id="category_id"  name="category_id">
-                        <option value="1"> Clothing</option>
-                        <option value="2"> Electronics</option>
-                        <option value="3"> Home</option>
-                        <option value="4"> Vehicles</option>
-                        <option value="5"> Others (General)</option>
-                        </select>
-					</div>
-					</td>
-					<td><input class="form-control input-sm" type="text" placeholder=Details...></td>
-					<td><a href="privacy" class="btn btn-info"  role="button">Add</a></td>
-				</tr>
-			</tbody>
 		</table>
 	
 </div>

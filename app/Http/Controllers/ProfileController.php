@@ -40,13 +40,8 @@ class ProfileController extends Controller
     }
 
     public function updateProfile(UpdateProfile $request){
-        if (!Auth::check()) {
-            return redirect('/login');
-        }
-
         Auth::user()->update($request->all());
 
         return redirect('/profile');
     }
-
 }

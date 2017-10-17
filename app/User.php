@@ -44,4 +44,8 @@ class User extends Authenticatable
     public function reviews_written(){
         return $this->hasMany('App\UserReview', 'reviewer_id', 'id');
     }
+
+    public function wishlist(){
+        return $this->hasMany('App\Wishlist', 'user_id', 'id');
+    }
 }

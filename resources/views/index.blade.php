@@ -29,6 +29,14 @@
 						<small class="text-muted">{{ date('M-jS', strtotime($product->created_at)) }}</small><br/>
 						<a href="/categories/{{$product->category->id}}"><small class="badge badge-pill badge-info">{{ $product->category->name}}</small></a>
 						<small class="badge badge-pill badge-success">$ {{ $product->price }}</small>
+
+						@if(Auth::check())
+						<form  action="/wishlist/create" method="POST">
+			                {{ csrf_field() }}
+			                <input type="hidden" name="product_id" value="{{ $product->id }}">
+			                <button id="addWishlistBtn" type="submit" class="badge badge-pill badge-success">Add to Wishlist</button>
+		                </form>
+		                @endif
                     </footer>
                 </div>
             </div>
