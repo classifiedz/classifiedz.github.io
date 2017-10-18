@@ -32,6 +32,8 @@
 			</tbody>
 			<table class="table table-user-information">
 		</table>
+
+		<a href="/profile"><button type="button" class="btn btn-warning">Back to Profile</button></a>
 	
 </div>
 
