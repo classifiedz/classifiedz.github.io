@@ -8,7 +8,7 @@
 		<table class="table table-striped">
 			<tbody>
 				<h3>{{ Auth::user()->name }}'s Wish List</h3>
-				<tr>
+				<tr class="table-info">
 					<td><b>Category</b></td>
 					<td><b>Details</b></td>
 					<td><b>Actions</b></td>

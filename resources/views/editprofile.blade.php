@@ -2,30 +2,30 @@
 
 @section('content')
 
-<div class="row px-5 pt-4">
+<div class="row px-5 pt-4 justify-content-center">
 
 	<form method="POST"  enctype="multipart/form-data" action="{{ route('updateProfile') }}">
 		<table class="table table-user-information">
 			<tbody>
 					{{ csrf_field() }}
-					<tr>
+					<tr class="table-info">
 						<td>Name</td>
 						<td><input class="form-control input-sm" type="text" 
 							value="{{ old('name') == null ? Auth::user()->name : old('name') }}" name="name"></td>
 					</tr>
-					<tr>
+					<tr class="table-info">
 						<td>Username</td>
 						<td><input class="form-control input-sm" type="text" value="{{ old('username') == null ? Auth::user()->username : old('username') }}" name="username"></td>
 					</tr>
-					<tr>
+					<tr class="table-info">
 						<td>Email</td>
 						<td><input class="form-control input-sm" type="text" value="{{ old('email') == null ? Auth::user()->email : old('email') }}" name="email"></td>
 					</tr>
-					<tr>
+					<tr class="table-info">
 						<td>City</td>
 						<td><input class="form-control input-sm" type="text" value="{{ old('city') == null ? Auth::user()->city : old('city') }}" name="city"></td>
 					</tr>
-					<tr>
+					<tr class="table-info">
 						<td>Phone Number</td>
 						<td><input class="form-control input-sm" type="text" value="{{ old('name') == null ? Auth::user()->phoneNumber : old('phoneNumber') }}" name="phoneNumber"></td>
 					</tr>
@@ -37,7 +37,7 @@
 		</table>
 		<ul class="list-inline" >
 			<li class="list-inline-item p-1">
-				<button type="submit" class="btn btn-success">Submit</button>
+				<button type="submit" class="btn btn-warning">Submit</button>
 			</li>
 			<li class="list-inline-item p-1">
 				<a href="/profile" class="btn btn-danger"  role="button">Cancel</a>
