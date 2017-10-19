@@ -5,8 +5,8 @@
 <div class="row px-5 pt-4">
     <!-- Center Picture on XS, SM but right align on MD up -->
     <div class="col-md-4 pb-4 text-md-right text-center">
-		<a href="#">
-			<img class="img" alt="User Picture" src="https://www.safeocs.gov/cos/resources/app/images/av1_1.png"/ height="200px">
+		<a href="/profile/edit">
+			<img class="img-thumbnail" alt="User Picture" src="https://www.safeocs.gov/cos/resources/app/images/av1_1.png"/ width="200px">
 		</a>
 	</div>
 	<div class="col-md-7 col-lg-5 col-xl-4">
