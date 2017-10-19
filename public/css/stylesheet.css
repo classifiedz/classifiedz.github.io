@@ -166,6 +166,11 @@ Aligns Main Menu under button
     height: 100%;
 }
 
+/* Sor by css */
+#sortByDropdown, .category_breadcrumb {
+    padding-top: 15px;
+}
+
 .dropdown-user:hover {
     cursor: pointer;
 }
@@ -196,5 +201,4 @@ Aligns Main Menu under button
 #deleteWishlistBtn:hover, #addWishlistBtn:hover {
     cursor: pointer;
 }
-
 /*profile page css end*/

@@ -32,7 +32,6 @@ $('#searchbar').keypress(function(e){
 });
 console.log(document.getElementById('searchbar').value);
 console.log('STILL WORKING 😎');
-
 /*profile page js test
 
 $(document).ready(function() {
