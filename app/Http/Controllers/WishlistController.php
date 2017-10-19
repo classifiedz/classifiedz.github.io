@@ -26,7 +26,7 @@ class WishlistController extends Controller
      */
     public function showWishlist()
     {
-        return view('wishlist');
+        return view('wishList');
     }
 
     public function storeUserWishlist(Request $request){
