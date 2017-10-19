@@ -135,6 +135,12 @@ Aligns Main Menu under button
     border-radius: 0.85rem;
 }*/
 /*login & register page font size*/
+
+.authenticationContainer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
 .panel-heading h1{
   width:100px;
   height:50px;
