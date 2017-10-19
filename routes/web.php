@@ -24,6 +24,7 @@ Route::get('/categories/{category}', 'ProductCategoryController@show');
 // Profile Page
 Route::get('/profile','ProfileController@showProfile')->middleware('auth');
 Route::get('/editprofile','EditprofileController@showEditprofile')->middleware('auth');
+Route::get('/wishlist','WishlistController@showWishlist')->middleware('auth');
 // Legal Document Pages
 Route::get('/privacy', 'PageController@privacyPage');
 Route::get('/postingpolicy', 'PageController@postingpolicyPage');

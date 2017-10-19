@@ -10,7 +10,7 @@
 				
 				<tr>
 					<td><span >Username</td>
-					<td>{{ Auth::user()->username }}</td>
+					<td><input class="form-control input-sm" type="text" placeholder={{ Auth::user()->username }}></td>
 				</tr>
 				<tr>
 					<td>City</span></td>
@@ -32,13 +32,11 @@
 		</table>
 		<ul class="list-inline" >
   			<li class="list-inline-item p-1">
-				<a href="privacy" class="btn btn-success"  role="button">Submit</a>
+				<button type="submit" class="btn btn-success">Submit</button>
 			</li>
 			
 			<li class="list-inline-item p-1">
-				<a href="{{ route('logout') }}"
-				onclick="event.preventDefault();
-				document.getElementById('logout-form').submit();"
+				<a href="/profile"
 				class="btn btn-danger"  role="button">
 					Cancel
 				</a>

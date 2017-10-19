@@ -21,17 +21,19 @@
     <link href="{{ asset('css/stylesheet.css') }}" rel="stylesheet">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{{ asset('img/favicon.png') }}" />
+
 </head>
 <body>
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-toggleable-md navbar-inverse bg-primary">
-        <!-- Navbar Collapsible Button -->
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-        data-target="#navbarSupportedContent">
+<!-- NAVBAR -->
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-primary">
+    <!-- Navbar Collapsible Button -->
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
         <span class="navbar-toggler-icon"></span>
     </button>
     <!-- Navbar Content -->
-    <a class="navbar-brand navbar-header" href="/"><i class="fa fa-search">&nbsp;</i>ClassifiedZ</a>
+    <a class="navbar-brand" href="/" title="homepage" id="logo"><img src="{{ asset('img/classifiedz.png') }}" width="180" height="32"></a>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <!-- Navbar Items -->
         <ul class="navbar-nav mr-auto">
