@@ -23,14 +23,22 @@ Route::get('/', ['as' => 'index', 'uses' => 'HomeController@index']);
 Route::get('/ads/{product}', 'ProductController@showAd');
 
 //Post Ad Page
-Route::get('/postAd', ['as' => 'postAdForm', 'uses' => 'ProductController@showForm'])->middleware('auth');
+Route::get('/ad/create', ['as' => 'postAdForm', 'uses' => 'ProductController@showForm'])->middleware('auth');
 Route::post('/postAd', ['as' => 'storeAd', 'uses' => 'ProductController@storeAd']);
+
 //Categories Page
 Route::get('/categories/{category}', 'ProductCategoryController@show');
+
 // Profile Page
 Route::get('/profile','ProfileController@showProfile')->middleware('auth');
-Route::get('/editprofile','EditprofileController@showEditprofile')->middleware('auth');
+Route::get('/profile/edit','ProfileController@showEditprofile')->middleware('auth');
+Route::post('/editprofile', ['as' => 'updateProfile', 'uses' => 'ProfileController@updateProfile'])->middleware('auth');
+
+// Wishlist Page
 Route::get('/wishlist','WishlistController@showWishlist')->middleware('auth');
+Route::post('/wishlist/create', 'WishlistController@storeUserWishlist')->middleware('auth');
+Route::delete('/wishlist/{wishlist}', 'WishlistController@removeUserWishlist')->middleware('auth');
+
 // Legal Document Pages
 Route::get('/privacy', 'PageController@privacyPage');
 Route::get('/postingpolicy', 'PageController@postingpolicyPage');
