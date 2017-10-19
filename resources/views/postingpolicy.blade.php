@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@section('title', 'Posting Policy')
 @section('content')
 <div class="container">
 <h1 class="display-1">Posting Policy</h1>

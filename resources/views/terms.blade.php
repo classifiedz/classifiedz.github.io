@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@section('title', 'Terms')
 @section('content')
 <div class="container">
 <h1 class="display-1">Terms of Service</h1>
