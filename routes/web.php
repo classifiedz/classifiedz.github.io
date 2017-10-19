@@ -10,6 +10,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use Illuminate\Http\Request;
+/* Searchable Content*/
+Route::get('/search/{searchKey}', 'searchController@search');
+/*Route::get('/search', function (Request $request) {
+    return App\Product::search($request->search)->get();
+});*/
 //Home Index
 Route::get('/', ['as' => 'index', 'uses' => 'HomeController@index']);
 
@@ -23,6 +29,8 @@ Route::post('/postAd', ['as' => 'storeAd', 'uses' => 'ProductController@storeAd'
 Route::get('/categories/{category}', 'ProductCategoryController@show');
 // Profile Page
 Route::get('/profile','ProfileController@showProfile')->middleware('auth');
+Route::get('/editprofile','EditprofileController@showEditprofile')->middleware('auth');
+Route::get('/wishlist','WishlistController@showWishlist')->middleware('auth');
 // Legal Document Pages
 Route::get('/privacy', 'PageController@privacyPage');
 Route::get('/postingpolicy', 'PageController@postingpolicyPage');

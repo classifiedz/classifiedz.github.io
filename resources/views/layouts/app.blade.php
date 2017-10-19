@@ -21,17 +21,19 @@
     <link href="{{ asset('css/stylesheet.css') }}" rel="stylesheet">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{{ asset('img/favicon.png') }}" />
+
 </head>
 <body>
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-toggleable-md navbar-inverse bg-primary">
-        <!-- Navbar Collapsible Button -->
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-        data-target="#navbarSupportedContent">
+<!-- NAVBAR -->
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-primary">
+    <!-- Navbar Collapsible Button -->
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
         <span class="navbar-toggler-icon"></span>
     </button>
     <!-- Navbar Content -->
-    <a class="navbar-brand navbar-header" href="/"><i class="fa fa-search">&nbsp;</i>ClassifiedZ</a>
+    <a class="navbar-brand" href="/" title="homepage" id="logo"><img src="{{ asset('img/classifiedz.png') }}" width="180" height="32"></a>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <!-- Navbar Items -->
         <ul class="navbar-nav mr-auto">
@@ -81,13 +83,17 @@
 	                </form>
 				</div>
 			</li>
-		@endguest
-		<!-- Navbar Search Field -->
-		<form class="form-inline my-2 my-lg-0">
-		    <input class="form-control mr-sm-2" type="text" placeholder="Search for anything...">
-		    <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
-		</form>
-		</ul>
+            @endguest
+    		<!-- Navbar Search Field
+    		<form class="form-inline my-2 my-lg-0">-->
+            <li class="nav-item">
+                <input class="form-control mr-sm-2" id="searchbar" type="text" placeholder="Search for anything..."/>
+            </li>
+            <li class="nav-item">
+                &nbsp;<button class="btn btn-success my-2 my-sm-0 searchbutton">Search</button>
+            </li>
+    		<!-- </form> -->
+        </ul>
 	</div>
 </nav>
 <!-- NAV END -->

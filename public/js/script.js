@@ -15,6 +15,23 @@ $('.sortBy').on('click',function(){
 	window.location.href = newURL;
 });
 
+/* If search button CLICK, move URL to search */
+$('.searchbutton').on('click',function(){
+    var URL = $(location).attr("href");
+    var searchQuery = $('#searchbar').val();
+    if($('#searchbar').val() == "")
+        searchQuery ="abc";
+	var newURL = updateQueryStringParameter(URL, 'search', '#searchbar'.value);
+	window.location.href = "/search/"+searchQuery;
+});
+/* If search field hit enter TYPED, move URL to search */
+$('#searchbar').keypress(function(e){
+    if(e.which == 13){//Enter key pressed
+        $('.searchbutton').click();//Trigger search button click event
+    }
+});
+console.log(document.getElementById('searchbar').value);
+console.log('STILL WORKING 😎');
 /*profile page js test
 
 $(document).ready(function() {

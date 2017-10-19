@@ -3,14 +3,21 @@
 @section('content')
 
 <div class="row px-5 pt-4">
-    <div class="col-md-4 pb-4 text-center">
+    <!-- Center Picture on XS, SM but right align on MD up -->
+    <div class="col-md-4 pb-4 text-md-right text-center">
 		<a href="#">
 			<img class="img" alt="User Picture" src="https://www.safeocs.gov/cos/resources/app/images/av1_1.png"/ height="200px">
 		</a>
 	</div>
 	<div class="col-md-7 col-lg-5 col-xl-4">
-		<table class="table table-user-information">
-			<h3>{{ Auth::user()->name }}</h3>
+		<table class="table table-responsive table-user-information">
+            <thead>
+                <tr>
+                    <th class="border-top-0" colspan="3">
+                        <h3>{{ Auth::user()->name }}</h3>
+                    </th>
+                </tr>
+            </thead>
 			<tbody>
 				<tr>
 					<td>Username</td>
@@ -36,10 +43,10 @@
 		</table>
 		<ul class="list-inline">
   			<li class="list-inline-item p-1">
-				<a href="#!" class="btn btn-success disabled"  role="button">Edit Profile</a>
+				<a href="/editprofile" class="btn btn-success"  role="button">Edit Profile</a>
 			</li>
 			<li class="list-inline-item p-1">
-				<a href="#!" class="btn btn-info disabled"  role="button">Wish List</a>
+				<a href="/wishlist" class="btn btn-info"  role="button">Wish List</a>
 			</li>
 			<li class="list-inline-item p-1">
 				<a href="{{ route('logout') }}"

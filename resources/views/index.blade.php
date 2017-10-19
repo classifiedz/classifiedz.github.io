@@ -30,6 +30,20 @@
     </div>
     @endif
 
+	<div class="row-fluid clearfix pb-3">
+		<div class="dropdown float-right" id="sortByDropdown">
+            <a class="btn btn-secondary dropdown-toggle" href="#!" id="dropdownMenuLink" data-toggle="dropdown">
+    			Sort by
+    		</a>
+    		<div class="dropdown-menu dropdown-menu-right">
+    			<a class="dropdown-item sortBy" id="newestFirst">Newest</a>
+    			<a class="dropdown-item sortBy" id="oldestFirst">Oldest</a>
+    			<a class="dropdown-item sortBy" id="cheapestFirst">Price Low to High</a>
+    			<a class="dropdown-item sortBy" id="expensiveFirst">Price High to Low</a>
+    			<a class="dropdown-item sortBy" id="popularFirst">Most Viewed</a>
+    		</div>
+		</div>
+	</div>
 	<!-- Row Fluid -->
 	<div class="row-fluid">
 		<!-- CARD COLUMNNS -->
@@ -101,3 +115,4 @@
     @endforeach --}}
 </div>
 @endsection
+<!-- End Page Cointainer -->

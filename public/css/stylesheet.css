@@ -5,7 +5,7 @@ html, body {
     margin: 0;
     padding: 0;
     background-color: rgb(250, 250, 250);
-   
+
 }
 
 header {
@@ -28,9 +28,10 @@ main {
 
 /* Nav Logo CSS */
 .navbar-brand {
-    color: #d0f2f1;
-    font-weight: bold;
-    font-size: 1.4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 /* Card Column on Homepage CSS */
@@ -139,8 +140,7 @@ Aligns Main Menu under button
   height:50px;
   position:relative;
   left:1.1%;
-  font-size:40px
-  margin-top:10;
+  font-size:40em;
 }
 
 
@@ -159,6 +159,7 @@ Aligns Main Menu under button
     margin-bottom: 0;
 }
 
+/* Drop Down
 .dropdown-user {
     margin: 13px 0;
     padding: 5px;
@@ -173,7 +174,15 @@ Aligns Main Menu under button
 .dropdown-user:hover {
     cursor: pointer;
 }
-
+#sortByDropdown, .category_breadcrumb {
+    padding-top: 15px;
+}
+/* End Dropdown*/
+.dropdown-item {
+    cursor: pointer;
+    cursor: hand;
+}
+/*
 .table-user-information > tbody > tr {
     border-top: 1px solid rgb(221, 221, 221);
 }
@@ -186,5 +195,6 @@ Aligns Main Menu under button
 .table-user-information > tbody > tr > td {
     border-top: 0;
 }
+*/
 
 /*profile page css end*/

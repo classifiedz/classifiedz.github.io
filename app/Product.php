@@ -2,10 +2,13 @@
 
 namespace App;
 
+use Laravel\Scout\Searchable; /* Searchable is Laravel's Scout Search Implementation */
 use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
+	use Searchable;/* Searchable is Laravel's Scout Search Implementation */
+
 	protected $table = 'products';
 
 	// fillable specifies which fields to be mass assigned
@@ -26,4 +29,10 @@ class Product extends Model
     public function comments(){
     	return $this->hasMany('App\ProductComment', 'product_id', 'id');
     }
+	/* Search Function */
+	public function searchableAs()
+	{
+		$array = $this->toArray();
+		return 'products_index';
+	}
 }
