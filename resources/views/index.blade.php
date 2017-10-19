@@ -4,46 +4,30 @@
 
 @section('content')
 <!-- PAGE CONTENT CONTAINER -->
-<div class="container clearfix">
-	<div id="sortByDropdown" class="dropdown float-right">
-	  <a class="btn btn-secondary dropdown-toggle" href="https://example.com" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	    Sort by
-	  </a>
 
-	  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-	    <a class="dropdown-item sortBy" id="newestFirst">Newest</a>
-	    <a class="dropdown-item sortBy" id="oldestFirst">Oldest</a>
-	    <a class="dropdown-item sortBy" id="cheapestFirst">Price Low to High</a>
-	    <a class="dropdown-item sortBy" id="expensiveFirst">Price High to Low</a>
-	    <a class="dropdown-item sortBy" id="popularFirst">Most Viewed</a>
-	  </div>
+@if(session('alert_msg'))
+<div class="alert alert-info alert-dismissible fade show" role="alert">
+	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		<span aria-hidden="true">&times;</span>
+	</button>
+	{!! session('alert_msg') !!}
+</div>
+@endif
+
+<div class="row-fluid clearfix px-3">
+	<div class="dropdown float-right" id="sortByDropdown">
+       <a class="btn btn-secondary dropdown-toggle" href="#!" id="dropdownMenuLink" data-toggle="dropdown">Sort by</a>
+			<div class="dropdown-menu dropdown-menu-right">
+				<a class="dropdown-item sortBy" id="newestFirst">Newest</a>
+				<a class="dropdown-item sortBy" id="oldestFirst">Oldest</a>
+				<a class="dropdown-item sortBy" id="cheapestFirst">Price Low to High</a>
+				<a class="dropdown-item sortBy" id="expensiveFirst">Price High to Low</a>
+				<a class="dropdown-item sortBy" id="popularFirst">Most Viewed</a>
+			</div>
 	</div>
 </div>
 
 <div class="container-fluid py-3">
-    @if(session('alert_msg'))
-    <div class="alert alert-info alert-dismissible fade show" role="alert">
-      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-      {!! session('alert_msg') !!}
-    </div>
-    @endif
-
-	<div class="row-fluid clearfix pb-3">
-		<div class="dropdown float-right" id="sortByDropdown">
-            <a class="btn btn-secondary dropdown-toggle" href="#!" id="dropdownMenuLink" data-toggle="dropdown">
-    			Sort by
-    		</a>
-    		<div class="dropdown-menu dropdown-menu-right">
-    			<a class="dropdown-item sortBy" id="newestFirst">Newest</a>
-    			<a class="dropdown-item sortBy" id="oldestFirst">Oldest</a>
-    			<a class="dropdown-item sortBy" id="cheapestFirst">Price Low to High</a>
-    			<a class="dropdown-item sortBy" id="expensiveFirst">Price High to Low</a>
-    			<a class="dropdown-item sortBy" id="popularFirst">Most Viewed</a>
-    		</div>
-		</div>
-	</div>
 	<!-- Row Fluid -->
 	<div class="row-fluid">
 		<!-- CARD COLUMNNS -->
@@ -57,16 +41,19 @@
                     <p class="card-text mb-2">{{ $product->description }}</p>
 					<footer class="text-right">
 						<small class="text-muted">{{ date('M-jS', strtotime($product->created_at)) }}</small><br/>
-						<a href="/categories/{{$product->category->id}}"><small class="badge badge-pill badge-info">{{ $product->category->name}}</small></a>
-						<small class="badge badge-pill badge-success">$ {{ $product->price }}</small>
 
+						<div id="space">
 						@if(Auth::check())
 						<form  action="/wishlist/create" method="POST">
 			                {{ csrf_field() }}
 			                <input type="hidden" name="product_id" value="{{ $product->id }}">
-			                <button id="addWishlistBtn" type="submit" class="badge badge-pill badge-success">Add to Wishlist</button>
+			                <button id="addWishlistBtn" type="submit" class="star">
+	                         <i class="fa fa-star" aria-hidden="true"></i>
+                           <i class="fa fa-star-o" aria-hidden="true"></i>
+                          </button>
 		                </form>
 		                @endif
+						<div><small class="badge badge-pill badge-success">$ {{ $product->price }}</small></div> </div>
                     </footer>
                 </div>
             </div>
