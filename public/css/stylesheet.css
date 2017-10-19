@@ -197,4 +197,8 @@ Aligns Main Menu under button
 }
 */
 
+/*Wishlist Page*/
+#deleteWishlistBtn:hover, #addWishlistBtn:hover {
+    cursor: pointer;
+}
 /*profile page css end*/
