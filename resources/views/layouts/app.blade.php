@@ -83,13 +83,17 @@
 	                </form>
 				</div>
 			</li>
-		@endguest
-		<!-- Navbar Search Field -->
-		<form class="form-inline my-2 my-lg-0">
-		    <input class="form-control mr-sm-2" type="text" placeholder="Search for anything...">
-		    <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
-		</form>
-		</ul>
+            @endguest
+    		<!-- Navbar Search Field
+    		<form class="form-inline my-2 my-lg-0">-->
+            <li class="nav-item">
+                <input class="form-control mr-sm-2" id="searchbar" type="text" placeholder="Search for anything..."/>
+            </li>
+            <li class="nav-item">
+                &nbsp;<button class="btn btn-success my-2 my-sm-0 searchbutton">Search</button>
+            </li>
+    		<!-- </form> -->
+        </ul>
 	</div>
 </nav>
 <!-- NAV END -->
