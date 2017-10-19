@@ -29,7 +29,7 @@
 						<td>Phone Number</td>
 						<td><input class="form-control input-sm" type="text" value="{{ old('name') == null ? Auth::user()->phoneNumber : old('phoneNumber') }}" name="phoneNumber"></td>
 					</tr>
-<!-- 					<tr>
+          <!-- <tr>
 						<td>Upload an image of your profile picture: </td>
 						<td><input id="input-b1"  name="input-b1" type="file" class="file" name"icon"><img class="img" alt="User Picture" src="https://www.safeocs.gov/cos/resources/app/images/av1_1.png"/ height="50px"></td>
 					</tr> -->
@@ -53,6 +53,7 @@
         </ul>
     </div>
 @endif
+
 </div>
 
 @endsection

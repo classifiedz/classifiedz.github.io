@@ -10,6 +10,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use Illuminate\Http\Request;
+/* Searchable Content*/
+Route::get('/search/{searchKey}', 'searchController@search');
+/*Route::get('/search', function (Request $request) {
+    return App\Product::search($request->search)->get();
+});*/
 //Home Index
 Route::get('/', ['as' => 'index', 'uses' => 'HomeController@index']);
 
