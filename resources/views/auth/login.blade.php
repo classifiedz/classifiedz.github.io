@@ -5,6 +5,7 @@
     <div class="row">
         <div class="col-6 col-lg-6 col-md-12 col-sm-12">
             <div class="panel panel-default">
+            <br>
                 <div class="panel-heading h1">Login</div>
 
                 <div class="panel-body">
@@ -71,6 +72,7 @@
 
         <div class="col-6 col-lg-6 col-md-12 col-sm-12">
             <div class="panel panel-default">
+            <br>
                 <div class="panel-heading h1">Register</div>
 
                 <div class="panel-body">
