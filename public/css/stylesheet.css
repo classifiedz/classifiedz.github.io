@@ -201,4 +201,20 @@ Aligns Main Menu under button
 #deleteWishlistBtn:hover, #addWishlistBtn:hover {
     cursor: pointer;
 }
+#addWishlistBtn{
+  background: none;
+  border: none;
+}
+.star:hover .fa-star-o,
+.star .fa-star{
+    display: none;
+}
+.star:hover .fa-star {
+    display: inline;
+    color:#ffd633;
+}
+#space{
+  display:flex;
+  justify-content: space-between;
+}
 /*profile page css end*/
