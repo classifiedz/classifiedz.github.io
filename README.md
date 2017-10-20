@@ -5,7 +5,9 @@
 ### Website: [classifiedz.xyz](http://classifiedz.xyz)  
 ### Slack : [classifiedz.slack.com](https://classifiedz.slack.com/)  
 ---  
+
 This repository for the Concocrida University Fall 2017 SOEN 341 term project. The project is a classifieds :mag: website where users can buy/sell/trade goods and services. The software process used is SCRUM.
+
 ---  
 ### Authors:  
 [Liyuan Zhang](https://github.com/Swallow666) (Front End)  
