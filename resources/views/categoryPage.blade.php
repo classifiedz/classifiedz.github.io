@@ -50,7 +50,7 @@
 		</div>
 		<!-- End Button Group -->
 	@endforeach
-  	<div class="dropdown float-right pr-2" id="sortByDropdown">
+  	<div class="dropdown float-right pr-2" id="sortByDropdown2">
 		<a class="btn btn-secondary dropdown-toggle" href="#!" id="dropdownMenuLink" data-toggle="dropdown">
 			Sort by
 		</a>

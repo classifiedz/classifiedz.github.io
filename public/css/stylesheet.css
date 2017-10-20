@@ -180,8 +180,8 @@ Aligns Main Menu under button
 .dropdown-user:hover {
     cursor: pointer;
 }
-#sortByDropdown, .category_breadcrumb {
-    padding-top: 15px;
+#sortByDropdown2, .category_breadcrumb {
+    padding-top: 5px;
 }
 /* End Dropdown*/
 .dropdown-item {
