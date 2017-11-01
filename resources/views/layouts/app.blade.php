@@ -72,6 +72,7 @@
 
 	            <div class="dropdown-menu bg-primary">
                     <a class="dropdown-item text-white bg-primary" href="/profile">Profile</a>
+                    <a class="dropdown-item text-white bg-primary" href="/wishlist">Wishlist</a>
                     <a class="dropdown-item text-white bg-primary" href="{{ route('logout') }}"
 	                    onclick="event.preventDefault();
 	                    document.getElementById('logout-form').submit();">
