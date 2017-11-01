@@ -39,6 +39,9 @@ Route::get('/wishlist','WishlistController@showWishlist')->middleware('auth');
 Route::post('/wishlist/create', 'WishlistController@storeUserWishlist')->middleware('auth');
 Route::delete('/wishlist/{wishlist}', 'WishlistController@removeUserWishlist')->middleware('auth');
 
+//YourStore page
+Route::get('/yourstore','YourstoreController@showYourstore')->middleware('auth');
+
 // Legal Document Pages
 Route::get('/privacy', 'PageController@privacyPage');
 Route::get('/postingpolicy', 'PageController@postingpolicyPage');

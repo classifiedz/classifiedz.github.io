@@ -52,7 +52,7 @@
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/profile"><i class="fa fa-user"></i> Your Store</a>
+                <a class="nav-link" href="/yourstore"><i class="fa fa-user"></i> Your Store</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('postAdForm') }}"><i class="fa fa-pencil-square-o"></i> Post an
