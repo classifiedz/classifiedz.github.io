@@ -5,7 +5,7 @@
 <div class="row-fluid pt-3">
 	<!-- BREADCRUMB -->
 	<ol class="breadcrumb">
-		<span class="h3">&nbsp;{{ Auth::user()->username }}'s Store<span class="badge badge-default">0 items</span></span>
+		<span class="h3">{{ $user->username }}'s Store&nbsp;<span class="badge badge-default">{{ count($user->products) }} items</span></span>
 	</ol>
 	<!-- items should be count of product-->
 	<!-- END BREADCRUMB -->
@@ -17,39 +17,55 @@
   <tbody>
     <tr>
       <th scope="row">	<span class="badge badge-primary">Contact</span></th>
-      <td>{{ Auth::user()->email }}</td>
-      <td>{{ Auth::user()->phoneNumber }}</td>
+      <td>{{ $user->email }}</td>
+      <td>{{ $user->phoneNumber }}</td>
     </tr>
 </tbody>
 </table>
 
-	
+<div class="container-fluid py-3">
+	<!-- Row Fluid -->
+	<div class="row-fluid">
+		<!-- CARD COLUMNNS -->
+		<div class="card-columns">
+            @foreach ($user->products as $product)
+            <!-- Card -->
+            <div class="card mb-3">
+                <a href="/ads/{{ $product->id }}" ><img class="card-img-top img-fluid" width="100%" src="{{ asset($product->image) }}" alt="Post Image"></a>
+                <div class="card-block p-3">
+                    <a id="cardTitle" href="/ads/{{ $product->id }}"><span class="card-title h4 text-justify">{{ $product->title }}</span></a>
+                    <p class="card-text mb-2">{{ $product->description }}</p>
+					<footer class="text-right">
+						<small class="text-muted">{{ date('M-jS', strtotime($product->created_at)) }}</small><br/>
 
-<!-- ads here-->
-<div class="row px-5 pt-4>
-
-	<form method="POST"  enctype="multipart/form-data" action="{{ route('updateProfile') }}">
-	<td><h4>Ad Posted</h4></td>	
-	</form>
-	<table class="table table-user-information">
-			<tbody>
-					{{ csrf_field() }}
-					<tr>
-						<td>Add the ad here</td>
-						
-					</tr>
-					
-			</tbody>
-		</table>
-	@if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
+						<div id="space">
+						@if(Auth::check() && $user->id != Auth::user()->id)
+						<form  action="/wishlist/create" method="POST">
+			                {{ csrf_field() }}
+			                <input type="hidden" name="product_id" value="{{ $product->id }}">
+			                <button id="addWishlistBtn" type="submit" class="star">
+	                         <i class="fa fa-star" aria-hidden="true"></i>
+                           <i class="fa fa-star-o" aria-hidden="true"></i>
+                          </button>
+		                </form>
+		                @endif
+		                @if(Auth::check() && $user->id == Auth::user()->id)
+						<form  action="/ad/{{ $product->id }}" method="POST">
+			                {{ csrf_field() }}
+			                <input type="hidden" name="_method" value="DELETE">
+			                <button id="deleteWishlistBtn" type="submit" class="btn btn-outline-danger">Delete</button>
+		                </form>
+		                @endif
+						<div><small class="badge badge-pill badge-success">$ {{ $product->price }}</small></div> </div>
+                    </footer>
+                </div>
+            </div>
             @endforeach
-        </ul>
-    </div>
-@endif
-
+			<!-- End Card -->
+		</div>
+		<!-- END CARD COLUMNNS -->
+	</div>
+	<!-- End Row -->
 </div>
+
 @endsection

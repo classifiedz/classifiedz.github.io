@@ -81,4 +81,14 @@ class ProductController extends Controller
 
 			return view('viewAd', ['product' => $product]);
 		}
+
+    public function removeProduct(Product $product) {
+        if (Auth::user()->id !== $product->user_id) {
+            redirect('/')->with('alert_msg', "You don't have permission to remove this item!");
+        }
+
+        Product::destroy($product->id);
+
+        return back();
+    }
 }

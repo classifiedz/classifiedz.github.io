@@ -39,8 +39,10 @@ Route::get('/wishlist','WishlistController@showWishlist')->middleware('auth');
 Route::post('/wishlist/create', 'WishlistController@storeUserWishlist')->middleware('auth');
 Route::delete('/wishlist/{wishlist}', 'WishlistController@removeUserWishlist')->middleware('auth');
 
-//YourStore page
-Route::get('/yourstore','YourstoreController@showYourstore')->middleware('auth');
+//Your Store page
+Route::get('/store','StoreController@showYourStore')->middleware('auth');
+Route::get('/store/{username}','StoreController@showStore');
+Route::delete('/ad/{product}', 'ProductController@removeProduct')->middleware('auth');
 
 // Legal Document Pages
 Route::get('/privacy', 'PageController@privacyPage');

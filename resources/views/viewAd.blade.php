@@ -10,7 +10,7 @@
         </div>
         <div class=" col-sm-6">
             <h2>{{ $product->title }}</h2>
-            <small>Sold by <a href="/profile">{{ $product->user->username}}</a></small>
+            <small>Sold by <a href="/store/{{ $product->user->username }}">{{ $product->user->username}}</a></small>
           </br></br>
             <h3>$ {{ $product->price}}</h3>
           </br>
