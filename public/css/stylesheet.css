@@ -170,6 +170,11 @@ Aligns Main Menu under button
     margin: 13px 0;
     padding: 5px;
     height: 100%;
+}*/
+
+/* dropdown on hover css */
+.dropdown:hover>.dropdown-menu {
+  display: block;
 }
 
 /* Sor by css */
