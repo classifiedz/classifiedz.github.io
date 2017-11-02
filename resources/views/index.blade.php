@@ -40,9 +40,8 @@
                     <a id="cardTitle" href="/ads/{{ $product->id }}"><span class="card-title h4 text-justify">{{ $product->title }}</span></a>
                     <p class="card-text mb-2">{{ $product->description }}</p>
 			
-	     <footer class="text-right">
-	         <small class="text-muted">{{ date('M-jS', strtotime($product->created_at)) }}</small><br/>
-						
+	            <footer class="text-right">
+	               <small class="text-muted">{{ date('M-jS', strtotime($product->created_at)) }}</small><br/>				
 	      <!-- Space -->
 	       <span class="pull-left">
 		 @if(Auth::check())
