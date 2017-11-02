@@ -15,6 +15,12 @@
                 <tr>
                     <th class="border-top-0" colspan="3">
                         <h3>{{ Auth::user()->name }}</h3>
+                        <button type="button" class="btn btn-default btn-sm">
+                          <span class="glyphicon glyphicon-thumbs-up"></span> Like
+                        </button>
+                        <button type="button" class="btn btn-default btn-sm">
+                          <span class="glyphicon glyphicon-thumbs-up"></span> Dislike
+                        </button>
                     </th>
                 </tr>
             </thead>
