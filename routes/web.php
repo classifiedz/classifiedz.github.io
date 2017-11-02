@@ -11,11 +11,10 @@
 |
 */
 use Illuminate\Http\Request;
-/* Searchable Content*/
+// Searchable Content
 Route::get('/search/{searchKey}', 'searchController@search');
-/*Route::get('/search', function (Request $request) {
-    return App\Product::search($request->search)->get();
-});*/
+Route::get('/search/{searchKey}/{category}', 'searchController@searchCategory');
+
 //Home Index
 Route::get('/', ['as' => 'index', 'uses' => 'HomeController@index']);
 
