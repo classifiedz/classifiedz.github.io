@@ -10,13 +10,13 @@
         </div>
         <div class=" col-sm-6">
             <h2>{{ $product->title }}</h2>
-            <small>Sold by <a href="#">{{ $product->user->username}}</a></small>
+            <small>Sold by <a href="/profile">{{ $product->user->username}}</a></small>
           </br></br>
             <h3>$ {{ $product->price}}</h3>
           </br>
             <h5>Description: </h5>
             <p>{{ $product->description}}</p>
-            <p><small>Interested? Contact them <a href="#">now</a>!</small></p>
+            <p><small>Interested? Check more sales of this guy or Contact him <a href="/yourstore">now</a>!</small></p>
 
         </div>
     </div>
