@@ -52,8 +52,7 @@ class HomeController extends Controller
         }
 
         $products = Product::orderBy($sortBy_column, $orderBy)
-        ->take(25)
-        ->get();
+                            ->paginate(15);
         return view('index', ['products' => $products]);
     }
 }

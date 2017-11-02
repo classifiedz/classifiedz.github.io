@@ -49,11 +49,14 @@ class ProductCategoryController extends Controller
 
 		$products = Product::whereIn('category_id', $categories_id)
 		->orderBy($sortBy_column, $orderBy)
-		->get();
+		->paginate(15);
+
+        $count = Product::whereIn('category_id', $categories_id)->count();
 
 		return view('categoryPage', [
 			'category' => $category,
-			'products' => $products
+			'products' => $products,
+            'count' => $count,
 		]);
 	}
 }

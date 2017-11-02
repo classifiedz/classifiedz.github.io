@@ -25,7 +25,7 @@
 		<li class="breadcrumb-item h3 active">
 			{{ $category->name }}
 		</li>
-		<span class="h3">&nbsp;<span class="badge badge-default">{{ count($products) }} items</span></span>
+		<span class="h3">&nbsp;<span class="badge badge-default">{{ $count }} items</span></span>
 	</ol>
 	<!-- END BREADCRUMB -->
 </div>
@@ -99,43 +99,17 @@
 	</div>
 	<!-- END CARD COLUMNNS -->
 </div>
+
 <!-- End Row -->
 
 <!-- Row Fluid -->
 <div class="row-fluid">
-	<!-- PAGINATION -->
-	<nav aria-label="Page navigation">
-		<ul class="pagination justify-content-center">
-			<!-- Previous -->
-			<li class="page-item disabled">
-				<a class="page-link" href="#">
-					<span>&lsaquo;</span>
-				</a>
-			</li>
-			<li class="page-item">
-				<a class="page-link" href="#">1</a>
-			</li>
-			<li class="page-item">
-				<a class="page-link" href="#">2</a>
-			</li>
-			<li class="page-item">
-				<a class="page-link" href="#">3</a>
-			</li>
-			<li class="page-item">
-				<a class="page-link" href="#">4</a>
-			</li>
-			<li class="page-item">
-				<a class="page-link" href="#">5</a>
-			</li>
-			<!-- Next -->
-			<li class="page-item">
-				<a class="page-link" href="#">&rsaquo;</a>
-			</li>
-			<!-- Next -->
-		</ul>
-	</nav>
-	<!-- END PAGINATION -->
+	<!-- Pagination -->
+	{{ $products->links('vendor.pagination.bootstrap-4') }}
+	<!-- End Pagination -->
 </div>
+<!-- End Row Fluid -->
+
 <!-- End Row -->
 <div>
     <!-- This is how to display data has been passed to the view (in App\Http\Controller\HomeController.php), look at /app/Product.php to look at data that's in product. Remove {{-- --}} to test and remove comment -->
