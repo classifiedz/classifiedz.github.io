@@ -33,8 +33,8 @@
 
 <!-- Row -->
 <div class="row-fluid pt-2 pb-3">
+	<!-- Button Group -->
 	@foreach ($category->children as $category2ndTier)
-		<!-- Button Group -->
 		<div class="btn-group p-1">
 			@if (count($category2ndTier->children) > 0)
 				<a role="button" class="btn btn-secondary" href="/categories/{{ $category2ndTier->id }}">{{ $category2ndTier->name }}</a>
@@ -48,8 +48,8 @@
 				<a class="btn btn-secondary" role="button" href="/categories/{{ $category2ndTier->id }}">{{ $category2ndTier->name }}</a>
 			@endif
 		</div>
-		<!-- End Button Group -->
 	@endforeach
+	<!-- End Button Group -->
   	<div class="dropdown float-right pr-2" id="sortByDropdown2">
 		<a class="btn btn-secondary dropdown-toggle" href="#!" id="dropdownMenuLink" data-toggle="dropdown">
 			Sort by
@@ -65,6 +65,7 @@
   	</div>
 </div>
 <!-- End Row -->
+
 <!-- Row Fluid -->
 <div class="row-fluid">
 	<!-- CARD COLUMNNS -->
