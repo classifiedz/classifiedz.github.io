@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'MyProfile')
+
 @section('content')
 
 <div class="row px-5 pt-4">
@@ -56,17 +58,18 @@
 			<li class="list-inline-item p-1">
 				<a href="{{ route('logout') }}"
 				onclick="event.preventDefault();
+
 				document.getElementById('logout-form').submit();"
-				class="btn btn-danger"  role="button">
-					Logout
-				</a>
-				<form id="logout-form" action="{{ route('logout') }}" method="POST"
-					style="display: none;">
-					{{ csrf_field() }}
-				</form>
-			</li>
-		</ul>
-	</div>
-</div>
+                       class="btn btn-danger" role="button">
+                        Logout
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                          style="display: none;">
+                        {{ csrf_field() }}
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </div>
 
 @endsection

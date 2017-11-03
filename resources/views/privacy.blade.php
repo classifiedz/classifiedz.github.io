@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
+@section('title', 'Privacy')
+
 @section('content')
+
 <div class="row px-5 pt-4">
 <table class="table table-user-information">
 			<h3>Privacy</h3>
@@ -28,4 +31,5 @@ Information we collect automatically: When you visit our Website, use our Servic
 		</table>
 
 </div>
+
 @endsection

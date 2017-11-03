@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
+@section('title', 'Refund')
+
 @section('content')
+
 <div class="row px-5 pt-4">
 <table class="table table-user-information">
 			<h3>Refund</h3>
@@ -19,4 +22,5 @@ Lorem ipsum dolor sit amet, nulla nostra tempor mollis lorem, pede donec pretium
 		</table>
 
 </div>
+
 @endsection

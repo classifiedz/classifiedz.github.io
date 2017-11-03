@@ -3,6 +3,7 @@
 @section('title', 'Home')
 
 @section('content')
+
 <!-- PAGE CONTENT CONTAINER -->
 
 @if(session('alert_msg'))
@@ -63,12 +64,13 @@
                     </footer>
                 </div>
             </div>
+
             @endforeach
-			<!-- End Card -->
-		</div>
-		<!-- END CARD COLUMNNS -->
-	</div>
-	<!-- End Row -->
+            <!-- End Card -->
+            </div>
+            <!-- END CARD COLUMNNS -->
+        </div>
+        <!-- End Row -->
 
 	<!-- Row Fluid -->
 	<div class="row-fluid">
@@ -80,11 +82,11 @@
 </div>
 <!-- End Container -->
 
-<div>
+    <div>
     <!-- This is how to display data has been passed to the view (in App\Http\Controller\HomeController.php), look at /app/Product.php to look at data that's in product. Remove {{-- --}} to test and remove comment -->
     {{-- @foreach ($products as $product)
     <p>Product {{ $product->id }} - {{ $product->category->name }} - {{ $product->image}}</p>
     @endforeach --}}
-</div>
+    </div>
 @endsection
 <!-- End Page Cointainer -->

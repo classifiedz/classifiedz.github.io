@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
+@section('title', 'Posting Policy')
+
 @section('content')
+
 <div class="row px-5 pt-4">
 <table class="table table-user-information">
 			<h3>Posting Policy</h3>
@@ -19,4 +22,5 @@
 		</table>
 
 </div>
+
 @endsection
