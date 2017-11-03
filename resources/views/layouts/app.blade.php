@@ -71,11 +71,12 @@
             	</a>
 
 	            <div class="dropdown-menu bg-primary">
-                    <a class="dropdown-item text-white bg-primary" href="/profile">Profile</a>
-                    <a class="dropdown-item text-white bg-primary" href="/wishlist">Wishlist</a>
+                    <a class="dropdown-item text-white bg-primary" href="/profile"><i class="fa fa-address-card-o" aria-hidden="true"></i>&nbsp;Profile</a>
+                    <a class="dropdown-item text-white bg-primary" href="/wishlist"><i class="fa fa-check-circle-o" aria-hidden="true"></i>&nbsp;Wishlist</a>
                     <a class="dropdown-item text-white bg-primary" href="{{ route('logout') }}"
 	                    onclick="event.preventDefault();
 	                    document.getElementById('logout-form').submit();">
+                        <i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;
 	                    	Logout
                 	</a>
 	                <form id="logout-form" action="{{ route('logout') }}" method="POST"

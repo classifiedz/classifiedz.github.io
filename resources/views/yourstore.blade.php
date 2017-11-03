@@ -13,14 +13,14 @@
 
 <!--contact info here-->
 
-	<table class="table">
+<table class="table">
   <tbody>
     <tr>
-      <th scope="row">	<span class="badge badge-primary">Contact</span></th>
-      <td>{{ $user->email }}</td>
-      <td>{{ $user->phoneNumber }}</td>
+      <th scope="row">	<span class="badge badge-primary">Contact Us</span></th>
+      <td><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;{{ $user->email }}</td>
+      <td><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;{{ $user->phoneNumber }}</td>
     </tr>
-</tbody>
+  </tbody>
 </table>
 
 <div class="container-fluid py-3">
