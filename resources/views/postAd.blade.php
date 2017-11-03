@@ -30,42 +30,43 @@
                             <span class="help-block">
             <strong>{{ $errors->first('category_id') }}</strong>
           </span>
-                        @endif
-                    </div>
-                    <div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">
-                        <label for="title">Item you're selling:</label>
-                        <input type="text" class="form-control" id="title" placeholder="Product..." name="title">
-                        @if ($errors->has('title'))
-                            <span class="help-block">
+
+          @endif
+        </div>
+        <div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">
+          <label for="title">Item you're selling:</label>
+          <input type="text" class="form-control" id="title" placeholder="Product..." name="title" value="{{ old('title') }}">
+          @if ($errors->has('title'))
+          <span class="help-block">
             <strong>{{ $errors->first('title') }}</strong>
           </span>
-                        @endif
-                    </div>
-                    <div class="form-group{{ $errors->has('description') ? ' has-error' : '' }}">
-                        <label for="description">Description:</label>
-                        <textarea class="form-control" rows="5" name="description" id="description"
-                                  placeholder="Describe what you're selling... "></textarea>
-
-                        @if ($errors->has('description'))
-                            <span class="help-block">
+          @endif
+        </div>
+        <div class="form-group{{ $errors->has('description') ? ' has-error' : '' }}">
+          <label for="description">Description:</label>
+          <textarea class="form-control" rows="5" name="description" id="description" placeholder="Describe what you're selling... ">{{ old('description') }}</textarea>
+          
+          @if ($errors->has('description'))
+          <span class="help-block">
             <strong>{{ $errors->first('description') }}</strong>
           </span>
-                        @endif
-                    </div>
-                    <div class="form-group{{ $errors->has('price') ? ' has-error' : '' }}">
-                        <label for="price">How much are you selling this item for?</label>
-                        <input type="text" class="form-control" id="price" name="price">
+          @endif
+        </div>
+        <div class="form-group{{ $errors->has('price') ? ' has-error' : '' }}">
+          <label for="price">How much are you selling this item for?</label>
+          <input type="text" class="form-control" id="price" name="price" value="{{ old('price') }}">
 
                         @if ($errors->has('price'))
                             <span class="help-block">
             <strong>{{ $errors->first('price') }}</strong>
           </span>
-                        @endif
-                    </div>
-                    <div class="form-group{{ $errors->has('image') ? ' has-error' : '' }}">
-                        <label for="image">Upload an image of your product:</label>
-                        </br>
-                        <input id="image" name="image" type="file">
+
+          @endif
+        </div>
+        <div class="form-group{{ $errors->has('image') ? ' has-error' : '' }}">
+          <label for="image">Upload an image of your product:</label>
+          </br>
+          <input id="image" name="image" type="file" value="{{ old('image') }}">
 
                         @if ($errors->has('image'))
                             <span class="help-block">

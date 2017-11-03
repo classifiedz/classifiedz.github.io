@@ -52,7 +52,7 @@
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/profile"><i class="fa fa-user"></i> Your Store</a>
+                <a class="nav-link" href="/store"><i class="fa fa-user"></i> Your Store</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('postAdForm') }}"><i class="fa fa-pencil-square-o"></i> Post an
@@ -71,10 +71,12 @@
             	</a>
 
 	            <div class="dropdown-menu bg-primary">
-                    <a class="dropdown-item text-white bg-primary" href="/profile">Profile</a>
+                    <a class="dropdown-item text-white bg-primary" href="/profile"><i class="fa fa-address-card-o" aria-hidden="true"></i>&nbsp;Profile</a>
+                    <a class="dropdown-item text-white bg-primary" href="/wishlist"><i class="fa fa-check-circle-o" aria-hidden="true"></i>&nbsp;Wishlist</a>
                     <a class="dropdown-item text-white bg-primary" href="{{ route('logout') }}"
 	                    onclick="event.preventDefault();
 	                    document.getElementById('logout-form').submit();">
+                        <i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;
 	                    	Logout
                 	</a>
 	                <form id="logout-form" action="{{ route('logout') }}" method="POST"
@@ -83,13 +85,17 @@
 	                </form>
 				</div>
 			</li>
-		@endguest
-		<!-- Navbar Search Field -->
-		<form class="form-inline my-2 my-lg-0">
-		    <input class="form-control mr-sm-2" type="text" placeholder="Search for anything...">
-		    <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
-		</form>
-		</ul>
+            @endguest
+    		<!-- Navbar Search Field
+    		<form class="form-inline my-2 my-lg-0">-->
+            <li class="nav-item">
+                <input class="form-control mr-sm-2" id="searchbar" type="text" placeholder="Search for anything..."/>
+            </li>
+            <li class="nav-item">
+                &nbsp;<button class="btn btn-success my-2 my-sm-0 searchbutton">Search</button>
+            </li>
+    		<!-- </form> -->
+        </ul>
 	</div>
 </nav>
 <!-- NAV END -->
@@ -125,5 +131,6 @@
 <script src="{{ asset('js/jquery/jquery.min.js') }}"></script>
 <script src="{{ asset('js/tether/tether.min.js') }}"></script>
 <script src="{{ asset('js/bootstrap/bootstrap.min.js') }}"></script>
+<script id="dsq-count-scr" src="//classifiedz-xyz.disqus.com/count.js" async></script>
 </body>
 </html>

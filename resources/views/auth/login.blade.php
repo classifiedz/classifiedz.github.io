@@ -3,7 +3,7 @@
 @section('title', '*Login|Register*')
 
 @section('content')
-<div class="container">
+<div class="container authenticationContainer">
     <div class="row">
         <div class="col-sm-5">
             <div class ="form-box">
@@ -66,10 +66,10 @@
                                 <a class="btn btn-link" href="{{ route('password.request') }}">
                                     Forgot Your Password?
                                 </a>
-                                <br /><br /> Not Registered yet?
+<!--                                 <br /><br /> Not Registered yet?
                                 <a class="btn btn-link" href="{{ route('register') }}">
                                     Create an Account
-                                </a>
+                                </a> -->
                             </div>
                         </div>
                     </form>
@@ -124,38 +124,40 @@
                             </div>
                         </div>
 
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            
+                        <div class="form-group{{ $errors->has('emailRegister') ? ' has-error' : '' }}">
+                            <label for="emailRegister" class="col-md-4 control-label">E-Mail Address</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" placeholder= "E-mail Address" value="{{ old('email') }}" required>
+                                <input id="emailRegister" type="email" class="form-control" name="emailRegister" value="{{ old('emailRegister') }}" required>
 
-                                @if ($errors->has('email'))
+                                @if ($errors->has('emailRegister'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
+                                        <strong>{{ $errors->first('emailRegister') }}</strong>
                                     </span>
                                 @endif
                             </div>
                         </div>
 
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            
+                        <div class="form-group{{ $errors->has('passwordRegister') ? ' has-error' : '' }}">
+                            <label for="passwordRegister" class="col-md-4 control-label">Password</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" placeholder= "Password" required>
+                                <input id="passwordRegister" type="password" class="form-control" name="passwordRegister" required>
 
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
+                                @if ($errors->has('passwordRegister'))
+                                    <span class="help-block"
+                                        <strong>{{ $errors->first('passwordRegister') }}</strong>
                                     </span>
                                 @endif
                             </div>
                         </div>
 
                         <div class="form-group">
-                            
+
+                            <label for="passwordRegister-confirm" class="col-md-4 control-label">Confirm Password</label>
+
                             <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder= "Confirm Password" required>
+                                <input id="passwordRegister-confirm" type="password" class="form-control" name="passwordRegister_confirmation" required>
                             </div>
                         </div>
 
@@ -164,11 +166,11 @@
                                 <button type="submit" class="btn btn-primary">
                                     Register
                                 </button>
-                </div>                
-                                <br /><br />Already have an account?
+<!--                                 <br /><br />Already have an account?
+
                                 <a class="btn btn-link" href="{{ route('login') }}">
                                     Sign in here
-                                </a>
+                                </a> -->
                             </div>
                         </div>
                     </form>

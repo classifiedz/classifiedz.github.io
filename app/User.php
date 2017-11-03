@@ -17,7 +17,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'username'
+        'name', 'email', 'password', 'username', 'city', 'phoneNumber'
     ];
 
     /**
@@ -43,5 +43,9 @@ class User extends Authenticatable
 
     public function reviews_written(){
         return $this->hasMany('App\UserReview', 'reviewer_id', 'id');
+    }
+
+    public function wishlist(){
+        return $this->hasMany('App\Wishlist', 'user_id', 'id');
     }
 }

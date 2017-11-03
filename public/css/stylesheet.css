@@ -5,7 +5,7 @@ html, body {
     margin: 0;
     padding: 0;
     background-color: rgb(250, 250, 250);
-   
+
 }
 
 header {
@@ -135,6 +135,12 @@ Aligns Main Menu under button
     border-radius: 0.85rem;
 }*/
 /*login & register page font size*/
+
+.authenticationContainer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
 .panel-heading h1{
   width:100px;
   height:50px;
@@ -198,16 +204,35 @@ Aligns Main Menu under button
     margin-bottom: 0;
 }
 
+/* Drop Down
 .dropdown-user {
     margin: 13px 0;
     padding: 5px;
     height: 100%;
+}*/
+
+/* dropdown on hover css */
+.dropdown:hover>.dropdown-menu {
+  display: block;
+}
+
+/* Sor by css */
+#sortByDropdown, .category_breadcrumb {
+    padding-top: 15px;
 }
 
 .dropdown-user:hover {
     cursor: pointer;
 }
-
+#sortByDropdown2, .category_breadcrumb {
+    padding-top: 5px;
+}
+/* End Dropdown*/
+.dropdown-item {
+    cursor: pointer;
+    cursor: hand;
+}
+/*
 .table-user-information > tbody > tr {
     border-top: 1px solid rgb(221, 221, 221);
 }
@@ -220,5 +245,26 @@ Aligns Main Menu under button
 .table-user-information > tbody > tr > td {
     border-top: 0;
 }
+*/
 
+/*Wishlist Page*/
+#deleteWishlistBtn:hover, #addWishlistBtn:hover {
+    cursor: pointer;
+}
+#addWishlistBtn{
+  background: none;
+  border: none;
+}
+.star:hover .fa-star-o,
+.star .fa-star{
+    display: none;
+}
+.star:hover .fa-star {
+    display: inline;
+    color:#ffd633;
+}
+#space{
+  display:flex;
+  justify-content: space-between;
+}
 /*profile page css end*/

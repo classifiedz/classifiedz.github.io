@@ -22,11 +22,37 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $products = Product::orderBy('created_at', 'desc')
-                           ->take(25)
-                           ->get();
+        $sortBy_column = null;
+        $orderBy = null;
+
+        switch ($request->query('sortBy')) {
+            case 'oldestFirst':
+            $sortBy_column = 'created_at';
+            $orderBy = 'asc';
+            break;
+            case 'cheapestFirst':
+            $sortBy_column = 'price';
+            $orderBy = 'asc';
+            break;
+            case 'expensiveFirst':
+            $sortBy_column = 'price';
+            $orderBy = 'desc';
+            break;
+            case 'popularFirst':
+            $sortBy_column = 'views';
+            $orderBy = 'desc';
+            break;
+            case 'newestFirst':
+            default:
+            $sortBy_column = 'created_at';
+            $orderBy = 'desc';
+            break;
+        }
+
+        $products = Product::orderBy($sortBy_column, $orderBy)
+                            ->paginate(15);
         return view('index', ['products' => $products]);
     }
 }
