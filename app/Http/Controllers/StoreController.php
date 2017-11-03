@@ -30,7 +30,7 @@ class StoreController extends Controller
 
         $title = "$user->username 's Store";
 
-        if(Auth::check() && Auth::user()->id == $user->id){
+        if (Auth::check() && Auth::user()->id == $user->id) {
             $title = "My Store";
         }
 
@@ -39,6 +39,7 @@ class StoreController extends Controller
             'title' => $title
         ]);
     }
+
     public function showYourStore()
     {
         $user = Auth::user();
