@@ -53,7 +53,7 @@
 						<form  action="/ad/{{ $product->id }}" method="POST">
 			                {{ csrf_field() }}
 			                <input type="hidden" name="_method" value="DELETE">
-			                <button id="deleteWishlistBtn" type="submit" class="btn btn-outline-danger">Delete</button>
+			                <button id="deleteWishlistBtn" type="submit" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 		                </form>
 		                @endif
 						<div><small class="badge badge-pill badge-success">$ {{ $product->price }}</small></div> </div>
