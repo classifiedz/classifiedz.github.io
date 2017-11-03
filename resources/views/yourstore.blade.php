@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'MyStore')
+
 @section('content')
 
 <div class="row-fluid pt-3">

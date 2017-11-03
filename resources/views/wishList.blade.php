@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'WishList')
+
 @section('content')
 
 <div class="row px-5 pt-4">

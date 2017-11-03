@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Home')
+@section('title', 'Search')
 
 <!-- Whoever has to edit work on this code... im sorry -->
 <!-- PAGE CONTENT CONTAINER -->
