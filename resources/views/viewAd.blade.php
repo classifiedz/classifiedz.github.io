@@ -10,13 +10,13 @@
         </div>
         <div class=" col-sm-6">
             <h2>{{ $product->title }}</h2>
-            <small>Sold by <a href="#">{{ $product->user->username}}</a></small>
+            <small>Sold by <a href="/store/{{ $product->user->username }}">{{ $product->user->username}}</a></small>
           </br></br>
             <h3>$ {{ $product->price}}</h3>
           </br>
             <h5>Description: </h5>
             <p>{{ $product->description}}</p>
-            <p><small>Interested? Contact them <a href="#">now</a>!</small></p>
+            <p><small>Interested? Contact them <a href="/store/{{ $product->user->username }}">now</a>!</small></p>
 
         </div>
     </div>

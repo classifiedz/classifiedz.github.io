@@ -11,11 +11,10 @@
 |
 */
 use Illuminate\Http\Request;
-/* Searchable Content*/
+// Searchable Content
 Route::get('/search/{searchKey}', 'searchController@search');
-/*Route::get('/search', function (Request $request) {
-    return App\Product::search($request->search)->get();
-});*/
+Route::get('/search/{searchKey}/{category}', 'searchController@searchCategory');
+
 //Home Index
 Route::get('/', ['as' => 'index', 'uses' => 'HomeController@index']);
 
@@ -38,6 +37,11 @@ Route::post('/editprofile', ['as' => 'updateProfile', 'uses' => 'ProfileControll
 Route::get('/wishlist','WishlistController@showWishlist')->middleware('auth');
 Route::post('/wishlist/create', 'WishlistController@storeUserWishlist')->middleware('auth');
 Route::delete('/wishlist/{wishlist}', 'WishlistController@removeUserWishlist')->middleware('auth');
+
+//Your Store page
+Route::get('/store','StoreController@showYourStore')->middleware('auth');
+Route::get('/store/{username}','StoreController@showStore');
+Route::delete('/ad/{product}', 'ProductController@removeProduct')->middleware('auth');
 
 // Legal Document Pages
 Route::get('/privacy', 'PageController@privacyPage');

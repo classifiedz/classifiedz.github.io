@@ -51,10 +51,7 @@
 		</table>
 		<ul class="list-inline">
   			<li class="list-inline-item p-1">
-				<a href="/profile/edit" class="btn btn-success"  role="button">Edit Profile</a>
-			</li>
-			<li class="list-inline-item p-1">
-				<a href="/wishlist" class="btn btn-info"  role="button">Wish List</a>
+				<a href="/profile/edit" class="btn btn-warning"  role="button">Edit Profile</a>
 			</li>
 			<li class="list-inline-item p-1">
 				<a href="{{ route('logout') }}"
