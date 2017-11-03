@@ -40,7 +40,7 @@
 		</table>
 		<ul class="list-inline" >
 			<li class="list-inline-item p-1">
-				<button type="submit" class="btn btn-warning">Save changes</button>
+				<button type="submit" class="btn btn-success">Save changes</button>
 			</li>
 			<li class="list-inline-item p-1">
 				<a href="/profile" class="btn btn-danger"  role="button">Cancel</a>
