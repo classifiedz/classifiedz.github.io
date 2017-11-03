@@ -34,6 +34,10 @@ Route::get('/profile','ProfileController@showProfile')->middleware('auth');
 Route::get('/profile/edit','ProfileController@showEditprofile')->middleware('auth');
 Route::post('/editprofile', ['as' => 'updateProfile', 'uses' => 'ProfileController@updateProfile'])->middleware('auth');
 
+// User ratings
+Route::post('/profile', ['as' => 'updateLikes', 'uses' => 'RatingController@updateLikes'])->middleware('auth');
+Route::post('/profile', ['as' => 'updatedisLikes', 'uses' => 'RatingController@updatedisLikes'])->middleware('auth');
+
 // Wishlist Page
 Route::get('/wishlist','WishlistController@showWishlist')->middleware('auth');
 Route::post('/wishlist/create', 'WishlistController@storeUserWishlist')->middleware('auth');
