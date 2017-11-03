@@ -44,4 +44,12 @@ class ProfileController extends Controller
 
         return redirect('/profile');
     }
+
+    public function updateLikes(){
+      Auth::user()->update($request->all());
+    }
+
+    public function updateDislikes(){
+      Auth::user()->update($request->all());
+    }
 }
