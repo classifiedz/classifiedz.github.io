@@ -129,5 +129,6 @@
 <script src="{{ asset('js/jquery/jquery.min.js') }}"></script>
 <script src="{{ asset('js/tether/tether.min.js') }}"></script>
 <script src="{{ asset('js/bootstrap/bootstrap.min.js') }}"></script>
+<script id="dsq-count-scr" src="//classifiedz-xyz.disqus.com/count.js" async></script>
 </body>
 </html>
