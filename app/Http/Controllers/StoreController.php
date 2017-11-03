@@ -28,7 +28,7 @@ class StoreController extends Controller
     {
         $user = User::where('username', $username)->firstOrFail();
 
-        $title = "$user->username 's Store";
+        $title = "$user->username's Store";
 
         if (Auth::check() && Auth::user()->id == $user->id) {
             $title = "My Store";
