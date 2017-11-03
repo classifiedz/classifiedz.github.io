@@ -16,7 +16,7 @@
 <table class="table">
   <tbody>
     <tr>
-      <th scope="row">	<span class="badge badge-primary">Contact Us</span></th>
+      <th scope="row">	<span class="badge badge-primary" data-toggle="tooltip" data-placement="top" title="change contacts in profile">Contact Us</span></th>
       <td><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;{{ $user->email }}</td>
       <td><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;{{ $user->phoneNumber }}</td>
     </tr>
