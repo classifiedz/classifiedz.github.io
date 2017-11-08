@@ -79,28 +79,33 @@
            @endif
          </div>
 
-
          <!-- Show Chat -->
-         <div class="form-group{{ $errors->has('showChat') ? ' has-error' : '' }}">
-            <label for="showChat">Show Chat On Your Ad?</label>
-            <select class="form-control" id="showChat" name="showChat">
-               <option value="0">No</option>
-               <option value="1">Yes</option>
-            </select>
-            @if ($errors->has('showChat'))
+         <div class="form-group{{ $errors->has('show_chat') ? ' has-error' : '' }}">
+            <label class="form-check-label">
+              <input name="show_chat" id="show_chat" type="checkbox" class="form-check-input" value="1" {{ old('show_chat') !== null ? 'checked' : '' }}>
+              Enable Chat On Your Ad?
+            </label>
+            @if ($errors->has('show_chat'))
                <span class="help-block">
-                 <strong>{{ $errors->first('showChat') }}</strong>
+                 <strong>{{ $errors->first('show_chat') }}</strong>
                </span>
             @endif
          </div>
 
-         <!-- Space Inbetween form and Buttons -->
-         </br></br>
+        <!-- Space Inbetween form and Buttons -->
+        </br></br>
 
          <!-- Privacy Agreement -->
-         <div class="checkbox">
-            <label><input type="checkbox" name="agree"> <small>I have read and agree to the <a href="#">Terms and Conditions</a></small></label>
-         </div>
+         <div class="form-group{{ $errors->has('terms') ? ' has-error' : '' }}">
+            <label>
+              <input type="checkbox" name="terms"> <small>I have read and agree to the <a href="#">Terms and Conditions</a></small>
+            </label>
+            @if ($errors->has('terms'))
+             <span class="help-block">
+               <strong>{{ $errors->first('terms') }}</strong>
+             </span>
+            @endif
+          </div>
 
          <!-- Submit / Cancel -->
          <button type="submit" class="btn btn-success"> Post Ad</button>

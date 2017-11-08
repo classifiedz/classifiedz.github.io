@@ -60,6 +60,8 @@ class ProductController extends Controller
         $imagePath = explode('/',$path);
         $path =  "storage/".$imagePath[1];
 
+        $show_chat = isset($request->show_chat) ? true : false;
+
         $product = [
             'user_id' => $id,
             'title' => $request->title,
@@ -67,7 +69,7 @@ class ProductController extends Controller
             'price' => $request->price,
             'category_id' => $request->category_id,
             'image' => $path,
-				'showChat' => $request->has('showChat'),
+			'show_chat' => $show_chat,
         ];
 
         $product = Product::create($product);

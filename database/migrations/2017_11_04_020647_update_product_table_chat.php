@@ -14,7 +14,7 @@ class UpdateProductTableChat extends Migration
     public function up()
     {
       Schema::table('products', function (Blueprint $table) {
-          $table->boolean('showChat')->default(true);
+          $table->boolean('show_chat')->default(true);
       });
     }
 

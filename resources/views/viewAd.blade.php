@@ -20,8 +20,7 @@
 
         </div>
     </div>
-    <!-- <h1>Value of showChat: {{$product->showChat}}</h1> -->
-    @if($product->showChat==true)
+    @if($product->show_chat==true)
        <div class="row-fluid">
            <div id="disqus_thread"></div>
            <script>
