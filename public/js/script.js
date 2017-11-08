@@ -9,13 +9,14 @@ function updateQueryStringParameter(uri, key, value) {
   }
 }
 
+/*Adding sort by parameter to the URL*/
 $('.sortBy').on('click',function(){
 	var URL = $(location).attr("href");
 	var newURL = updateQueryStringParameter(URL, 'sortBy', this.id);
 	window.location.href = newURL;
 });
 
-
+/*Deals with modal confirmation prompt for deleting your own ad*/
 $('#deleteAdModal').on('show.bs.modal', function (event) {
     var button = $(event.relatedTarget) // Button that triggered the modal
     var productId = button.data('productid') // Extract info from data-* attributes
@@ -23,7 +24,7 @@ $('#deleteAdModal').on('show.bs.modal', function (event) {
     $('#deleteAdForm').attr('action', '/ad/' + productId);
 })
 
-
+/*Deals with modal confirmation prompt for deleting an item in your wishlist*/
 $('#deleteWishlistItemModal').on('show.bs.modal', function (event) {
     var button = $(event.relatedTarget) // Button that triggered the modal
     var productId = button.data('productid') // Extract info from data-* attributes

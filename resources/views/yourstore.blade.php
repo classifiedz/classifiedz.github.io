@@ -52,11 +52,6 @@
 		                </form>
 		                @endif
 		                @if(Auth::check() && $user->id == Auth::user()->id)
-<!-- 						<form  action="/ad/{{ $product->id }}" method="POST">
-			                {{ csrf_field() }}
-			                <input type="hidden" name="_method" value="DELETE">
-			                <button id="deleteWishlistBtn" type="submit" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-		                </form> -->
 		                <button type="button" class="close" aria-label="Close" data-toggle="modal" data-target="#deleteAdModal" data-productid="{{ $product->id }}">
 		                	<span aria-hidden="true">&times;</span>
 		                </button>
@@ -73,6 +68,7 @@
 	<!-- End Row -->
 </div>
 
+<!-- Confirmation modal -->
 @if(Auth::check() && $user->id == Auth::user()->id)
 <div class="modal fade" id="deleteAdModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -97,5 +93,6 @@
   </div>
 </div>
 @endif
+<!-- End confirmation modal -->
 
 @endsection
