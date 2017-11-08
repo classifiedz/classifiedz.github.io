@@ -15,6 +15,22 @@ $('.sortBy').on('click',function(){
 	window.location.href = newURL;
 });
 
+
+$('#deleteAdModal').on('show.bs.modal', function (event) {
+    var button = $(event.relatedTarget) // Button that triggered the modal
+    var productId = button.data('productid') // Extract info from data-* attributes
+    
+    $('#deleteAdForm').attr('action', '/ad/' + productId);
+})
+
+
+$('#deleteWishlistItemModal').on('show.bs.modal', function (event) {
+    var button = $(event.relatedTarget) // Button that triggered the modal
+    var productId = button.data('productid') // Extract info from data-* attributes
+    
+    $('#deleteWishlistItemForm').attr('action', '/wishlist/' + productId);
+})
+
 /* If search button CLICK, move URL to search */
 $('.searchbutton').on('click',function(){
     var URL = $(location).attr("href");
