@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Ad Post')
+
 @section('content')
 
 <div class="container-fluid py-5">
