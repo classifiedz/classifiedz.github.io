@@ -27,18 +27,25 @@ class StoreController extends Controller
     public function showStore($username)
     {
         $user = User::where('username', $username)->firstOrFail();
-
+  		  
+        $title = "$user->username's Store";
+  		  
+        if (Auth::check() && Auth::user()->id == $user->id) {
+              $title = "My Store";
+        }
+ 		 
         return view('yourstore', [
-            'user' => $user
+            'user' => $user,
+            'title' => $title
         ]);
     }
-
+ 		 
     public function showYourStore()
     {
         $user = Auth::user();
-
         return view('yourstore', [
-            'user' => $user
+            'user' => $user,
+            'title' => 'My Store'
         ]);
     }
 
