@@ -15,7 +15,7 @@
                     </div>
                 </div>
 
-                <div class="panel-body">
+                <div class="form-bottom">
                     <form class="form-horizontal" method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
 
