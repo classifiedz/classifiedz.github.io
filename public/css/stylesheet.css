@@ -235,3 +235,11 @@ Aligns Main Menu under button
     padding-right: 65px;
    
 }
+.form-top {
+    overflow: hidden;
+    padding: 0 15px 15px 25px;
+    background: #444;
+    background: rgba(0, 0, 0, 0.35);
+    -moz-border-radius: 4px 4px 0 0; -webkit-border-radius: 4px 4px 0 0; border-radius: 4px 4px 0 0;
+    text-align: left;
+}

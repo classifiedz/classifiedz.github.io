@@ -5,7 +5,8 @@
     <div class="row">
         <div class="col-6 col-lg-6 col-md-12 col-sm-12">
             <div class="form-box">
-                <div class="panel-heading h1">Login</div>
+                <div class ="form-top">
+                </div>
 
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="{{ route('login') }}">
