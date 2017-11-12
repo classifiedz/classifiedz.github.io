@@ -229,3 +229,9 @@ Aligns Main Menu under button
   justify-content: space-between;
 }
 /*profile page css end*/
+.form-box {
+    margin-top: 40px;
+    margin-right: 50px;
+    padding-right: 65px;
+   
+}
