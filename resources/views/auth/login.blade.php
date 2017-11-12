@@ -6,6 +6,8 @@
         <div class="col-6 col-lg-6 col-md-12 col-sm-12">
             <div class="form-box">
                 <div class ="form-top">
+                    <div class ="form-top-left">
+                    </div>
                 </div>
 
                 <div class="panel-body">
