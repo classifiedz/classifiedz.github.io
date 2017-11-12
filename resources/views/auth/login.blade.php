@@ -7,6 +7,8 @@
             <div class="form-box">
                 <div class ="form-top">
                     <div class ="form-top-left">
+                        <h3> Login </h3>
+                        <p>Enter E-mail and password to log on:</p>
                     </div>
                 </div>
 
