@@ -139,6 +139,7 @@ Aligns Main Menu under button
 .authenticationContainer {
     padding-top: 20px;
     padding-bottom: 20px;
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
 }
 
 .panel-heading h1{
