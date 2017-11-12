@@ -10,6 +10,9 @@
                         <h3> Login </h3>
                         <p>Enter E-mail and password to log on:</p>
                     </div>
+                    <div class = "form-top-right">
+                        <i class = "fa fa-lock"></i>
+                    </div>
                 </div>
 
                 <div class="panel-body">
