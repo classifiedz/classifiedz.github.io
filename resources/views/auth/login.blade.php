@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<div class = "bg">
 <div class="container authenticationContainer">
     <div class="row">
         <div class="col-6 col-lg-6 col-md-12 col-sm-12">
@@ -175,5 +176,6 @@
             </div>
         </div>
     </div>
+</div>
 </div>
 @endsection

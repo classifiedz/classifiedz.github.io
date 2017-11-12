@@ -139,7 +139,6 @@ Aligns Main Menu under button
 .authenticationContainer {
     padding-top: 20px;
     padding-bottom: 20px;
-    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
 }
 
 .panel-heading h1{
@@ -282,4 +281,13 @@ Aligns Main Menu under button
 
 .form-bottom form .input-error {
     border-color: #19b9e7;
+}
+
+.bg {
+    width: 105%;
+    height: 100%;
+    font-family: 'Raleway', sans-serif;
+    margin-left: -15px;
+    padding: 0;
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
 }
