@@ -291,3 +291,7 @@ Aligns Main Menu under button
     padding: 0;
     background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
 }
+
+.btn{
+    color: white;
+}
