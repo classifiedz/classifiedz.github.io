@@ -59,15 +59,12 @@
 		                </form>
 
 		                <form>
-		                	<a href="/EditAd">
-		                		<button id="edit_ads_btn" type="submit">
-		                			<span data-toggle="tooltip" data-placement="top" title="Edit Ad">
-		                				<i class="fa fa-pencil" aria-hidden="true"></i>
-		                			</span>
-		                		</button>
+		                	<a href="/ad/edit/{{ $product->id }}">
+	                			<span data-toggle="tooltip" data-placement="top" title="Edit Ad">
+	                				<i class="fa fa-pencil" aria-hidden="true"></i>
+	                			</span>
 		                	</a>
 		                </form>
-
 		                @endif
 						<div><small class="badge badge-pill badge-success">$ {{ $product->price }}</small></div> </div>
                     </footer>

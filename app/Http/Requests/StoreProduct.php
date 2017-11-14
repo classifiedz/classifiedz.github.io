@@ -29,7 +29,7 @@ class StoreProduct extends FormRequest
         return [
             'title' => 'required|string|max:200',
             'description' => 'nullable|string',
-            'price' => 'required|numeric',
+            'price' => 'required|numeric|min:0',
             'category_id' => 'required|numeric|exists:product_categories,id',
             'image' => 'required|image',
         ];

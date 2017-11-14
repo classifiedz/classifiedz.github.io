@@ -25,6 +25,10 @@ Route::get('/ads/{product}', 'ProductController@showAd');
 Route::get('/ad/create', ['as' => 'postAdForm', 'uses' => 'ProductController@showForm'])->middleware('auth');
 Route::post('/postAd', ['as' => 'storeAd', 'uses' => 'ProductController@storeAd']);
 
+//Edit Ad page
+Route::get('/ad/edit/{product}','ProductController@showEditAdForm')->middleware('auth');
+Route::put('/updateAd', ['as' => 'updateAd', 'uses' => 'ProductController@updateAd']);
+
 //Categories Page
 Route::get('/categories/{category}', 'ProductCategoryController@show');
 
@@ -43,8 +47,6 @@ Route::get('/store','StoreController@showYourStore')->middleware('auth');
 Route::get('/store/{username}','StoreController@showStore');
 Route::delete('/ad/{product}', 'ProductController@removeProduct')->middleware('auth');
 
-//Edit Ad page
-Route::get('/editAd','EditAdController@showEditAd')->middleware('auth');
 
 // Legal Document Pages
 Route::get('/privacy', 'PageController@privacyPage');
