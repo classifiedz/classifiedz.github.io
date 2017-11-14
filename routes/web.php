@@ -43,6 +43,9 @@ Route::get('/store','StoreController@showYourStore')->middleware('auth');
 Route::get('/store/{username}','StoreController@showStore');
 Route::delete('/ad/{product}', 'ProductController@removeProduct')->middleware('auth');
 
+//Edit Ad page
+Route::get('/editAd','EditAdController@showEditAd')->middleware('auth');
+
 // Legal Document Pages
 Route::get('/privacy', 'PageController@privacyPage');
 Route::get('/postingpolicy', 'PageController@postingpolicyPage');

@@ -55,8 +55,19 @@
 						<form  action="/ad/{{ $product->id }}" method="POST">
 			                {{ csrf_field() }}
 			                <input type="hidden" name="_method" value="DELETE">
-			                <button id="deleteWishlistBtn" type="submit" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			                <button id="deleteWishlistBtn" type="submit" class="close" aria-label="Close"><span aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Delete Ad">&times;</span></button>
 		                </form>
+
+		                <form>
+		                	<a href="/EditAd">
+		                		<button id="edit_ads_btn" type="submit">
+		                			<span data-toggle="tooltip" data-placement="top" title="Edit Ad">
+		                				<i class="fa fa-pencil" aria-hidden="true"></i>
+		                			</span>
+		                		</button>
+		                	</a>
+		                </form>
+
 		                @endif
 						<div><small class="badge badge-pill badge-success">$ {{ $product->price }}</small></div> </div>
                     </footer>
