@@ -21,6 +21,8 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+            $table->integer('likes')->default(0);
+            $table->integer('dislikes')->default(0);
         });
     }
 

@@ -32,8 +32,8 @@ class UsersTableSeeder extends Seeder
                 'username' => $faker->userName,
                 'email' => $faker->email,
                 'password' => $password,
-				'city'=> $faker->city,
-				'phoneNumber' => $faker->phoneNumber
+				        'city'=> $faker->city,
+				        'phoneNumber' => $faker->phoneNumber
             ]);
         }
     }

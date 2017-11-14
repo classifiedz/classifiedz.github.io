@@ -22,6 +22,11 @@
       <td><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;{{ $user->email }}</td>
       <td><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;{{ $user->phoneNumber }}</td>
     </tr>
+		<tr>
+      <th scope="row">	<span class="badge badge-primary" data-toggle="tooltip" data-placement="top" title="change contacts in profile">Rating</span></th>
+      <td>{{ $user->likes }}&nbsp;<a href="/store/{{ $user->username }}/rating/like"><i class="fa fa-thumbs-up" aria-hidden="true"></i></a>&nbsp;&nbsp;&nbsp;<a href="/store/{{ $user->username }}/rating/dislike"><i class="fa fa-thumbs-down" aria-hidden="true"></i></a>&nbsp;{{ $user->dislikes }}</td>
+		</tr>
+
   </tbody>
 </table>
 

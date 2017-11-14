@@ -28,6 +28,7 @@ class StoreController extends Controller
     {
         $user = User::where('username', $username)->firstOrFail();
 
+        // get rating from database.
         return view('yourstore', [
             'user' => $user
         ]);
@@ -40,6 +41,28 @@ class StoreController extends Controller
         return view('yourstore', [
             'user' => $user
         ]);
+    }
+
+    /**
+     * Like store
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function likeStore($username)
+    {
+      User::where('username', $username)->increment('likes');
+      return $this->showStore($username);
+    }
+
+    /**
+     * Like store
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function dislikeStore($username)
+    {
+      User::where('username', $username)->increment('dislikes');
+      return $this->showStore($username);
     }
 
 }
