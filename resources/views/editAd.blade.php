@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Edit Ad')
+
 @section('content')
 
 <div class="container-fluid py-5">
@@ -93,8 +95,8 @@
     <div class="checkbox">
       <label><input type="checkbox" name="agree"> <small>I have read and agree to the <a href="#">Terms and Conditions</a></small></label>
     </div>
-    <button type="submit" class="btn btn-success"> Post Ad</button>
-    <button type="button" class="btn btn-danger">Cancel</button>
+    <button type="submit" class="btn btn-success">Update</button>
+    <a href="/store" class="btn btn-danger"  role="button">Cancel</a>
   </form>
 </div>
 </div>
