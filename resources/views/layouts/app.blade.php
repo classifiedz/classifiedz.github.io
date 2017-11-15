@@ -125,12 +125,14 @@
 <script src="{{ asset('js/app.js') }}"></script>
 
 <!-- === Dependencies === -->
-<!-- Custom JS -->
-<script src="{{ asset('js/script.js') }}"></script>
 <!-- Bootstrap core JavaScript -->
 <script src="{{ asset('js/jquery/jquery.min.js') }}"></script>
 <script src="{{ asset('js/tether/tether.min.js') }}"></script>
 <script src="{{ asset('js/bootstrap/bootstrap.min.js') }}"></script>
 <script id="dsq-count-scr" src="//classifiedz-xyz.disqus.com/count.js" async></script>
+<!-- masonry.js -->
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<!-- Custom JS -->
+<script src="{{ asset('js/script.js') }}"></script>
 </body>
 </html>
