@@ -29,6 +29,7 @@ class ProductsTableSeeder extends Seeder
                 'status' => $statuses[$randomNumber],
                 'image' => $faker->imageUrl($width = 640, $height = 480),
                 'views' => $faker->numberBetween(0, 250),
+                'show_chat' => true,
             ]);
         }
     }
