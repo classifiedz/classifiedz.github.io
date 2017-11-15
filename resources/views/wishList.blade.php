@@ -18,7 +18,7 @@
 				<td>{{ $item->product->category->name }}</td>
 				<td><a href="/ads/{{ $item->product->id }}">{{ $item->product->title }}</a></td>
 				<td>
-					<button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#deleteWishlistItemModal" data-productid="{{ $item->product->id }}">Delete</button>
+					<button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#deleteWishlistItemModal" data-wishlistid="{{ $item->id }}">Delete</button>
 				</td>
 			</tr>
 			@endforeach
@@ -43,7 +43,7 @@
 			<form  id="deleteWishlistItemForm" action="" method="POST">
 	            {{ csrf_field() }}
 	            <input type="hidden" name="_method" value="DELETE">
-	            <button id="deleteWishlistBtn" type="submit" class="btn btn-danger">Delete</button>
+	            <button type="submit" class="btn btn-danger">Delete</button>
 	        </form>
 		</span>
       </div>

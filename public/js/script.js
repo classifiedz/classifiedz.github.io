@@ -27,9 +27,9 @@ $('#deleteAdModal').on('show.bs.modal', function (event) {
 /*Deals with modal confirmation prompt for deleting an item in your wishlist*/
 $('#deleteWishlistItemModal').on('show.bs.modal', function (event) {
     var button = $(event.relatedTarget) // Button that triggered the modal
-    var productId = button.data('productid') // Extract info from data-* attributes
+    var wishlistId = button.data('wishlistid') // Extract info from data-* attributes
     
-    $('#deleteWishlistItemForm').attr('action', '/wishlist/' + productId);
+    $('#deleteWishlistItemForm').attr('action', '/wishlist/' + wishlistId);
 })
 
 /* If search button CLICK, move URL to search */
