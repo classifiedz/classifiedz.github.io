@@ -7,7 +7,7 @@
 <div class="container-fluid py-5">
   <div class="row-fluid">
     <div class="container col-sm-8">
-      <h2>Update Ad</h2>
+      <h2>Update Your Ad &nbsp;<span class="badge badge-default">{{$product->title}}</span></h2>
       <form method="POST"  enctype="multipart/form-data" action="{{ route('updateAd') }}">
         {{ csrf_field() }}
 
@@ -54,7 +54,7 @@
           @endif
         </div>
         <div class="form-group{{ $errors->has('price') ? ' has-error' : '' }}">
-          <label for="price">How much are you selling this item for?</label>
+          <label for="price">How much are you selling this item for:</label>
           <input type="text" class="form-control" id="price" name="price" value="{{ (old('price') !== null) ? old('price') : $product->price }}">
 
           @if ($errors->has('price'))
@@ -65,9 +65,10 @@
         </div>
 
         <div>
-        	<label for="currImage">This is your current image</label>
-        	<img id="currImage" src="{{ asset($product->image) }}">
+        	<label for="currImage">Your current image of product:&nbsp;</label>
+        	<img id="currImage" src="{{ asset($product->image) }}" height="80">
         </div>
+        <br>
         <div class="form-group{{ $errors->has('image') ? ' has-error' : '' }}">
           <label for="image">Upload a new image of your product (not necessary):</label>
           </br>
