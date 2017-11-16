@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Refund')
+
 @section('content')
 <div class="row px-5 pt-4">
 <table class="table table-user-information">

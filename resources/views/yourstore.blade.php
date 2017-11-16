@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'MyStore')
+@section('title', $title)
 
 @section('content')
 
@@ -68,6 +68,7 @@
 	<!-- End Row -->
 </div>
 
+
 <!-- Confirmation modal -->
 @if(Auth::check() && $user->id == Auth::user()->id)
 <div class="modal fade" id="deleteAdModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -96,3 +97,6 @@
 <!-- End confirmation modal -->
 
 @endsection
+=======
+@endsection
+

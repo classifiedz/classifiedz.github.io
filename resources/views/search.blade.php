@@ -77,14 +77,14 @@
     </div>
     <!-- End Row Category Search-->
 
-    <!-- Row Fluid -->
-    <div class="row-fluid pt-3">
-    	<!-- CARD COLUMNNS -->
-    	<div class="card-columns">
-    		@foreach ($products as $product)
+    <!-- Row -->
+	<div class="row cards"><!-- row-fluid -->
+      @foreach ($products as $product)
+		   <!-- CARD COLUMNNS -->
+         <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 p-2">
             @if( isset($category) && ( ($product->category->name == $category->name) || (isset($product->category->parent) && $product->category->parent->name == $category->name) || (isset($product->category->parent->parent) && $product->category->parent->parent->name == $category->name) ) )
                <!-- Card -->
-               <div class="card mb-3">
+               <div class="card">
                   <a href="/ads/{{ $product->id }}" ><img class="card-img-top img-fluid" width="100%" src="{{ asset($product->image) }}" alt="Post Image"></a>
                   <div class="card-block p-3">
                      <a id="cardTitle" href="/ads/{{ $product->id }}"><span class="card-title h4 text-justify">{{ $product->title }}</span></a>
@@ -100,23 +100,38 @@
             @endif
             @if(!isset($category))
                <!-- Card -->
-               <div class="card mb-3">
+               <div class="card">
                   <a href="/ads/{{ $product->id }}" ><img class="card-img-top img-fluid" width="100%" src="{{ asset($product->image) }}" alt="Post Image"></a>
                   <div class="card-block p-3">
                      <a id="cardTitle" href="/ads/{{ $product->id }}"><span class="card-title h4 text-justify">{{ $product->title }}</span></a>
                      <p class="card-text mb-2">{{ $product->description }}</p>
                      <footer class="text-right">
-                        <small class="text-muted">{{ date('M-jS', strtotime($product->created_at)) }}</small><br/>
-                        <a href="{{$searchWord}}/{{$product->category->id}}"><small class="badge badge-pill badge-info">{{ $product->category->name}}</small></a>
-                        <small class="badge badge-pill badge-success">$ {{ $product->price }}</small>
-                     </footer>
+               			<small class="text-muted">{{ date('M-jS', strtotime($product->created_at)) }}</small><br/>
+            				<!-- Space -->
+            				<span class="pull-left">
+      	 						@if(Auth::check())
+         					   	<form  action="/wishlist/create" method="POST">
+	                              {{ csrf_field() }}
+         				         	<input type="hidden" name="product_id" value="{{ $product->id }}">
+         					        	<button id="addWishlistBtn" type="submit" class="star">
+         			                  <i class="fa fa-star"></i>
+         			              	   <i class="fa fa-star-o"></i>
+         			            	</button>
+         			         	</form>
+				               @endif
+      						</span>
+           					<!-- End Space -->
+      						<span class="pull-right">
+      							<small class="badge badge-pill badge-success">$ {{ $product->price }}</small>
+      						</span>
+      					</footer>
                   </div>
                </div>
                <!-- End Card -->
             @endif
-    		@endforeach
-    	</div>
-    	<!-- END CARD COLUMNNS -->
+         </div>
+         <!-- END CARD COLUMNNS -->
+ 		@endforeach
    </div>
    <!-- End Row -->
 @endsection
