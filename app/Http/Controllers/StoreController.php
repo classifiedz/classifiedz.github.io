@@ -28,7 +28,13 @@ class StoreController extends Controller
     public function showStore($username)
     {
         $user = User::where('username', $username)->firstOrFail();
-
+      
+        $title = "$user->username's Store";
+  		  
+        if (Auth::check() && Auth::user()->id == $user->id) {
+          $title = "My Store";
+        }
+      
         $likeCntr = 0;
         $dislikeCntr = 0;
         $liked = false;
@@ -57,9 +63,10 @@ class StoreController extends Controller
             'dislikeCntr' => $dislikeCntr,
             'liked' => $liked,
             'disliked' => $disliked,
+            'title' => $title
         ]);
     }
-
+ 		 
     public function showYourStore()
     {
         $user = Auth::user();
@@ -91,6 +98,7 @@ class StoreController extends Controller
             'dislikeCntr' => $dislikeCntr,
             'liked' => $liked,
             'disliked' => $disliked,
+            'title' => 'My Store'
         ]);
     }
 
