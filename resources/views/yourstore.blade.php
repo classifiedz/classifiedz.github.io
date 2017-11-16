@@ -22,10 +22,46 @@
       <td><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;{{ $user->email }}</td>
       <td><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;{{ $user->phoneNumber }}</td>
     </tr>
-		<tr>
-      <th scope="row">	<span class="badge badge-primary" data-toggle="tooltip" data-placement="top" title="change contacts in profile">Rating</span></th>
-      <td>{{ $user->likes }}&nbsp;<a href="/store/{{ $user->username }}/rating/like"><i class="fa fa-thumbs-up" aria-hidden="true"></i></a>&nbsp;&nbsp;&nbsp;<a href="/store/{{ $user->username }}/rating/dislike"><i class="fa fa-thumbs-down" aria-hidden="true"></i></a>&nbsp;{{ $user->dislikes }}</td>
-		</tr>
+	<tr>
+      <th scope="row">	
+      	<span class="badge badge-primary" data-toggle="tooltip" data-placement="top" title="change contacts in profile">Rating</span>
+      </th>
+      <td>
+      	<p class="same-line">
+      		@if($liked) <b> @endif
+      		{{ $likeCntr }}
+      		@if($liked) </b> @endif
+      	</p>
+      	&nbsp;
+      	<span class="same-line">
+	      	<form  action="/store/rate" method="POST">
+		       {{ csrf_field() }}
+		        <input type="hidden" name="reviewee_id" value="{{ $user->id }}">
+		        <input type="hidden" name="liked" value="1">
+			  	<button id="addWishlistBtn" type="submit">
+                    <i class="fa fa-thumbs-up fa-lg text-success"></i>
+              	</button>
+		    </form>
+		</span>
+		&nbsp;&nbsp;
+		<span class="same-line">
+	      	<form  action="/store/rate" method="POST">
+		       {{ csrf_field() }}
+		        <input type="hidden" name="reviewee_id" value="{{ $user->id }}">
+		        <input type="hidden" name="liked" value="0">
+			  	<button id="addWishlistBtn" type="submit">
+                    <i class="fa fa-thumbs-down fa-lg text-danger"></i>
+              	</button>
+		    </form>
+		</span>
+      	&nbsp; 
+      	<p class="same-line">
+      		@if($disliked) <b> @endif
+      		{{ $dislikeCntr }}
+      		@if($disliked) </b> @endif
+      	</p>
+      </td>
+	</tr>
 
   </tbody>
 </table>

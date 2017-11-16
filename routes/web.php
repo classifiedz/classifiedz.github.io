@@ -41,8 +41,7 @@ Route::delete('/wishlist/{wishlist}', 'WishlistController@removeUserWishlist')->
 //Your Store page
 Route::get('/store','StoreController@showYourStore')->middleware('auth');
 Route::get('/store/{username}','StoreController@showStore');
-Route::get('/store/{username}/rating/like','StoreController@likeStore')->middleware('auth');
-Route::get('/store/{username}/rating/dislike','StoreController@dislikeStore')->middleware('auth');
+Route::post('/store/rate','StoreController@rateStore')->middleware('auth');
 Route::delete('/ad/{product}', 'ProductController@removeProduct')->middleware('auth');
 
 // Legal Document Pages
