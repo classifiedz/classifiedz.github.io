@@ -20,7 +20,7 @@ class UserReviewsTableSeeder extends Seeder
             	'reviewee_id' => $faker->numberBetween(1,25),
                 'reviewer_id' => $faker->numberBetween(1,25),
                 'comment' => $faker->sentence,
-                'rating' => $faker->numberBetween(1,5),
+                'liked' => $faker->boolean,
             ]);
         }
     }

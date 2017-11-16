@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreUserRating;
 use App\Product;
 use App\User;
 use App\UserReview;
+
 
 class StoreController extends Controller
 {
@@ -102,7 +104,7 @@ class StoreController extends Controller
         ]);
     }
 
-    public function  rateStore(Request $request) {
+    public function  rateStore(StoreUserRating $request) {
         $reviewee_id = $request->reviewee_id;
         $reviewer_id = Auth::id();
         $liked = $request->liked;
