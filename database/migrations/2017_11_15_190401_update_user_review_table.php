@@ -14,7 +14,7 @@ class UpdateUserReviewTable extends Migration
     public function up()
     {
         Schema::table('user_reviews', function (Blueprint $table) {
-            $table->boolean('liked');
+            $table->boolean('liked')->default(true);
             $table->dropColumn('rating');
         });
     }
