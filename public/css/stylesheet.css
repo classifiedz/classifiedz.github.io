@@ -209,10 +209,10 @@ Aligns Main Menu under button
 */
 
 /*Wishlist Page*/
-#deleteWishlistBtn:hover, #addWishlistBtn:hover {
+#deleteWishlistBtn:hover, #addWishlistBtn:hover, #likeBtn:hover, #dislikeBtn:hover {
     cursor: pointer;
 }
-#addWishlistBtn{
+#addWishlistBtn, #likeBtn, #dislikeBtn {
   background: none;
   border: none;
 }

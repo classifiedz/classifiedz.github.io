@@ -38,9 +38,9 @@
 		       {{ csrf_field() }}
 		        <input type="hidden" name="reviewee_id" value="{{ $user->id }}">
 		        <input type="hidden" name="liked" value="1">
-			  	<button id="addWishlistBtn" type="submit">
-                    <i class="fa fa-thumbs-up fa-lg text-success"></i>
-              	</button>
+			  	<button id="likeBtn" class="likeBtn" dusk="likeBtn" type="submit">
+			  		<i class="fa fa-thumbs-up fa-lg text-success"></i>
+			  	</button>
 		    </form>
 		</span>
 		&nbsp;&nbsp;
@@ -49,9 +49,9 @@
 		       {{ csrf_field() }}
 		        <input type="hidden" name="reviewee_id" value="{{ $user->id }}">
 		        <input type="hidden" name="liked" value="0">
-			  	<button id="addWishlistBtn" type="submit">
-                    <i class="fa fa-thumbs-down fa-lg text-danger"></i>
-              	</button>
+			  	<button id="dislikeBtn" class="dislikeBtn" dusk="dislikeBtn" type="submit">
+			  		<i class="fa fa-thumbs-down fa-lg text-danger"></i>
+			  	</button>
 		    </form>
 		</span>
       	&nbsp; 

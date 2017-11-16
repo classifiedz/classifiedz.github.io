@@ -1,9 +1,17 @@
+sudo: required
+dist: trusty
+
 language: php
 
 php:
    - '7.1'
 
-sudo: true
+addons:
+  chrome: stable
+
+install:
+   - cp .env.testing .env
+   - travis_retry composer install --no-interaction --prefer-dist --no-suggest
 
 services:
   - mysql
@@ -13,6 +21,9 @@ before_script:
   - composer install --dev --prefer-source --no-interaction
   - php artisan key:generate
   - php artisan migrate --seed
+  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
+  - php artisan serve &
 
 script:
   - vendor/bin/phpunit --debug
+  - php artisan dusk
