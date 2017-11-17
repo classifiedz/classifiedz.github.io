@@ -46,23 +46,23 @@ class AuthenticationTest extends DuskTestCase
 
         $name = 'Mr Bean';
         $username = 'MrBean';
-        $emailRegister = 'mr.bean@gmail.com';
-        $passwordRegister = 'ABC123doremi29!';
-        $passwordRegister_confirmation = $passwordRegister;
+        $email_register = 'mr.bean@gmail.com';
+        $password_register = 'ABC123doremi29!';
+        $password_register_confirmation = $password_register;
 
-        $this->browse(function ($browser) use ($name, $username, $emailRegister, $passwordRegister, $passwordRegister_confirmation) {
+        $this->browse(function ($browser) use ($name, $username, $email_register, $password_register, $password_register_confirmation) {
             $browser->visit('/login')
                 ->type('name', $name)
                 ->type('username', $username)
-                ->type('emailRegister', $emailRegister)
-                ->type('passwordRegister', $passwordRegister)
-                ->type('passwordRegister_confirmation', $passwordRegister_confirmation)
+                ->type('emailRegister', $email_register)
+                ->type('passwordRegister', $password_register)
+                ->type('passwordRegister_confirmation', $password_register_confirmation)
                 ->press('Sign me up!')
                 ->assertPathIs('/');
         });
 
         $user_found = User::where('username', $username)
-                            ->where('email', $emailRegister)
+                            ->where('email', $email_register)
                             ->first();
 
         if(isset($user_found)){
