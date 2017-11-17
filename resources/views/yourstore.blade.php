@@ -105,6 +105,7 @@
 		                	</a>
 		                </form>
 						<div><small class="badge badge-pill badge-success">$ {{ $product->price }}</small></div> </div>
+						@endif
                     </footer>
                 </div>
             </div>
