@@ -24,7 +24,7 @@
     </tr>
 	<tr>
       <th scope="row">	
-      	<span class="badge badge-primary" data-toggle="tooltip" data-placement="top" title="change contacts in profile">Rating</span>
+      	<span class="badge badge-primary" data-toggle="tooltip" data-placement="top" title="like or dislike">Rating</span>
       </th>
       <td>
       	<p class="same-line">
