@@ -27,14 +27,12 @@ class UpdateProduct extends FormRequest
      */
     public function rules()
     {
-        $statuses = array('ACTIVE', 'PURCHASED', 'INACTIVE', 'REMOVED');
-
         return [
-            'title' => 'string|max:200',
+            'title' => 'required|string|max:200',
             'description' => 'nullable|string',
-            'price' => 'numeric',
-            'category_id' => 'numeric|exists:product_categories,id',
-            'status' => 'in:' . implode(',', $statuses),
+            'price' => 'required|numeric|min:0',
+            'category_id' => 'required|numeric|exists:product_categories,id',
+            'image' => 'image'
         ];
     }
 }

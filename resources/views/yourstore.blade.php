@@ -52,10 +52,17 @@
 		                </form>
 		                @endif
 		                @if(Auth::check() && $user->id == Auth::user()->id)
-		                <button type="button" class="close" aria-label="Close" data-toggle="modal" data-target="#deleteAdModal" data-productid="{{ $product->id }}">
+						<button type="button" class="close" aria-label="Close" data-toggle="modal" data-target="#deleteAdModal" data-productid="{{ $product->id }}">
 		                	<span aria-hidden="true">&times;</span>
 		                </button>
-		                @endif
+
+		                <form>
+		                	<a href="/ad/edit/{{ $product->id }}">
+	                			<span data-toggle="tooltip" data-placement="top" title="Edit Ad">
+	                				<i class="fa fa-pencil" aria-hidden="true"></i>
+	                			</span>
+		                	</a>
+		                </form>
 						<div><small class="badge badge-pill badge-success">$ {{ $product->price }}</small></div> </div>
                     </footer>
                 </div>
