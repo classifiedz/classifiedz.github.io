@@ -78,7 +78,7 @@
             </div>
         </div>
 
-        <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+        <div class="col-12 col-sm-12 col-md-6 offset-lg-1 col-lg-5">
             <div class="form-box">
                 <div class ="form-top">
                     <div class ="form-top-left">
