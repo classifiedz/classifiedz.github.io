@@ -93,7 +93,7 @@
         </div>
       </div> -->
     </br></br>
-    <div class="checkbox">
+    <div>
       <label><input type="checkbox" name="agree"> <small>I have read and agree to the <a href="/terms">Terms and Conditions</a></small></label>
     </div>
     <button type="submit" class="btn btn-success">Update</button>
