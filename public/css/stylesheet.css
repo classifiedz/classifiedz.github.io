@@ -285,7 +285,6 @@ Aligns Main Menu under button
 .checkbox {
     color: #ffffff;
 }
-=======
 
 /*404 Page CSS*/
 #background-404-page {
@@ -298,13 +297,9 @@ Aligns Main Menu under button
     position: fixed;
     align-items: center;
     justify-content: center;
-    font-size:150px;
+    font-size:7em;
     color:#FFFFFF;
-    font-family:arial black;
-}
-
-#redirect-404-page {
-    text-decoration: none;
+    font-family: arial black;
 }
 /*404 Page CSS end*/
 
@@ -313,4 +308,3 @@ Aligns Main Menu under button
     display: inline-block;
 }
 /*General CSS end*/
-
