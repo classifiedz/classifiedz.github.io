@@ -61,13 +61,16 @@ class ProductController extends Controller
         $imagePath = explode('/',$path);
         $path =  "storage/".$imagePath[1];
 
+        $show_chat = isset($request->show_chat) ? true : false;
+
         $product = [
             'user_id' => $id,
             'title' => $request->title,
             'description' => $request->description,
             'price' => $request->price,
             'category_id' => $request->category_id,
-            'image' => $path
+            'image' => $path,
+			'show_chat' => $show_chat,
         ];
 
         $product = Product::create($product);
