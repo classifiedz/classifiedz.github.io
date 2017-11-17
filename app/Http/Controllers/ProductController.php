@@ -126,12 +126,15 @@ class ProductController extends Controller
             $path =  "storage/".$imagePath[1];
         }
 
+        $show_chat = isset($request->show_chat) ? true : false;
+
         $product = [
             'title' => $request->title,
             'description' => $request->description,
             'price' => $request->price,
             'category_id' => $request->category_id,
-            'image' => $path
+            'image' => $path,
+            'show_chat' =>$show_chat
         ];
 
         $originalProduct->update($product);

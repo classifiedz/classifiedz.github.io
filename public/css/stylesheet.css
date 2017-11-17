@@ -303,4 +303,8 @@ Aligns Main Menu under button
 .same-line {
     display: inline-block;
 }
+
+.no-decoration {
+    text-decoration: none;
+}
 /*General CSS end*/

@@ -32,7 +32,9 @@ class UpdateProduct extends FormRequest
             'description' => 'nullable|string',
             'price' => 'required|numeric|min:0',
             'category_id' => 'required|numeric|exists:product_categories,id',
-            'image' => 'image'
+            'image' => 'image',
+            'show_chat' => 'boolean',
+            'terms' => 'accepted',
         ];
     }
 }
