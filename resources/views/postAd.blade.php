@@ -73,7 +73,6 @@
           <label for="image">Upload an image of your product:</label>
           </br>
           <input id="image" name="image" type="file" value="{{ old('image') }}">
-
            @if ($errors->has('image'))
            <span class="help-block">
              <strong>{{ $errors->first('image') }}</strong>
@@ -100,7 +99,7 @@
          <!-- Privacy Agreement -->
          <div class="form-group{{ $errors->has('terms') ? ' has-error' : '' }}">
             <label>
-              <input type="checkbox" name="terms"> <small>I have read and agree to the <a href="#">Terms and Conditions</a></small>
+              <input type="checkbox" name="terms"> <small>I have read and agree to the <a href="/terms">Terms and Conditions</a></small>
             </label>
             @if ($errors->has('terms'))
              <span class="help-block">

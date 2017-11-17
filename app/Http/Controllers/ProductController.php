@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\StoreProduct;
+use App\Http\Requests\UpdateProduct;
 use App\Product;
 use App\ProductCategory;
 
@@ -87,11 +88,54 @@ class ProductController extends Controller
 
     public function removeProduct(Product $product) {
         if (Auth::user()->id !== $product->user_id) {
-            redirect('/')->with('alert_msg', "You don't have permission to remove this item!");
+            return redirect('/')->with('alert_msg', "You don't have permission to remove this item!");
         }
 
         Product::destroy($product->id);
 
         return back();
+    }
+
+    public function showEditAdForm(Product $product) {
+        if (Auth::user()->id !== $product->user_id) {
+            return redirect('/')->with('alert_msg', "You don't have permission to edit this item!");
+        }
+
+        $categories = ProductCategory::where('parent_category_id', null)->get();
+
+        return view('editAd', [
+            'product' => $product,
+            'categories' => $categories,
+        ]);
+    }
+
+    public function updateAd(UpdateProduct $request) {
+        $originalProduct = Product::where('id', $request->id)->first();
+        $user_id = Auth::id();
+
+        if ($user_id !== $originalProduct->user_id) {
+            return redirect('/')->with('alert_msg', "You don't have permission to edit this item!");
+        }
+
+        $path = $originalProduct->image;
+        if($request->file('image') !== null) {
+            $path = Storage::putFile('public', $request->file('image'));
+            Storage::setVisibility($path, 'public');
+
+            $imagePath = explode('/',$path);
+            $path =  "storage/".$imagePath[1];
+        }
+
+        $product = [
+            'title' => $request->title,
+            'description' => $request->description,
+            'price' => $request->price,
+            'category_id' => $request->category_id,
+            'image' => $path
+        ];
+
+        $originalProduct->update($product);
+
+        return redirect('/store');
     }
 }
