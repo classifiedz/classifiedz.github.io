@@ -13,7 +13,7 @@ class AuthenticationTest extends DuskTestCase
 {
 
     /**
-     * A basic test example.
+     * Login and logout test
      *
      * @return void
      */
@@ -33,6 +33,48 @@ class AuthenticationTest extends DuskTestCase
         $this->logout();
 
         $this->removeUser($user->id);
+    }
+
+    /**
+     * Testing the register form
+     *
+     * @return void
+     */
+    public function testRegisterForm()
+    {
+        $user_created = false;
+
+        $name = 'Mr Bean';
+        $username = 'MrBean';
+        $email_register = 'mr.bean@gmail.com';
+        $password_register = 'ABC123doremi29!';
+        $password_register_confirmation = $password_register;
+
+        $this->browse(function ($browser) use ($name, $username, $email_register, $password_register, $password_register_confirmation) {
+            $browser->visit('/login')
+                ->type('name', $name)
+                ->type('username', $username)
+                ->type('emailRegister', $email_register)
+                ->type('passwordRegister', $password_register)
+                ->type('passwordRegister_confirmation', $password_register_confirmation)
+                ->press('Sign me up!')
+                ->assertPathIs('/');
+        });
+
+        $user_found = User::where('username', $username)
+                            ->where('email', $email_register)
+                            ->first();
+
+        if(isset($user_found)){
+            $user_created = true;
+        }
+
+        $this->assertTrue($user_created);
+
+        if($user_created) {
+            $this->logout();
+            $this->removeUser($user_found->id);
+        }
     }
 
     private function login($email, $password){
