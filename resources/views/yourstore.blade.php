@@ -22,6 +22,47 @@
       <td><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;{{ $user->email }}</td>
       <td><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;{{ $user->phoneNumber }}</td>
     </tr>
+	<tr>
+      <th scope="row">	
+      	<span class="badge badge-primary" data-toggle="tooltip" data-placement="top" title="change contacts in profile">Rating</span>
+      </th>
+      <td>
+      	<p class="same-line">
+      		@if($liked) <b> @endif
+      		{{ $likeCntr }}
+      		@if($liked) </b> @endif
+      	</p>
+      	&nbsp;
+      	<span class="same-line">
+	      	<form  action="/store/rate" method="POST">
+		       {{ csrf_field() }}
+		        <input type="hidden" name="reviewee_id" value="{{ $user->id }}">
+		        <input type="hidden" name="liked" value="1">
+			  	<button id="likeBtn" class="likeBtn" dusk="likeBtn" type="submit">
+			  		<i class="fa fa-thumbs-up fa-lg text-success"></i>
+			  	</button>
+		    </form>
+		</span>
+		&nbsp;&nbsp;
+		<span class="same-line">
+	      	<form  action="/store/rate" method="POST">
+		       {{ csrf_field() }}
+		        <input type="hidden" name="reviewee_id" value="{{ $user->id }}">
+		        <input type="hidden" name="liked" value="0">
+			  	<button id="dislikeBtn" class="dislikeBtn" dusk="dislikeBtn" type="submit">
+			  		<i class="fa fa-thumbs-down fa-lg text-danger"></i>
+			  	</button>
+		    </form>
+		</span>
+      	&nbsp; 
+      	<p class="same-line">
+      		@if($disliked) <b> @endif
+      		{{ $dislikeCntr }}
+      		@if($disliked) </b> @endif
+      	</p>
+      </td>
+	</tr>
+
   </tbody>
 </table>
 
@@ -64,6 +105,7 @@
 		                	</a>
 		                </form>
 						<div><small class="badge badge-pill badge-success">$ {{ $product->price }}</small></div> </div>
+						@endif
                     </footer>
                 </div>
             </div>
@@ -104,6 +146,3 @@
 <!-- End confirmation modal -->
 
 @endsection
-=======
-@endsection
-

@@ -45,6 +45,7 @@ Route::delete('/wishlist/{wishlist}', 'WishlistController@removeUserWishlist')->
 //Your Store page
 Route::get('/store','StoreController@showYourStore')->middleware('auth');
 Route::get('/store/{username}','StoreController@showStore');
+Route::post('/store/rate','StoreController@rateStore')->middleware('auth');
 Route::delete('/ad/{product}', 'ProductController@removeProduct')->middleware('auth');
 
 
