@@ -283,14 +283,6 @@ Aligns Main Menu under button
     border-color: #19b9e7;
 }
 
-.bg {
-    width: 100%;
-    height: 100%;
-    font-family: 'Raleway', sans-serif;
-    margin-left: -15px;
-    padding: 0;
-}
-
 .btn{
     color: #ffffff;
 }
