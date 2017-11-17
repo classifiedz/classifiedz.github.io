@@ -266,7 +266,7 @@ Aligns Main Menu under button
 .form-bottom {
     padding: 25px 25px 30px 25px;
     background: #444;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.1);
     -moz-border-radius: 0 0 4px 4px; -webkit-border-radius: 0 0 4px 4px; border-radius: 0 0 4px 4px;
     text-align: left;
 }
