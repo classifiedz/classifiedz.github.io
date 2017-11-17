@@ -230,6 +230,63 @@ Aligns Main Menu under button
 }
 /*profile page css end*/
 
+.form-top {
+    overflow: hidden;
+    padding: 0 15px 15px 25px;
+    background: #444;
+    background: rgba(0, 0, 0, 0.2);
+    -moz-border-radius: 4px 4px 0 0; -webkit-border-radius: 4px 4px 0 0; border-radius: 4px 4px 0 0;
+    text-align: left;
+}
+.form-top-left {
+    float: left;
+    width: 75%;
+    padding-top: 25px;
+}
+.form-top-left h3 { margin-top: 0; color: #fff; }
+
+.form-top-left p { opacity: 0.8; color: #fff; }
+
+.form-top-right {
+    float: left;
+    width: 25%;
+    padding-top: 0px;
+    font-size: 66px;
+    color: #fff;
+    line-height: 100px;
+    text-align: right;
+    opacity: 0.3;
+}
+
+.form-bottom {
+    padding: 25px 25px 30px 25px;
+    background: #444;
+    background: rgba(0, 0, 0, 0.1);
+    -moz-border-radius: 0 0 4px 4px; -webkit-border-radius: 0 0 4px 4px; border-radius: 0 0 4px 4px;
+    text-align: left;
+}
+
+.form-bottom form textarea {
+    height: 100px;
+}
+
+.form-bottom form button.btn {
+    width: 100%;
+}
+
+.form-bottom form .input-error {
+    border-color: #19b9e7;
+}
+
+.btn{
+    color: #ffffff;
+}
+
+.checkbox {
+    color: #ffffff;
+}
+=======
+
 /*404 Page CSS*/
 #background-404-page {
     background-color: #0275D8;
@@ -256,3 +313,4 @@ Aligns Main Menu under button
     display: inline-block;
 }
 /*General CSS end*/
+

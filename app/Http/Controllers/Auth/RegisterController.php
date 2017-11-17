@@ -48,7 +48,7 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         $messages = [
-            'password.regex' => 'Password must contain atleast one uppercase and lowercase letter, a number and a special character',
+            'passwordRegister.regex' => 'Password must contain atleast one uppercase and lowercase letter, a number and a special character',
         ];
         
 
