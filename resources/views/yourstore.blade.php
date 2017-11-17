@@ -138,6 +138,3 @@
 <!-- End confirmation modal -->
 
 @endsection
-=======
-@endsection
-
