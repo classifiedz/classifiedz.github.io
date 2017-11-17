@@ -34,6 +34,8 @@ class EditAdTest extends DuskTestCase
                     ->type('title', $new_title)
                     ->type('description', $new_description)
                     ->type('price', $new_price)
+                    ->check('show_chat')
+                    ->check('terms')
                     ->press('Update')
                     ->assertPathIs('/store');
         });
