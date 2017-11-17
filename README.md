@@ -32,3 +32,6 @@ This repository for the Concocrida University Fall 2017 SOEN 341 term project. T
 	- Blade 
 - MySQL
 - Algolia
+
+	*"Coming together is a beginning. Keeping together is progress. Working together is success." 
+												--Henry Ford*
