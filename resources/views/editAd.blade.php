@@ -45,7 +45,7 @@
         </div>
         <div class="form-group{{ $errors->has('description') ? ' has-error' : '' }}">
           <label for="description">Description:</label>
-          <textarea class="form-control" rows="5" name="description" id="description" placeholder="Describe what you're selling... ">{{ (old('description') !== null) ? old('description') : $product->title }}</textarea>
+          <textarea class="form-control" rows="5" name="description" id="description" placeholder="Describe what you're selling... ">{{ (old('description') !== null) ? old('description') : $product->description }}</textarea>
           
           @if ($errors->has('description'))
           <span class="help-block">
