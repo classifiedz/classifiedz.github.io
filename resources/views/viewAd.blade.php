@@ -35,16 +35,7 @@
                 <p><small>This ad was posted on {{ date('F jS', strtotime($product->created_at)) }} </small></p>
             </div>
             <div class=" col-sm-6">
-                @if(Auth::check())
-                    <form  action="/wishlist/create" method="POST">
-                        {{ csrf_field() }}
-                        <input type="hidden" name="product_id" value="{{ $product->id }}">
-                        <button id="addWishlistBtn" type="submit" class="star">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-o"></i>
-                        </button>
-                    </form>
-                @endif
+
                 <h2>{{ $product->title }}</h2>
                 <small>Sold by <a href="/store/{{ $product->user->username }}">{{ $product->user->username}}</a></small>
                 </br></br>
@@ -57,6 +48,17 @@
                     <p>{{ count($product->wishlist) }} person is currently interested!</p>
                 @elseif(count($product->wishlist) > 1)
                     <p>{{ count($product->wishlist) }} people are currently interested!</p>
+                @endif
+
+                @if(Auth::check())
+                    <form  action="/wishlist/create" method="POST">
+                        {{ csrf_field() }}
+                        <input type="hidden" name="product_id" value="{{ $product->id }}">
+                        <button id="addWishlistBtn" type="submit" class="star">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </button>
+                    </form>
                 @endif
             </div>
         </div>
