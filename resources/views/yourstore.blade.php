@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'MyStore')
+@section('title', $title)
 
 @section('content')
 
@@ -22,6 +22,47 @@
       <td><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;{{ $user->email }}</td>
       <td><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;{{ $user->phoneNumber }}</td>
     </tr>
+	<tr>
+      <th scope="row">	
+      	<span class="badge badge-primary" data-toggle="tooltip" data-placement="top" title="change contacts in profile">Rating</span>
+      </th>
+      <td>
+      	<p class="same-line">
+      		@if($liked) <b> @endif
+      		{{ $likeCntr }}
+      		@if($liked) </b> @endif
+      	</p>
+      	&nbsp;
+      	<span class="same-line">
+	      	<form  action="/store/rate" method="POST">
+		       {{ csrf_field() }}
+		        <input type="hidden" name="reviewee_id" value="{{ $user->id }}">
+		        <input type="hidden" name="liked" value="1">
+			  	<button id="likeBtn" class="likeBtn" dusk="likeBtn" type="submit">
+			  		<i class="fa fa-thumbs-up fa-lg text-success"></i>
+			  	</button>
+		    </form>
+		</span>
+		&nbsp;&nbsp;
+		<span class="same-line">
+	      	<form  action="/store/rate" method="POST">
+		       {{ csrf_field() }}
+		        <input type="hidden" name="reviewee_id" value="{{ $user->id }}">
+		        <input type="hidden" name="liked" value="0">
+			  	<button id="dislikeBtn" class="dislikeBtn" dusk="dislikeBtn" type="submit">
+			  		<i class="fa fa-thumbs-down fa-lg text-danger"></i>
+			  	</button>
+		    </form>
+		</span>
+      	&nbsp; 
+      	<p class="same-line">
+      		@if($disliked) <b> @endif
+      		{{ $dislikeCntr }}
+      		@if($disliked) </b> @endif
+      	</p>
+      </td>
+	</tr>
+
   </tbody>
 </table>
 
@@ -52,13 +93,19 @@
 		                </form>
 		                @endif
 		                @if(Auth::check() && $user->id == Auth::user()->id)
-						<form  action="/ad/{{ $product->id }}" method="POST">
-			                {{ csrf_field() }}
-			                <input type="hidden" name="_method" value="DELETE">
-			                <button id="deleteWishlistBtn" type="submit" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<button type="button" class="close" aria-label="Close" data-toggle="modal" data-target="#deleteAdModal" data-productid="{{ $product->id }}">
+		                	<span aria-hidden="true">&times;</span>
+		                </button>
+
+		                <form>
+		                	<a href="/ad/edit/{{ $product->id }}">
+	                			<span data-toggle="tooltip" data-placement="top" title="Edit Ad">
+	                				<i class="fa fa-pencil" aria-hidden="true"></i>
+	                			</span>
+		                	</a>
 		                </form>
-		                @endif
 						<div><small class="badge badge-pill badge-success">$ {{ $product->price }}</small></div> </div>
+						@endif
                     </footer>
                 </div>
             </div>
@@ -69,5 +116,33 @@
 	</div>
 	<!-- End Row -->
 </div>
+
+
+<!-- Confirmation modal -->
+@if(Auth::check() && $user->id == Auth::user()->id)
+<div class="modal fade" id="deleteAdModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Are you sure you want delete this ad?</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		<span>
+			<form  id="deleteAdForm" action="" method="POST">
+	            {{ csrf_field() }}
+	            <input type="hidden" name="_method" value="DELETE">
+	            <button type="submit" class="btn btn-danger">Delete</button>
+	        </form>
+    	</span>
+      </div>
+    </div>
+  </div>
+</div>
+@endif
+<!-- End confirmation modal -->
 
 @endsection

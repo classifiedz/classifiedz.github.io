@@ -9,5 +9,9 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
-.env
 resources/views/layouts/trying
+laravel-instructions-osx.md
+.env example
+DS_store
+._composer.json
+CNAME

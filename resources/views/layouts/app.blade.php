@@ -66,14 +66,14 @@
             </li>
             @else
             <li class="nav-item dropdown">
-                <a href="!#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                <a href="!#" class="nav-link dropdown-toggle" data-toggle="dropdown" dusk="profileDropdown">
                 	{{ Auth::user()->name }} <span class="caret"></span>
             	</a>
 
 	            <div class="dropdown-menu bg-primary">
                     <a class="dropdown-item text-white bg-primary" href="/profile"><i class="fa fa-address-card-o" aria-hidden="true"></i>&nbsp;Profile</a>
                     <a class="dropdown-item text-white bg-primary" href="/wishlist"><i class="fa fa-check-circle-o" aria-hidden="true"></i>&nbsp;Wishlist</a>
-                    <a class="dropdown-item text-white bg-primary" href="{{ route('logout') }}"
+                    <a class="dropdown-item text-white bg-primary" dusk="logoutLink" href="{{ route('logout') }}"
 	                    onclick="event.preventDefault();
 	                    document.getElementById('logout-form').submit();">
                         <i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;
@@ -125,12 +125,14 @@
 <script src="{{ asset('js/app.js') }}"></script>
 
 <!-- === Dependencies === -->
-<!-- Custom JS -->
-<script src="{{ asset('js/script.js') }}"></script>
 <!-- Bootstrap core JavaScript -->
 <script src="{{ asset('js/jquery/jquery.min.js') }}"></script>
 <script src="{{ asset('js/tether/tether.min.js') }}"></script>
 <script src="{{ asset('js/bootstrap/bootstrap.min.js') }}"></script>
 <script id="dsq-count-scr" src="//classifiedz-xyz.disqus.com/count.js" async></script>
+<!-- masonry.js -->
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<!-- Custom JS -->
+<script src="{{ asset('js/script.js') }}"></script>
 </body>
 </html>

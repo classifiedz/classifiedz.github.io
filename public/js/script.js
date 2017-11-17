@@ -9,11 +9,28 @@ function updateQueryStringParameter(uri, key, value) {
   }
 }
 
+/*Adding sort by parameter to the URL*/
 $('.sortBy').on('click',function(){
 	var URL = $(location).attr("href");
 	var newURL = updateQueryStringParameter(URL, 'sortBy', this.id);
 	window.location.href = newURL;
 });
+
+/*Deals with modal confirmation prompt for deleting your own ad*/
+$('#deleteAdModal').on('show.bs.modal', function (event) {
+    var button = $(event.relatedTarget) // Button that triggered the modal
+    var productId = button.data('productid') // Extract info from data-* attributes
+    
+    $('#deleteAdForm').attr('action', '/ad/' + productId);
+})
+
+/*Deals with modal confirmation prompt for deleting an item in your wishlist*/
+$('#deleteWishlistItemModal').on('show.bs.modal', function (event) {
+    var button = $(event.relatedTarget) // Button that triggered the modal
+    var wishlistId = button.data('wishlistid') // Extract info from data-* attributes
+    
+    $('#deleteWishlistItemForm').attr('action', '/wishlist/' + wishlistId);
+})
 
 /* If search button CLICK, move URL to search */
 $('.searchbutton').on('click',function(){
@@ -30,43 +47,21 @@ $('#searchbar').keypress(function(e){
         $('.searchbutton').click();//Trigger search button click event
     }
 });
-console.log(document.getElementById('searchbar').value);
-console.log('STILL WORKING 😎');
-/*profile page js test
 
-$(document).ready(function() {
-    var panels = $('.user-infos');
-    var panelsButton = $('.dropdown-user');
-    panels.hide();
-
-    //Click dropdown
-    panelsButton.click(function() {
-        //get data-for attribute
-        var dataFor = $(this).attr('data-for');
-        var idFor = $(dataFor);
-
-        //current button
-        var currentButton = $(this);
-        idFor.slideToggle(400, function() {
-            //Completed slidetoggle
-            if(idFor.is(':visible'))
-            {
-                currentButton.html('<i class="glyphicon glyphicon-chevron-up text-muted"></i>');
-            }
-            else
-            {
-                currentButton.html('<i class="glyphicon glyphicon-chevron-down text-muted"></i>');
-            }
-        })
-    });
-
-
-    $('[data-toggle="tooltip"]').tooltip();
-
-    $('button').click(function(e) {
-        e.preventDefault();
-        alert("This is a demo.\n :-)");
-    });
+// Masonry JS Initilization
+$(window).on('load',function() {
+	$('.cards').masonry({
+		itemSelector: '.col',
+      horizontalOrder: true
+	});
+});
+// Plan-B, click on pill badge to masonry arrange the cards
+$(".badge-success").click(function(){
+   $('.cards').masonry({
+		itemSelector: '.col',
+      horizontalOrder: true
+	});
 });
 
-profile page js test end*/
+console.log(document.getElementById('searchbar').value);
+console.log('STILL WORKING 😎');
