@@ -7,7 +7,7 @@
 <div class="container-fluid py-5">
   <div class="row-fluid">
     <div class="container col-sm-8">
-      <h2>Update Your Ad &nbsp;<span class="badge badge-default">{{$product->title}}</span></h2>
+      <h2>Update Your Ad &nbsp;<a class="no-decoration" href="/ads/{{ $product->id }}"><span class="badge badge-default">{{$product->title}}</span></a></h2>
       <form method="POST"  enctype="multipart/form-data" action="{{ route('updateAd') }}">
         {{ csrf_field() }}
 
@@ -80,22 +80,34 @@
         </span>
         @endif
       </div>
-      <!-- <div class="form-group">
-        <label for="contact">How would you prefer to be contacted?</label>
-        <div class="radio">
-          <label class="px-4"><input type="radio" name="contact" value="call"> Call</label>
-        </div>
-        <div class="radio">
-          <label class="px-4"><input type="radio" name="contact" value="text"> Text</label>
-        </div>
-        <div class="radio">
-          <label class="px-4"><input type="radio" name="contact" value="email"> Email</label>
-        </div>
-      </div> -->
-    </br></br>
-    <div>
-      <label><input type="checkbox" name="agree"> <small>I have read and agree to the <a href="/terms">Terms and Conditions</a></small></label>
-    </div>
+
+      <!-- Show Chat -->
+         <div class="form-group{{ $errors->has('show_chat') ? ' has-error' : '' }}">
+            <label class="form-check-label">
+              <input name="show_chat" id="show_chat" type="checkbox" class="form-check-input" value="1" {{ ( (old('show_chat') !== null) || ($product->show_chat == true) ) ? 'checked' : '' }}>
+              Enable Chat On Your Ad?
+            </label>
+            @if ($errors->has('show_chat'))
+               <span class="help-block">
+                 <strong>{{ $errors->first('show_chat') }}</strong>
+               </span>
+            @endif
+         </div>
+
+        <!-- Space Inbetween form and Buttons -->
+        </br></br>
+
+        <!-- Privacy Agreement -->
+         <div class="form-group{{ $errors->has('terms') ? ' has-error' : '' }}">
+            <label>
+              <input type="checkbox" name="terms"> <small>I have read and agree to the <a href="/terms">Terms and Conditions</a></small>
+            </label>
+            @if ($errors->has('terms'))
+             <span class="help-block">
+               <strong>{{ $errors->first('terms') }}</strong>
+             </span>
+            @endif
+          </div>
     <button type="submit" class="btn btn-success">Update</button>
     <a href="/store" class="btn btn-danger"  role="button">Cancel</a>
   </form>
