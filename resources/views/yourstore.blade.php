@@ -93,11 +93,9 @@
 		                </form>
 		                @endif
 		                @if(Auth::check() && $user->id == Auth::user()->id)
-						<form  action="/ad/{{ $product->id }}" method="POST">
-			                {{ csrf_field() }}
-			                <input type="hidden" name="_method" value="DELETE">
-			                <button id="deleteWishlistBtn" type="submit" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-		                </form>
+		                <button type="button" class="close" aria-label="Close" data-toggle="modal" data-target="#deleteAdModal" data-productid="{{ $product->id }}">
+		                	<span aria-hidden="true">&times;</span>
+		                </button>
 		                @endif
 						<div><small class="badge badge-pill badge-success">$ {{ $product->price }}</small></div> </div>
                     </footer>
@@ -111,4 +109,35 @@
 	<!-- End Row -->
 </div>
 
+
+<!-- Confirmation modal -->
+@if(Auth::check() && $user->id == Auth::user()->id)
+<div class="modal fade" id="deleteAdModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Are you sure you want delete this ad?</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		<span>
+			<form  id="deleteAdForm" action="" method="POST">
+	            {{ csrf_field() }}
+	            <input type="hidden" name="_method" value="DELETE">
+	            <button type="submit" class="btn btn-danger">Delete</button>
+	        </form>
+    	</span>
+      </div>
+    </div>
+  </div>
+</div>
+@endif
+<!-- End confirmation modal -->
+
 @endsection
+=======
+@endsection
+
