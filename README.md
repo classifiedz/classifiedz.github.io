@@ -3,7 +3,7 @@
 [![Waffle.io - Columns and their card count](https://badge.waffle.io/classifiedz/classifiedz.github.io.svg?columns=Sprint%204,In%20Progress,Review,Done)](http://waffle.io/classifiedz/classifiedz.github.io)  
 ### Github: [classifiedz.github.io](https://github.com/classifiedz/classifiedz.github.io)
 ### Wiki: [classifiedz.github.io/wiki](https://github.com/classifiedz/classifiedz.github.io/wiki)
-### Website: [classifiedz.xyz](http://classifiedz.xyz)  
+### Website: [classifiedz.xyz](http://classifiedz341.herokuapp.com)  
 ### Slack : [classifiedz.slack.com](https://classifiedz.slack.com/)  
 ### Waffle : [waffle.io](http://waffle.io/classifiedz/classifiedz.github.io)
 ---  
